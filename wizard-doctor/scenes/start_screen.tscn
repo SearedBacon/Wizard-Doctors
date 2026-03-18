@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://dj7wyc742e38q"]
+
+[ext_resource type="Script" uid="uid://jpjopda2ruiw" path="res://scripts/start_screen.gd" id="1_tx5wa"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cllq7"]
+font_size = 60
+
+[node name="StartScreen" type="Node2D" unique_id=612808401]
+script = ExtResource("1_tx5wa")
+
+[node name="Label" type="Label" parent="." unique_id=931814830]
+offset_left = 360.0
+offset_top = 105.0
+offset_right = 772.0
+offset_bottom = 188.0
+text = "Wizard Doctor"
+label_settings = SubResource("LabelSettings_cllq7")
