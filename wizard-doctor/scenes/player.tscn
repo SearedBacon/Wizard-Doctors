@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cwaq2g87cu4nh"]
+
+[ext_resource type="Script" uid="uid://u1ro6g2g8pn" path="res://scripts/player.gd" id="1_3vyb7"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u8vuu"]
+
+[node name="Player" type="CharacterBody2D" unique_id=1569324369]
+script = ExtResource("1_3vyb7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1160152568]
+shape = SubResource("CircleShape2D_u8vuu")
+disabled = true
