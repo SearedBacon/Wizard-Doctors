@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://djmbspymsfw0a"]
+
+[ext_resource type="Texture2D" uid="uid://jm7wsrd8d8km" path="res://assets/boil.png" id="1_bi80w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8jqlm"]
+atlas = ExtResource("1_bi80w")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3ke8"]
+atlas = ExtResource("1_bi80w")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_au12p"]
+atlas = ExtResource("1_bi80w")
+region = Rect2(0, 64, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7mkqr"]
+atlas = ExtResource("1_bi80w")
+region = Rect2(0, 96, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_re3ld"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8jqlm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3ke8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_au12p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7mkqr")
+}],
+"loop": true,
+"name": &"exist",
+"speed": 10.0
+}]
+
+[node name="Cauldron" type="Node2D" unique_id=279469598]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=279388163]
+sprite_frames = SubResource("SpriteFrames_re3ld")
+animation = &"exist"
+frame_progress = 0.28005937
