@@ -1,26 +1,25 @@
 [gd_scene format=3 uid="uid://1be7boftq3vt"]
 
 [ext_resource type="Texture2D" uid="uid://bxihsx65jokxj" path="res://assets/antique_bookshelf.png" id="1_d4oew"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_d4oew"]
-size = Vector2(15, 9)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_iit53"]
-size = Vector2(11, 9)
+[ext_resource type="Script" uid="uid://d1wioandktan4" path="res://scripts/bookshelf.gd" id="1_iit53"]
 
 [node name="Bookshelf" type="Node2D" unique_id=696840804]
+script = ExtResource("1_iit53")
 
 [node name="AntiqueBookshelf" type="Sprite2D" parent="." unique_id=1877639948]
 texture = ExtResource("1_d4oew")
 
-[node name="Recipe" type="Area2D" parent="." unique_id=175114928]
+[node name="Recipe" type="Button" parent="." unique_id=1787962184]
+offset_left = -11.0
+offset_top = -10.0
+offset_right = 4.0
+offset_bottom = -1.0
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Recipe" unique_id=1038199542]
-position = Vector2(-3.5, -5.5)
-shape = SubResource("RectangleShape2D_d4oew")
+[node name="Index" type="Button" parent="." unique_id=1688308808]
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 13.0
+offset_bottom = 10.0
 
-[node name="Area2D" type="Area2D" parent="." unique_id=1976635209]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1771317062]
-position = Vector2(7.5, 5.5)
-shape = SubResource("RectangleShape2D_iit53")
+[connection signal="pressed" from="Recipe" to="." method="_on_recipe_pressed"]
+[connection signal="pressed" from="Index" to="." method="_on_index_pressed"]

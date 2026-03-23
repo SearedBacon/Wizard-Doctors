@@ -3,6 +3,9 @@
 [ext_resource type="Texture2D" uid="uid://ncbbofkfubv2" path="res://assets/roadPLAZA.tga" id="1_7gffy"]
 [ext_resource type="PackedScene" uid="uid://djmbspymsfw0a" path="res://scenes/cauldron.tscn" id="1_khaum"]
 [ext_resource type="PackedScene" uid="uid://1be7boftq3vt" path="res://scenes/bookshelf.tscn" id="3_fcilv"]
+[ext_resource type="PackedScene" uid="uid://bxemh0k1pqxpg" path="res://scenes/recipes.tscn" id="4_yqa6y"]
+[ext_resource type="PackedScene" uid="uid://yhj8j5fl0d81" path="res://scenes/illnesses.tscn" id="5_n3rqw"]
+[ext_resource type="Texture2D" uid="uid://t4cvijxo41ca" path="res://assets/vendors_table.png" id="6_n3rqw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fcilv"]
 texture = ExtResource("1_7gffy")
@@ -266,6 +269,21 @@ texture = ExtResource("1_7gffy")
 [sub_resource type="TileSet" id="TileSet_yqa6y"]
 sources/0 = SubResource("TileSetAtlasSource_fcilv")
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_n3rqw"]
+atlas = ExtResource("6_n3rqw")
+region = Rect2(0, 0, 96, 96)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ise63"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n3rqw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Clinic" type="Node2D" unique_id=1466911789]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=202205652]
@@ -273,9 +291,24 @@ tile_map_data = PackedByteArray("AAAAAAAAAAACAAIAAAAAAAEAAAACAAMAAAABAAAAAAADAAI
 tile_set = SubResource("TileSet_yqa6y")
 
 [node name="Cauldron" parent="." unique_id=279469598 instance=ExtResource("1_khaum")]
-position = Vector2(550, 366)
-scale = Vector2(3, 3)
+position = Vector2(570, 424.00003)
+scale = Vector2(5, 5)
 
 [node name="Bookshelf" parent="." unique_id=696840804 instance=ExtResource("3_fcilv")]
-position = Vector2(554, 85.00001)
-scale = Vector2(3.5, 3.5)
+position = Vector2(576, 132)
+scale = Vector2(5.5, 5.5)
+
+[node name="Recipes" parent="." unique_id=1255496518 instance=ExtResource("4_yqa6y")]
+
+[node name="Illnesses" parent="." unique_id=1078342918 instance=ExtResource("5_n3rqw")]
+
+[node name="Table" type="AnimatedSprite2D" parent="." unique_id=1583908351]
+position = Vector2(1059, 350)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_ise63")
+
+[node name="SeePatients" type="Button" parent="." unique_id=1294559862]
+offset_left = 964.0
+offset_top = 255.0
+offset_right = 1153.0
+offset_bottom = 421.0
