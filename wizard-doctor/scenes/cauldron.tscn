@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://djmbspymsfw0a"]
 
+[ext_resource type="Script" uid="uid://cdy0sbvw1s4us" path="res://scripts/cauldron.gd" id="1_8jqlm"]
 [ext_resource type="Texture2D" uid="uid://jm7wsrd8d8km" path="res://assets/boil.png" id="1_bi80w"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8jqlm"]
@@ -38,15 +39,23 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_l3ke8"]
+blend_mode = 1
+
 [node name="Cauldron" type="Node2D" unique_id=279469598]
+script = ExtResource("1_8jqlm")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=279388163]
 sprite_frames = SubResource("SpriteFrames_re3ld")
 animation = &"exist"
+autoplay = "exist"
 frame_progress = 0.28005937
 
 [node name="Brew" type="Button" parent="." unique_id=1581607043]
+material = SubResource("CanvasItemMaterial_l3ke8")
 offset_left = -12.0
 offset_top = -13.0
 offset_right = 13.0
 offset_bottom = 11.0
+
+[connection signal="pressed" from="Brew" to="." method="_on_brew_pressed"]

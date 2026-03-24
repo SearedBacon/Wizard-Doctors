@@ -3,6 +3,12 @@
 [ext_resource type="Texture2D" uid="uid://bxihsx65jokxj" path="res://assets/antique_bookshelf.png" id="1_d4oew"]
 [ext_resource type="Script" uid="uid://d1wioandktan4" path="res://scripts/bookshelf.gd" id="1_iit53"]
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_iit53"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_kkcsm"]
+blend_mode = 1
+
 [node name="Bookshelf" type="Node2D" unique_id=696840804]
 script = ExtResource("1_iit53")
 
@@ -10,12 +16,14 @@ script = ExtResource("1_iit53")
 texture = ExtResource("1_d4oew")
 
 [node name="Recipe" type="Button" parent="." unique_id=1787962184]
+material = SubResource("CanvasItemMaterial_iit53")
 offset_left = -11.0
 offset_top = -10.0
 offset_right = 4.0
 offset_bottom = -1.0
 
 [node name="Index" type="Button" parent="." unique_id=1688308808]
+material = SubResource("CanvasItemMaterial_kkcsm")
 offset_left = 2.0
 offset_top = 1.0
 offset_right = 13.0

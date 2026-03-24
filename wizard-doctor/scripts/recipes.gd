@@ -14,3 +14,7 @@ func _physics_process(delta: float) -> void:
 		back.visible=true
 	if Globals.rpage==0:
 		back.visible=false
+
+
+func _on_button_pressed() -> void:
+	Globals.rScreen=false
