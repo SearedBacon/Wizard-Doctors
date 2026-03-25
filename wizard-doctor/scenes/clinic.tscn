@@ -291,6 +291,12 @@ animations = [{
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_mk7th"]
 blend_mode = 1
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_fqmk2"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rwdlf"]
+blend_mode = 1
+
 [node name="Clinic" type="Node2D" unique_id=1466911789]
 script = ExtResource("1_mk7th")
 
@@ -339,8 +345,15 @@ scale = Vector2(2.735, 2.735)
 texture = ExtResource("9_j4sk3")
 
 [node name="Planks" type="Sprite2D" parent="." unique_id=1467271950]
-position = Vector2(331, 549)
-scale = Vector2(0.17480469, 0.19628906)
+material = SubResource("CanvasItemMaterial_fqmk2")
+position = Vector2(344, 545)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("10_fqmk2")
+
+[node name="Planks2" type="Sprite2D" parent="." unique_id=1856606393]
+material = SubResource("CanvasItemMaterial_rwdlf")
+position = Vector2(549, 546)
+scale = Vector2(0.2, 0.2)
 texture = ExtResource("10_fqmk2")
 
 [connection signal="pressed" from="SeePatients" to="." method="_on_see_patients_pressed"]
