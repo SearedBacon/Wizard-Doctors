@@ -20,5 +20,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		ingredients.visible=false
 
+
+
 func _on_see_patients_pressed() -> void:
-	pass
+	pass # Replace with function body.

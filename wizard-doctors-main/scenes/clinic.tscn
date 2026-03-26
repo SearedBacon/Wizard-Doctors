@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://yhj8j5fl0d81" path="res://scenes/illnesses.tscn" id="5_n3rqw"]
 [ext_resource type="Texture2D" uid="uid://t4cvijxo41ca" path="res://assets/vendors_table.png" id="6_n3rqw"]
 [ext_resource type="PackedScene" uid="uid://dudi845vmxtmy" path="res://scenes/ingredients.tscn" id="8_ise63"]
-[ext_resource type="Texture2D" uid="uid://0lttiglfngxu" path="res://assets/castledoors.png" id="9_j4sk3"]
+[ext_resource type="PackedScene" uid="uid://8c3f3xuwntl3" path="res://scenes/door.tscn" id="9_fqmk2"]
 [ext_resource type="Texture2D" uid="uid://cwn1phjdg0w7m" path="res://assets/planks.png" id="10_fqmk2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fcilv"]
@@ -308,16 +308,6 @@ tile_set = SubResource("TileSet_yqa6y")
 position = Vector2(570, 424.00003)
 scale = Vector2(5, 5)
 
-[node name="Recipes" parent="." unique_id=1255496518 instance=ExtResource("4_yqa6y")]
-visible = false
-position = Vector2(422, 20)
-scale = Vector2(0.9, 0.9)
-
-[node name="Illnesses" parent="." unique_id=1078342918 instance=ExtResource("5_n3rqw")]
-visible = false
-position = Vector2(422, 20)
-scale = Vector2(0.9, 0.9)
-
 [node name="Table" type="AnimatedSprite2D" parent="." unique_id=1583908351]
 position = Vector2(1059, 350)
 scale = Vector2(2, 2)
@@ -330,110 +320,115 @@ offset_top = 255.0
 offset_right = 1153.0
 offset_bottom = 395.0
 
-[node name="Ingredients" parent="." unique_id=572742726 instance=ExtResource("8_ise63")]
-visible = false
-position = Vector2(712, 20)
-scale = Vector2(0.9, 0.9)
-
-[node name="FrontWall" type="Node" parent="." unique_id=262842313]
-
-[node name="Planks" type="Sprite2D" parent="FrontWall" unique_id=1467271950]
+[node name="Planks" type="Sprite2D" parent="." unique_id=1467271950]
 material = SubResource("CanvasItemMaterial_fqmk2")
 position = Vector2(301, 566)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("10_fqmk2")
 
-[node name="Planks2" type="Sprite2D" parent="FrontWall" unique_id=1856606393]
+[node name="Planks2" type="Sprite2D" parent="." unique_id=1856606393]
 material = SubResource("CanvasItemMaterial_rwdlf")
 position = Vector2(466, 566)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("10_fqmk2")
 
-[node name="Planks3" type="Sprite2D" parent="FrontWall" unique_id=1885518489]
+[node name="Planks3" type="Sprite2D" parent="." unique_id=1885518489]
 material = SubResource("CanvasItemMaterial_rwdlf")
 position = Vector2(630, 566)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("10_fqmk2")
 
-[node name="Planks4" type="Sprite2D" parent="FrontWall" unique_id=1657191367]
+[node name="Planks4" type="Sprite2D" parent="." unique_id=1657191367]
 material = SubResource("CanvasItemMaterial_rwdlf")
 position = Vector2(793, 567)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("10_fqmk2")
 
-[node name="Planks5" type="Sprite2D" parent="FrontWall" unique_id=235199776]
+[node name="Planks5" type="Sprite2D" parent="." unique_id=235199776]
 material = SubResource("CanvasItemMaterial_rwdlf")
 position = Vector2(957, 566)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("10_fqmk2")
 
-[node name="Planks6" type="Sprite2D" parent="FrontWall" unique_id=1289511311]
+[node name="Planks6" type="Sprite2D" parent="." unique_id=1289511311]
 material = SubResource("CanvasItemMaterial_rwdlf")
 position = Vector2(1121, 566)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("10_fqmk2")
 
-[node name="Planks7" type="Sprite2D" parent="FrontWall" unique_id=935165179]
+[node name="Planks7" type="Sprite2D" parent="." unique_id=935165179]
 material = SubResource("CanvasItemMaterial_rwdlf")
 position = Vector2(9, 566)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("10_fqmk2")
 
-[node name="Planks8" type="Sprite2D" parent="FrontWall" unique_id=966441232]
+[node name="Planks8" type="Sprite2D" parent="." unique_id=966441232]
 material = SubResource("CanvasItemMaterial_rwdlf")
 position = Vector2(155, 566)
 scale = Vector2(0.12695314, 0.16)
 texture = ExtResource("10_fqmk2")
 
-[node name="Castledoors" type="Sprite2D" parent="FrontWall" unique_id=472467258]
-position = Vector2(155, 552)
+[node name="Door" parent="." unique_id=1597790803 instance=ExtResource("9_fqmk2")]
+position = Vector2(121, 456)
 scale = Vector2(2, 2)
-texture = ExtResource("9_j4sk3")
 
-[node name="BackWall" type="Node" parent="." unique_id=199613898]
-
-[node name="Planks" type="Sprite2D" parent="BackWall" unique_id=1485372961]
+[node name="Planks9" type="Sprite2D" parent="." unique_id=1485372961]
 position = Vector2(82, 82)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("10_fqmk2")
 
-[node name="Planks2" type="Sprite2D" parent="BackWall" unique_id=1795428300]
+[node name="Planks10" type="Sprite2D" parent="." unique_id=1795428300]
 position = Vector2(245, 82)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("10_fqmk2")
 
-[node name="Planks3" type="Sprite2D" parent="BackWall" unique_id=1748075586]
+[node name="Planks11" type="Sprite2D" parent="." unique_id=1748075586]
 position = Vector2(409, 82)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("10_fqmk2")
 
-[node name="Planks4" type="Sprite2D" parent="BackWall" unique_id=508810257]
+[node name="Planks12" type="Sprite2D" parent="." unique_id=508810257]
 position = Vector2(735, 82)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("10_fqmk2")
 
-[node name="Planks5" type="Sprite2D" parent="BackWall" unique_id=484291839]
+[node name="Planks13" type="Sprite2D" parent="." unique_id=484291839]
 position = Vector2(899, 82)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("10_fqmk2")
 
-[node name="Planks6" type="Sprite2D" parent="BackWall" unique_id=1082602563]
+[node name="Planks14" type="Sprite2D" parent="." unique_id=1082602563]
 position = Vector2(1063, 82)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("10_fqmk2")
 
-[node name="Planks7" type="Sprite2D" parent="BackWall" unique_id=1363072389]
+[node name="Planks15" type="Sprite2D" parent="." unique_id=1363072389]
 position = Vector2(571, 82)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("10_fqmk2")
 
-[node name="Planks8" type="Sprite2D" parent="BackWall" unique_id=1963085405]
-position = Vector2(1228, 82)
+[node name="Planks16" type="Sprite2D" parent="." unique_id=1963085405]
+position = Vector2(1225, 82)
 scale = Vector2(0.16, 0.16)
 texture = ExtResource("10_fqmk2")
 
-[node name="Bookshelf" parent="BackWall" unique_id=696840804 instance=ExtResource("3_fcilv")]
+[node name="Bookshelf" parent="." unique_id=696840804 instance=ExtResource("3_fcilv")]
 position = Vector2(576, 132)
 scale = Vector2(4, 4)
+
+[node name="Recipes" parent="." unique_id=1255496518 instance=ExtResource("4_yqa6y")]
+visible = false
+position = Vector2(422, 20)
+scale = Vector2(0.9, 0.9)
+
+[node name="Illnesses" parent="." unique_id=1078342918 instance=ExtResource("5_n3rqw")]
+visible = false
+position = Vector2(422, 20)
+scale = Vector2(0.9, 0.9)
+
+[node name="Ingredients" parent="." unique_id=572742726 instance=ExtResource("8_ise63")]
+visible = false
+position = Vector2(712, 20)
+scale = Vector2(0.9, 0.9)
 
 [connection signal="pressed" from="SeePatients" to="." method="_on_see_patients_pressed"]

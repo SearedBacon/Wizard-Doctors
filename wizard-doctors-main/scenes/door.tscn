@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://8c3f3xuwntl3"]
+
+[ext_resource type="Texture2D" uid="uid://0lttiglfngxu" path="res://assets/castledoors.png" id="1_hpvv5"]
+[ext_resource type="Script" uid="uid://bf1ojmosjok45" path="res://scripts/door.gd" id="1_uvdjg"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_uvdjg"]
+blend_mode = 1
+
+[node name="Door" type="Node2D" unique_id=1597790803]
+script = ExtResource("1_uvdjg")
+
+[node name="Castledoors" type="Sprite2D" parent="." unique_id=1873325382]
+position = Vector2(32, 48)
+texture = ExtResource("1_hpvv5")
+
+[node name="Button" type="Button" parent="." unique_id=687698659]
+material = SubResource("CanvasItemMaterial_uvdjg")
+offset_top = 25.0
+offset_right = 64.0
+offset_bottom = 97.0
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
