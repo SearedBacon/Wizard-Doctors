@@ -13,3 +13,4 @@ var fur:=0
 var wisteria:=0
 var waterbottles:=0
 var shells:=0
+var fishscales:=0
