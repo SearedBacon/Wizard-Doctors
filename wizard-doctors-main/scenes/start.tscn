@@ -1,9 +1,11 @@
 [gd_scene format=3 uid="uid://dyck1o4bhxpwp"]
 
 [ext_resource type="Script" uid="uid://b2u1dwqb882km" path="res://scripts/start.gd" id="1_jaeev"]
+[ext_resource type="FontFile" uid="uid://nbr1p2koff0c" path="res://assets/Firlest-Regular.otf" id="2_u80x2"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_ewcy1"]
-font_size = 60
+font = ExtResource("2_u80x2")
+font_size = 100
 
 [node name="Start" type="Node2D" unique_id=1617238037]
 script = ExtResource("1_jaeev")
@@ -13,28 +15,30 @@ offset_right = 1153.0
 offset_bottom = 646.0
 color = Color(0, 0.67852193, 0.12229746, 1)
 
-[node name="Label" type="Label" parent="." unique_id=261803195]
-offset_left = 341.0
-offset_top = 86.0
-offset_right = 753.0
-offset_bottom = 169.0
+[node name="Title" type="Label" parent="." unique_id=261803195]
+offset_left = 279.0
+offset_top = 76.0
+offset_right = 868.0
+offset_bottom = 161.0
 text = "Wizard Doctor"
 label_settings = SubResource("LabelSettings_ewcy1")
 
 [node name="Start" type="Button" parent="." unique_id=328744194]
-offset_left = 233.0
-offset_top = 355.0
-offset_right = 335.0
-offset_bottom = 418.0
-theme_override_font_sizes/font_size = 40
+offset_left = 492.0
+offset_top = 287.0
+offset_right = 643.0
+offset_bottom = 350.0
+theme_override_fonts/font = ExtResource("2_u80x2")
+theme_override_font_sizes/font_size = 60
 text = "Start"
 
 [node name="Quit" type="Button" parent="." unique_id=1688800533]
-offset_left = 624.0
-offset_top = 350.0
-offset_right = 716.0
-offset_bottom = 413.0
-theme_override_font_sizes/font_size = 40
+offset_left = 514.0
+offset_top = 406.0
+offset_right = 621.0
+offset_bottom = 469.0
+theme_override_fonts/font = ExtResource("2_u80x2")
+theme_override_font_sizes/font_size = 60
 text = "Quit"
 
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
