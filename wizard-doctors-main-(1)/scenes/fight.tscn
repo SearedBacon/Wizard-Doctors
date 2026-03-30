@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://drjh7qov5v75e" path="res://assets/Health.png" id="1_htrw1"]
 [ext_resource type="Texture2D" uid="uid://dtl0ifdv85wch" path="res://assets/Monster Pack 21 (Bovine)/Spritesheets/Updated Boar/Boar_Attack.png" id="3_5mf5x"]
 [ext_resource type="Texture2D" uid="uid://ctl2r4t7bhidt" path="res://assets/Monster Pack 21 (Bovine)/Spritesheets/Updated Boar/Boar_Idle.png" id="4_qogor"]
+[ext_resource type="FontFile" uid="uid://nbr1p2koff0c" path="res://assets/Firlest-Regular.otf" id="5_qogor"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_htrw1"]
 atlas = ExtResource("1_537il")
@@ -260,7 +261,7 @@ scale = Vector2(0.28382543, 0.17181888)
 texture = ExtResource("1_htrw1")
 
 [node name="player" type="AnimatedSprite2D" parent="." unique_id=761432315]
-position = Vector2(168, 492.00003)
+position = Vector2(168, 496)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_8lmvx")
 animation = &"Idle"
@@ -272,9 +273,18 @@ scale = Vector2(0.284, 0.172)
 texture = ExtResource("1_htrw1")
 
 [node name="boar" type="AnimatedSprite2D" parent="." unique_id=1158277082]
-position = Vector2(937, 541)
+position = Vector2(937, 522)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_g2u6g")
 animation = &"Idle"
 autoplay = "Idle"
 frame_progress = 0.031156933
+
+[node name="Attack" type="Button" parent="." unique_id=1472194184]
+offset_left = 59.0
+offset_top = 301.0
+offset_right = 117.0
+offset_bottom = 332.0
+theme_override_fonts/font = ExtResource("5_qogor")
+theme_override_font_sizes/font_size = 30
+text = "Attack"
