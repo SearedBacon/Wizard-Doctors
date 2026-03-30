@@ -13,6 +13,7 @@ var fur:=0
 var wisteria:=0
 var waterbottles:=0
 var shells:=0
+<<<<<<< HEAD
 var rabbitsfoot:=0
 var tusk:=0
 var run:=true
@@ -20,3 +21,6 @@ var left:=true
 var right:=false
 var up:=false
 var down:=false
+=======
+var fishscales:=0
+>>>>>>> 2897292930c0c2a5ad43d35f1552f67411eefe28

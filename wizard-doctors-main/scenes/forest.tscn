@@ -4,7 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://btymkmtbbnfvf" path="res://assets/tree.png" id="2_bgcxa"]
 [ext_resource type="PackedScene" uid="uid://cwaq2g87cu4nh" path="res://scenes/player.tscn" id="3_bgcxa"]
 [ext_resource type="Texture2D" uid="uid://b8skqa7p4vjto" path="res://assets/signpost.png" id="4_yj5dr"]
+<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://eil78wv5w8vv" path="res://scenes/boar.tscn" id="5_xr56k"]
+=======
+[ext_resource type="PackedScene" uid="uid://dcpvu70fspdyw" path="res://scenes/enemies.tscn" id="5_xr56k"]
+>>>>>>> 2897292930c0c2a5ad43d35f1552f67411eefe28
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yj5dr"]
 texture = ExtResource("1_0afsd")
@@ -222,11 +226,16 @@ text = "Beach"
 position = Vector2(383, 485)
 disable_mode = 2
 
+<<<<<<< HEAD
 [node name="Boar" parent="." unique_id=326999417 instance=ExtResource("5_xr56k")]
 position = Vector2(421, 388)
 
 [node name="Boar2" parent="." unique_id=741676734 instance=ExtResource("5_xr56k")]
 position = Vector2(366, 245)
+=======
+[node name="Enemies" parent="." unique_id=631846250 instance=ExtResource("5_xr56k")]
+position = Vector2(430.00003, 487)
+>>>>>>> 2897292930c0c2a5ad43d35f1552f67411eefe28
 
 [connection signal="body_entered" from="GoHome" to="Player" method="_on_go_home_body_entered"]
 [connection signal="body_entered" from="GoBeach" to="Player" method="_on_go_beach_body_entered"]
