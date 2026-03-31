@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://cc7wh8rgbi8yq"]
+
+[ext_resource type="Texture2D" uid="uid://btymkmtbbnfvf" path="res://assets/tree.png" id="1_avsvi"]
+[ext_resource type="Script" uid="uid://cljny7mt5212e" path="res://scripts/tree.gd" id="2_vplca"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_vplca"]
+size = Vector2(6, 3.0000005)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_viusy"]
+size = Vector2(28, 24)
+
+[node name="Tree" type="Sprite2D" unique_id=694139078]
+scale = Vector2(3, 3)
+texture = ExtResource("1_avsvi")
+script = ExtResource("2_vplca")
+
+[node name="Stop" type="CharacterBody2D" parent="." unique_id=1802280293]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Stop" unique_id=642276514]
+position = Vector2(-0.6666667, 10.666666)
+shape = SubResource("RectangleShape2D_vplca")
+
+[node name="Behind" type="Area2D" parent="." unique_id=1608243979]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Behind" unique_id=973486833]
+position = Vector2(4.7683716e-07, -2)
+shape = SubResource("RectangleShape2D_viusy")
+
+[connection signal="body_entered" from="Behind" to="." method="_on_behind_body_entered"]
+[connection signal="body_exited" from="Behind" to="." method="_on_behind_body_exited"]

@@ -1,0 +1,24 @@
+extends Node
+
+var ipage:=0
+var rpage:=0
+var ingredientpage:=0
+var IngredientScreen=false
+var rScreen=false
+var iScreen=false
+var speed:=100
+var behind:=false
+var bones:=0
+var treeroot:=0
+var fur:=0
+var wisteria:=0
+var waterbottles:=0
+var shells:=0
+var rabbitsfoot:=0
+var tusk:=0
+var run:=true
+var left:=true
+var right:=false
+var up:=false
+var down:=false
+var fishscales:=0
