@@ -34,4 +34,8 @@ func _process(delta: float) -> void:
 			await get_tree().create_timer(2).timeout
 			Globals.down=false
 			Globals.left=true
-	
+
+func _on_body_entered(body: Node2D) -> void:
+	if body is Player:
+		Globals.fightb=true
+		boar.visible=false

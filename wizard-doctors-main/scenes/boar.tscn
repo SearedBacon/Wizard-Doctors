@@ -208,3 +208,5 @@ shape = SubResource("RectangleShape2D_f7758")
 scale = Vector2(1.5, 1.5)
 sprite_frames = SubResource("SpriteFrames_p1bql")
 animation = &"Down"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

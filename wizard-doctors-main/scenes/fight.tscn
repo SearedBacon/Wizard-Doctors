@@ -1,9 +1,12 @@
 [gd_scene format=3 uid="uid://co2mws5dkvqbg"]
 
+[ext_resource type="Script" uid="uid://byua2gubvumd2" path="res://scripts/fight.gd" id="1_57w1i"]
 [ext_resource type="Texture2D" uid="uid://ctm7ghq6led33" path="res://assets/wizard spritesheet calciumtrice.png" id="1_537il"]
 [ext_resource type="Texture2D" uid="uid://drjh7qov5v75e" path="res://assets/Health.png" id="1_htrw1"]
 [ext_resource type="Texture2D" uid="uid://dtl0ifdv85wch" path="res://assets/Monster Pack 21 (Bovine)/Spritesheets/Updated Boar/Boar_Attack.png" id="3_5mf5x"]
 [ext_resource type="Texture2D" uid="uid://ctl2r4t7bhidt" path="res://assets/Monster Pack 21 (Bovine)/Spritesheets/Updated Boar/Boar_Idle.png" id="4_qogor"]
+[ext_resource type="FontFile" uid="uid://nbr1p2koff0c" path="res://assets/Firlest-Regular.otf" id="5_qogor"]
+[ext_resource type="PackedScene" uid="uid://sbr2i1y3m6vg" path="res://scenes/attack.tscn" id="7_f43n0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_htrw1"]
 atlas = ExtResource("1_537il")
@@ -242,6 +245,7 @@ animations = [{
 }]
 
 [node name="Fight" type="Node2D" unique_id=1759373432]
+script = ExtResource("1_57w1i")
 
 [node name="Bg" type="ColorRect" parent="." unique_id=1720872719]
 offset_right = 1152.0
@@ -249,32 +253,70 @@ offset_bottom = 648.0
 color = Color(0, 0.8833332, 1, 1)
 
 [node name="Ground" type="ColorRect" parent="." unique_id=454026362]
-offset_top = 387.0
+offset_top = 177.0
 offset_right = 1152.0
-offset_bottom = 648.0
+offset_bottom = 438.0
 color = Color(8.1822276e-07, 0.5225101, 0.16669819, 1)
 
+[node name="Yes" type="ColorRect" parent="." unique_id=1507826682]
+offset_top = 438.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.47708946, 0.2595265, 2.8878452e-07, 1)
+
 [node name="Health" type="Sprite2D" parent="." unique_id=182276314]
-position = Vector2(166, 565)
+position = Vector2(166, 355)
 scale = Vector2(0.28382543, 0.17181888)
 texture = ExtResource("1_htrw1")
 
 [node name="player" type="AnimatedSprite2D" parent="." unique_id=761432315]
-position = Vector2(168, 492.00003)
+position = Vector2(168, 282.00003)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_8lmvx")
 animation = &"Idle"
 autoplay = "Idle"
 
 [node name="Health2" type="Sprite2D" parent="." unique_id=1918300003]
-position = Vector2(942.00006, 564)
+position = Vector2(942.00006, 354)
 scale = Vector2(0.284, 0.172)
 texture = ExtResource("1_htrw1")
 
 [node name="boar" type="AnimatedSprite2D" parent="." unique_id=1158277082]
-position = Vector2(937, 541)
+position = Vector2(937, 331)
 scale = Vector2(3, 3)
 sprite_frames = SubResource("SpriteFrames_g2u6g")
 animation = &"Idle"
 autoplay = "Idle"
 frame_progress = 0.031156933
+
+[node name="Attack" type="Button" parent="." unique_id=647648469]
+offset_left = 95.0
+offset_top = 514.0
+offset_right = 308.0
+offset_bottom = 582.0
+theme_override_fonts/font = ExtResource("5_qogor")
+theme_override_font_sizes/font_size = 70
+text = "Attack"
+
+[node name="Bag" type="Button" parent="." unique_id=162343575]
+offset_left = 468.0
+offset_top = 514.0
+offset_right = 580.0
+offset_bottom = 582.0
+theme_override_fonts/font = ExtResource("5_qogor")
+theme_override_font_sizes/font_size = 70
+text = "Bag"
+
+[node name="Run" type="Button" parent="." unique_id=15408533]
+offset_left = 753.0
+offset_top = 514.0
+offset_right = 1096.0
+offset_bottom = 582.0
+theme_override_fonts/font = ExtResource("5_qogor")
+theme_override_font_sizes/font_size = 70
+text = "Flee In Fear"
+
+[node name="Attacks" parent="." unique_id=1480694836 instance=ExtResource("7_f43n0")]
+visible = false
+
+[connection signal="pressed" from="Attack" to="." method="_on_attack_pressed"]
