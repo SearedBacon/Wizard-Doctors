@@ -1337,7 +1337,7 @@ position = Vector2(692, 596)
 shape = SubResource("RectangleShape2D_43n2k")
 
 [node name="border2" type="CharacterBody2D" parent="." unique_id=226964882]
-position = Vector2(-5, -549)
+position = Vector2(-5, -495)
 up_direction = Vector2(-0.8011671, -0.5984408)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="border2" unique_id=1425942688]
