@@ -24,3 +24,4 @@ var down:=false
 var fishscales:=0
 var fightb:=false
 var attack:=false
+var shop:=false

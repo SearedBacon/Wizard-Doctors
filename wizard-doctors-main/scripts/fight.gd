@@ -9,10 +9,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		player.play("Idle")
 
-
 func _on_attack_pressed() -> void:
 	attacks.visible=true
-
 
 func _on_run_pressed() -> void:
 	Globals.fightb=false
