@@ -37,7 +37,7 @@ func update_animations(direction:int)->void:
 
 func _on_go_home_body_entered(body: Node2D) -> void:
 	if body is Player:
-		get_tree().change_scene_to_file("res://scenes/clinic.tscn")
+		get_tree().change_scene_to_file("res://scenes/village.tscn")
 
 
 func _on_go_beach_body_entered(body: Node2D) -> void:

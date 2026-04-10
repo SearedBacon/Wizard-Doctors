@@ -61,3 +61,7 @@ func _on_area_2d_8_body_exited(_body: Node2D) -> void:
 
 func _on_leave_body_entered(body: Node2D) -> void:
 	get_tree().change_scene_to_file("res://scenes/forest.tscn")
+
+
+func _on_home_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://scenes/clinic.tscn")

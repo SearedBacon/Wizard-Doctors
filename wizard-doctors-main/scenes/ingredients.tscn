@@ -87,7 +87,7 @@ offset_right = 273.0
 offset_bottom = 545.0
 color = Color(0.31, 0.31, 0.31, 0.6666667)
 
-[node name="Name" type="Label" parent="." unique_id=1964416846]
+[node name="Names" type="Label" parent="." unique_id=1964416846]
 offset_left = 98.0
 offset_top = 93.0
 offset_right = 266.0
