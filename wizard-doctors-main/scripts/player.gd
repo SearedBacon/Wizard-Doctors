@@ -4,7 +4,7 @@ class_name Player
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var player: CharacterBody2D = $"."
 var active:=true
-
+@export var speed:=100
 
 func _physics_process(_delta: float) -> void:
 	var direction:=0
@@ -17,8 +17,8 @@ func _physics_process(_delta: float) -> void:
 		animated_sprite.flip_h =(direction==-1)
 	update_animations(direction)
 	
-	velocity.x=direction*Globals.speed
-	velocity.y=directions*Globals.speed
+	velocity.x=direction*speed
+	velocity.y=directions*speed
 	
 
 	move_and_slide()

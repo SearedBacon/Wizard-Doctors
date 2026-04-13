@@ -316,9 +316,6 @@ script = ExtResource("1_3vyb7")
 position = Vector2(0, 27)
 shape = SubResource("RectangleShape2D_u8vuu")
 
-[node name="Camera2D" type="Camera2D" parent="." unique_id=254337668]
-zoom = Vector2(3, 3)
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2054485934]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_jej6c")

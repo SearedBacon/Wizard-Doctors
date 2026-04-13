@@ -1328,6 +1328,9 @@ tile_set = SubResource("TileSet_tdq1v")
 [node name="Player" parent="." unique_id=1553301949 instance=ExtResource("3_43n2k")]
 position = Vector2(323, 416)
 
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1039579220]
+zoom = Vector2(3, 3)
+
 [node name="border" type="CharacterBody2D" parent="." unique_id=1209674656]
 position = Vector2(0, 15)
 up_direction = Vector2(-0.8011671, -0.5984408)

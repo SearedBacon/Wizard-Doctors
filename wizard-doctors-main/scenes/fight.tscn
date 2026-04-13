@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ctl2r4t7bhidt" path="res://assets/Monster Pack 21 (Bovine)/Spritesheets/Updated Boar/Boar_Idle.png" id="4_qogor"]
 [ext_resource type="FontFile" uid="uid://nbr1p2koff0c" path="res://assets/Firlest-Regular.otf" id="5_qogor"]
 [ext_resource type="PackedScene" uid="uid://sbr2i1y3m6vg" path="res://scenes/attack.tscn" id="7_f43n0"]
+[ext_resource type="PackedScene" uid="uid://d1di882f184wj" path="res://scenes/chargeeeee.tscn" id="8_i268b"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_htrw1"]
 atlas = ExtResource("1_537il")
@@ -244,6 +245,9 @@ animations = [{
 "speed": 6.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i268b"]
+size = Vector2(20, 61.666664)
+
 [node name="Fight" type="Node2D" unique_id=1759373432]
 script = ExtResource("1_57w1i")
 
@@ -289,6 +293,12 @@ animation = &"Idle"
 autoplay = "Idle"
 frame_progress = 0.031156933
 
+[node name="Area2D" type="Area2D" parent="boar" unique_id=892963689]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="boar/Area2D" unique_id=1872306480]
+position = Vector2(0, -14.166664)
+shape = SubResource("RectangleShape2D_i268b")
+
 [node name="Attack" type="Button" parent="." unique_id=647648469]
 offset_left = 95.0
 offset_top = 514.0
@@ -315,9 +325,6 @@ offset_bottom = 582.0
 theme_override_fonts/font = ExtResource("5_qogor")
 theme_override_font_sizes/font_size = 70
 text = "Flee In Fear"
-
-[node name="Attacks" parent="." unique_id=1480694836 instance=ExtResource("7_f43n0")]
-visible = false
 
 [node name="HealthBack" type="ColorRect" parent="." unique_id=484075180]
 offset_left = 44.0
@@ -346,6 +353,13 @@ offset_top = 406.0
 offset_right = 1071.0
 offset_bottom = 442.0
 color = Color(0.74, 0, 0, 1)
+
+[node name="Attacks" parent="." unique_id=1480694836 instance=ExtResource("7_f43n0")]
+visible = false
+
+[node name="CHARGEEEEE" parent="." unique_id=469363788 instance=ExtResource("8_i268b")]
+visible = false
+position = Vector2(252, 287)
 
 [connection signal="pressed" from="Attack" to="." method="_on_attack_pressed"]
 [connection signal="pressed" from="Run" to="." method="_on_run_pressed"]

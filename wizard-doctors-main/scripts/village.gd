@@ -65,3 +65,11 @@ func _on_leave_body_entered(body: Node2D) -> void:
 
 func _on_home_body_entered(body: Node2D) -> void:
 	get_tree().change_scene_to_file("res://scenes/clinic.tscn")
+
+func _on_area_2d_9_body_entered(body: Node2D) -> void:
+	if body is Player:
+		Globals.behind=true
+
+func _on_area_2d_9_body_exited(body: Node2D) -> void:
+	if body is Player:
+		Globals.behind=false

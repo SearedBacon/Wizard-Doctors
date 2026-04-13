@@ -230,6 +230,9 @@ position = Vector2(909, 462)
 position = Vector2(383, 485)
 disable_mode = 2
 
+[node name="PCamera2D" type="Camera2D" parent="Player" unique_id=1777615194]
+zoom = Vector2(3, 3)
+
 [node name="Skeletons" parent="." unique_id=1340739391 instance=ExtResource("7_i1yi8")]
 position = Vector2(590, 350)
 
@@ -248,6 +251,9 @@ texture = ExtResource("10_3knxq")
 position = Vector2(0.00012207031, 0.00012207031)
 scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("RectangleShape2D_ercsu")
+
+[node name="FCamera2D" type="Camera2D" parent="." unique_id=2079530167]
+position = Vector2(576, 316)
 
 [connection signal="body_entered" from="GoHome" to="Player" method="_on_go_home_body_entered"]
 [connection signal="body_entered" from="GoBeach" to="Player" method="_on_go_beach_body_entered"]
