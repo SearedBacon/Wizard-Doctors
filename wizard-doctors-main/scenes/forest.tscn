@@ -236,10 +236,6 @@ zoom = Vector2(3, 3)
 [node name="Skeletons" parent="." unique_id=1340739391 instance=ExtResource("7_i1yi8")]
 position = Vector2(590, 350)
 
-[node name="Fight" parent="." unique_id=1759373432 instance=ExtResource("9_3knxq")]
-visible = false
-z_index = 2
-
 [node name="tusk" type="Sprite2D" parent="." unique_id=199992802]
 position = Vector2(468.99997, 462.99997)
 scale = Vector2(0.2515788, 0.2464924)
@@ -252,8 +248,13 @@ position = Vector2(0.00012207031, 0.00012207031)
 scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("RectangleShape2D_ercsu")
 
+[node name="Fight" parent="." unique_id=1759373432 instance=ExtResource("9_3knxq")]
+z_index = 1000
+position = Vector2(-2, 7)
+
 [node name="FCamera2D" type="Camera2D" parent="." unique_id=2079530167]
-position = Vector2(576, 316)
+position = Vector2(574.0001, 322.99994)
+scale = Vector2(1.0000002, 1.0000002)
 
 [connection signal="body_entered" from="GoHome" to="Player" method="_on_go_home_body_entered"]
 [connection signal="body_entered" from="GoBeach" to="Player" method="_on_go_beach_body_entered"]

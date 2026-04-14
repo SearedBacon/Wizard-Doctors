@@ -5,7 +5,9 @@ extends TileMapLayer
 @onready var f_camera_2d: Camera2D = $FCamera2D
 
 func _physics_process(delta: float) -> void:
+	
 	f_camera_2d.enabled=false
+	
 	if Globals.collectT==true and Input.is_action_just_pressed("collect"):
 		Globals.tusk+=1
 		Globals.collectTPerm=true

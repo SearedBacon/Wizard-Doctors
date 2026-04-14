@@ -39,3 +39,4 @@ func _on_body_entered(body: Node2D) -> void:
 	if body is Player:
 		Globals.fightb=true
 		boar.visible=false
+		Globals.doneb=false

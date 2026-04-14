@@ -29,3 +29,5 @@ var shop:=false
 var time:=true
 var fights:=false
 var go:=false
+var please:=true
+var doneb:=true
