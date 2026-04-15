@@ -13,20 +13,27 @@ func _physics_process(delta: float) -> void:
 		Globals.go=true
 		Globals.please=true
 		await get_tree().create_timer(1.8).timeout
-		chargeeeee.global_position=Vector2(252, 287)
+		chargeeeee.global_position=Vector2(1460, 287)
 		Globals.go=false
 		Globals.please=false
 	else:
 		player.play("Idle")
 	
 	if health_2.size.x<=0:
+		Globals.fightb=false
+		Globals.bdead=true
+		health_2.size.x=253
 		Globals.doneb=true
+		
 
 func _on_attack_pressed() -> void:
 	attacks.visible=true
 
 func _on_run_pressed() -> void:
 	Globals.fightb=false
+	Globals.bdead=false
+	health_2.size.x=253
+	Globals.doneb=false
 
 func _on_hitb_body_entered(body: Node2D) -> void:
 	health_2.size.x-=100

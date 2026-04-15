@@ -66,6 +66,18 @@ size = Vector2(47, 49)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sek5r"]
 size = Vector2(59, 59)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3knxq"]
+size = Vector2(82, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_j3csf"]
+size = Vector2(82, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_dabdc"]
+size = Vector2(82, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cf55d"]
+size = Vector2(82, 90)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ercsu"]
 size = Vector2(119.24695, 121.70776)
 
@@ -217,14 +229,38 @@ text = "Beach"
 [node name="Boar" parent="." unique_id=326999417 instance=ExtResource("5_xr56k")]
 position = Vector2(421, 388)
 
+[node name="boar1" type="Area2D" parent="Boar" unique_id=265750301]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boar/boar1" unique_id=779364885]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_3knxq")
+
 [node name="Boar2" parent="." unique_id=741676734 instance=ExtResource("5_xr56k")]
 position = Vector2(362, 236)
+
+[node name="boar2" type="Area2D" parent="Boar2" unique_id=516667640]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boar2/boar2" unique_id=623684246]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_j3csf")
 
 [node name="Boar3" parent="." unique_id=1485468425 instance=ExtResource("5_xr56k")]
 position = Vector2(678, 211)
 
+[node name="boar3" type="Area2D" parent="Boar3" unique_id=30864993]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boar3/boar3" unique_id=1954256892]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_dabdc")
+
 [node name="Boar4" parent="." unique_id=1956731487 instance=ExtResource("5_xr56k")]
 position = Vector2(909, 462)
+
+[node name="boar4" type="Area2D" parent="Boar4" unique_id=1708993141]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boar4/boar4" unique_id=1305298417]
+position = Vector2(0, 11)
+shape = SubResource("RectangleShape2D_cf55d")
 
 [node name="Player" parent="." unique_id=1553301949 instance=ExtResource("3_bgcxa")]
 position = Vector2(383, 485)
@@ -250,13 +286,17 @@ shape = SubResource("RectangleShape2D_ercsu")
 
 [node name="Fight" parent="." unique_id=1759373432 instance=ExtResource("9_3knxq")]
 z_index = 1000
-position = Vector2(-2, 7)
+position = Vector2(1208, 7)
 
 [node name="FCamera2D" type="Camera2D" parent="." unique_id=2079530167]
-position = Vector2(574.0001, 322.99994)
+position = Vector2(1784.0001, 322.99994)
 scale = Vector2(1.0000002, 1.0000002)
 
 [connection signal="body_entered" from="GoHome" to="Player" method="_on_go_home_body_entered"]
 [connection signal="body_entered" from="GoBeach" to="Player" method="_on_go_beach_body_entered"]
+[connection signal="body_entered" from="Boar/boar1" to="." method="_on_boar_1_body_entered"]
+[connection signal="body_entered" from="Boar2/boar2" to="." method="_on_boar_2_body_entered"]
+[connection signal="body_entered" from="Boar3/boar3" to="." method="_on_boar_3_body_entered"]
+[connection signal="body_entered" from="Boar4/boar4" to="." method="_on_boar_4_body_entered"]
 [connection signal="body_entered" from="tusk/collect" to="." method="_on_collect_body_entered"]
 [connection signal="body_exited" from="tusk/collect" to="." method="_on_collect_body_exited"]

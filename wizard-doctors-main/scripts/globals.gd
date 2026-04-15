@@ -31,3 +31,5 @@ var fights:=false
 var go:=false
 var please:=true
 var doneb:=true
+var bdead:=false
+var whichb:=0
