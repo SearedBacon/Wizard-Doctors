@@ -272,12 +272,12 @@ offset_bottom = 648.0
 color = Color(0.47708946, 0.2595265, 2.8878452e-07, 1)
 
 [node name="CIRCLE" type="Sprite2D" parent="." unique_id=182276314]
-position = Vector2(166, 355)
+position = Vector2(162, 356)
 scale = Vector2(0.28382543, 0.17181888)
 texture = ExtResource("1_htrw1")
 
 [node name="player" type="AnimatedSprite2D" parent="." unique_id=761432315]
-position = Vector2(168, 282.00003)
+position = Vector2(164, 283.00003)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_8lmvx")
 animation = &"Attack"
@@ -311,30 +311,30 @@ texture = ExtResource("1_htrw1")
 
 [node name="HealthBack" type="ColorRect" parent="." unique_id=484075180]
 offset_left = 44.0
-offset_top = 403.0
+offset_top = 400.0
 offset_right = 303.0
-offset_bottom = 445.0
+offset_bottom = 442.0
 color = Color(0.2833844, 0.28338444, 0.2833844, 1)
 
 [node name="Health" type="ColorRect" parent="." unique_id=1920706880]
 offset_left = 47.0
-offset_top = 406.0
+offset_top = 403.0
 offset_right = 300.0
-offset_bottom = 442.0
+offset_bottom = 439.0
 color = Color(0.7370735, 2.3102762e-06, 9.62615e-07, 1)
 
 [node name="HealthBack2" type="ColorRect" parent="." unique_id=1052871545]
 offset_left = 814.59
-offset_top = 403.0
+offset_top = 400.0
 offset_right = 1073.5894
-offset_bottom = 445.0
+offset_bottom = 442.0
 color = Color(0.28, 0.28, 0.28, 1)
 
 [node name="Health2" type="ColorRect" parent="." unique_id=60046634]
 offset_left = 818.0
-offset_top = 406.0
+offset_top = 403.0
 offset_right = 1071.0
-offset_bottom = 442.0
+offset_bottom = 439.0
 color = Color(0.74, 0, 0, 1)
 
 [node name="CHARGEEEEE" parent="." unique_id=469363788 instance=ExtResource("8_i268b")]
@@ -369,7 +369,7 @@ theme_override_font_sizes/font_size = 70
 text = "Flee In Fear"
 
 [node name="Attacks" parent="." unique_id=1480694836 instance=ExtResource("7_f43n0")]
-visible = false
+position = Vector2(0, 438)
 
 [connection signal="body_entered" from="player/hitp" to="." method="_on_hitp_body_entered"]
 [connection signal="area_entered" from="boar/Hitb" to="." method="_on_hitb_area_entered"]

@@ -11,23 +11,33 @@ script = ExtResource("1_jy1op")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1246924244]
 offset_right = 1152.0
-offset_bottom = 648.0
+offset_bottom = 210.0
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=224218524]
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 1150.0
-offset_bottom = 646.0
+offset_bottom = 208.0
 color = Color(0, 0, 0, 1)
 
 [node name="FIREBALL" type="Button" parent="." unique_id=1061831228]
 material = SubResource("CanvasItemMaterial_nursx")
-offset_left = 247.0
-offset_top = 225.0
-offset_right = 900.0
-offset_bottom = 401.0
+offset_left = 356.0
+offset_top = 80.0
+offset_right = 493.0
+offset_bottom = 122.0
 theme_override_fonts/font = ExtResource("1_nursx")
-theme_override_font_sizes/font_size = 200
+theme_override_font_sizes/font_size = 40
 text = "FIREBALL"
 
+[node name="LIGHTNINGBOLT" type="Button" parent="." unique_id=1824367274]
+offset_left = 70.0
+offset_top = 80.0
+offset_right = 303.0
+offset_bottom = 122.0
+theme_override_fonts/font = ExtResource("1_nursx")
+theme_override_font_sizes/font_size = 40
+text = "lightning bolt"
+
 [connection signal="pressed" from="FIREBALL" to="." method="_on_fireball_pressed"]
+[connection signal="pressed" from="LIGHTNINGBOLT" to="." method="_on_lightningbolt_pressed"]
