@@ -162,6 +162,9 @@ animations = [{
 "speed": 10.0
 }]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_bjlyo"]
+size = Vector2(10.8, 32.800007)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_wu0rg"]
 atlas = ExtResource("3_5mf5x")
 region = Rect2(0, 128, 128, 128)
@@ -246,7 +249,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i268b"]
-size = Vector2(20, 61.666664)
+size = Vector2(20, 16.666668)
 
 [node name="Fight" type="Node2D" unique_id=1073864691]
 script = ExtResource("1_57w1i")
@@ -280,10 +283,12 @@ sprite_frames = SubResource("SpriteFrames_8lmvx")
 animation = &"Attack"
 autoplay = "Idle"
 
-[node name="CIRCLE2" type="Sprite2D" parent="." unique_id=1918300003]
-position = Vector2(942.00006, 354)
-scale = Vector2(0.284, 0.172)
-texture = ExtResource("1_htrw1")
+[node name="hitp" type="Area2D" parent="player" unique_id=869564062]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player/hitp" unique_id=1058573102]
+position = Vector2(-1.2000008, -0.40000534)
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_bjlyo")
 
 [node name="boar" type="AnimatedSprite2D" parent="." unique_id=1158277082]
 position = Vector2(937, 331)
@@ -296,8 +301,13 @@ frame_progress = 0.031156933
 [node name="Hitb" type="Area2D" parent="boar" unique_id=892963689]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="boar/Hitb" unique_id=1872306480]
-position = Vector2(0, -14.166664)
+position = Vector2(0, 8.333336)
 shape = SubResource("RectangleShape2D_i268b")
+
+[node name="CIRCLE2" type="Sprite2D" parent="." unique_id=1918300003]
+position = Vector2(942.00006, 354)
+scale = Vector2(0.284, 0.172)
+texture = ExtResource("1_htrw1")
 
 [node name="HealthBack" type="ColorRect" parent="." unique_id=484075180]
 offset_left = 44.0
@@ -361,6 +371,8 @@ text = "Flee In Fear"
 [node name="Attacks" parent="." unique_id=1480694836 instance=ExtResource("7_f43n0")]
 visible = false
 
+[connection signal="body_entered" from="player/hitp" to="." method="_on_hitp_body_entered"]
+[connection signal="area_entered" from="boar/Hitb" to="." method="_on_hitb_area_entered"]
 [connection signal="body_entered" from="boar/Hitb" to="." method="_on_hitb_body_entered"]
 [connection signal="pressed" from="Attack" to="." method="_on_attack_pressed"]
 [connection signal="pressed" from="Run" to="." method="_on_run_pressed"]

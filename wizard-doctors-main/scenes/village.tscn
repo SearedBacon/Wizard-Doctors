@@ -119,21 +119,21 @@ offset_right = 787.0
 offset_bottom = 244.0
 text = "Magic spells for sale!"
 
-[node name="Nothing" type="Label" parent="." unique_id=1993413316]
+[node name="Heals" type="Label" parent="." unique_id=1993413316]
 visible = false
-offset_left = 333.0
+offset_left = 355.0
 offset_top = 221.0
-offset_right = 541.0
+offset_right = 563.0
 offset_bottom = 244.0
-text = "Absolutely fricking nothing"
+text = "Healing items for sale!"
 
-[node name="Nothing2" type="Label" parent="." unique_id=161100779]
+[node name="PotionStuff" type="Label" parent="." unique_id=161100779]
 visible = false
 offset_left = 73.0
 offset_top = 221.0
 offset_right = 281.0
 offset_bottom = 244.0
-text = "Absolutely fricking nothing"
+text = "Potion materials for sale!"
 
 [node name="Nothing3" type="Label" parent="." unique_id=828759527]
 visible = false

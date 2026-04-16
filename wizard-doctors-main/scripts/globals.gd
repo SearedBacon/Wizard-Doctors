@@ -33,3 +33,4 @@ var please:=true
 var doneb:=true
 var bdead:=false
 var whichb:=0
+var goback:=false
