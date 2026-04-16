@@ -1,0 +1,33 @@
+63f7b34db8d8cdea90c76aacccf841ec
+::res://::1776302677
+icon.svg::CompressedTexture2D::8778575661233667154::1774402534::1774402645::1::::<><><>0<>0<>d8cf4eecc8a3330fd16aa85ea4c5b30d<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://assets/::1774402645
+antique_bookshelf.png::CompressedTexture2D::4017737529941620031::1774402534::1774402645::1::::<><><>0<>0<>09ab42d0594bbf521d8f53fa6c33b197<>res://.godot/imported/antique_bookshelf.png-d2251f19dd780e48ac743e5c9e69846c.ctex::
+boil.png::CompressedTexture2D::658455328887982764::1774402534::1774402645::1::::<><><>0<>0<>e2950b7f0daf265b84363d004c83f309<>res://.godot/imported/boil.png-d2fdf7062ca5d4bedbed3b69286e9279.ctex::
+castledoors.png::CompressedTexture2D::1778617229154840658::1774402534::1774402645::1::::<><><>0<>0<>8815f0edba86bd50b7f68e51631ea564<>res://.godot/imported/castledoors.png-1d963a8c384c48785f378879b13c8d97.ctex::
+New Piskel-1.png.png::CompressedTexture2D::4762034682677332680::1774402534::1774402645::1::::<><><>0<>0<>0c0d5b928be46a071b4057f0205bc2f8<>res://.godot/imported/New Piskel-1.png.png-17c8f2de147b048af02c1d17f056acee.ctex::
+planks.png::CompressedTexture2D::6345438648658217324::1774402534::1774402645::1::::<><><>0<>0<>4447b4edbb8368c6e2ff5c304f522105<>res://.godot/imported/planks.png-c110d31c73671c93f5f9628126108b09.ctex::
+roadPLAZA.tga::CompressedTexture2D::916646969101959897::1774402534::1774402645::1::::<><><>0<>0<>22325ff8be03dd1458d08a7d16065c0a<>res://.godot/imported/roadPLAZA.tga-ae6b56884f320216648f51438ac3eb32.ctex::
+tilestonebricks.png::CompressedTexture2D::5814156493377336803::1774402534::1774402645::1::::<><><>0<>0<>abc556ece088b43fa2b4fdee8e09ec56<>res://.godot/imported/tilestonebricks.png-12973261215b133c12746fb3948b9a78.ctex::
+vendors_table.png::CompressedTexture2D::1393614354802818836::1774402534::1774402645::1::::<><><>0<>0<>3b6a22ac9f2c4052fcf444b82d28be1d<>res://.godot/imported/vendors_table.png-baf1b9787aabce174799b497acaf2e1a.ctex::
+wizard spritesheet calciumtrice.png::CompressedTexture2D::6133155981893172112::1774402534::1774402645::1::::<><><>0<>0<>13fd77cdcb01afde56f4fa2bf69f63f8<>res://.godot/imported/wizard spritesheet calciumtrice.png-ce7a98b5ae502fc231cfdec836d801a7.ctex::
+::res://scenes/::1774402867
+bookshelf.tscn::PackedScene::1827274400122765725::1774402534::0::1::::<><><>0<>0<><>::uid://bxihsx65jokxj::::res://assets/antique_bookshelf.png<>uid://d1wioandktan4::::res://scripts/bookshelf.gd
+cauldron.tscn::PackedScene::7815827863648426610::1774402534::0::1::::<><><>0<>0<><>::uid://cdy0sbvw1s4us::::res://scripts/cauldron.gd<>uid://jm7wsrd8d8km::::res://assets/boil.png
+clinic.tscn::PackedScene::1267887726469267075::1774402867::0::1::::<><><>0<>0<><>::uid://ncbbofkfubv2::::res://assets/roadPLAZA.tga<>uid://djmbspymsfw0a::::res://scenes/cauldron.tscn<>uid://dqewsgslx5xin::::res://scripts/clinic.gd<>uid://1be7boftq3vt::::res://scenes/bookshelf.tscn<>uid://bxemh0k1pqxpg::::res://scenes/recipes.tscn<>uid://yhj8j5fl0d81::::res://scenes/illnesses.tscn<>uid://t4cvijxo41ca::::res://assets/vendors_table.png<>uid://dudi845vmxtmy::::res://scenes/ingredients.tscn<>uid://0lttiglfngxu::::res://assets/castledoors.png<>uid://cwn1phjdg0w7m::::res://assets/planks.png
+globals.tscn::PackedScene::3049197427147832947::1774402534::0::1::::<><><>0<>0<><>::uid://cvldcvy7sk13u::::res://scripts/globals.gd
+illnesses.tscn::PackedScene::1699588795022103200::1774402534::0::1::::<><><>0<>0<><>::uid://be1i3w0lqh6qw::::res://scripts/illnesses.gd<>uid://b831ar5q1tprs::::res://assets/New Piskel-1.png.png
+ingredients.tscn::PackedScene::8569778294735516436::1774402534::0::1::::<><><>0<>0<><>::uid://dii4g8egsrcoo::::res://scripts/ingredients.gd<>uid://b831ar5q1tprs::::res://assets/New Piskel-1.png.png
+player.tscn::PackedScene::6318015983318683061::1774402534::0::1::::<><><>0<>0<><>::uid://u1ro6g2g8pn::::res://scripts/player.gd<>uid://ctm7ghq6led33::::res://assets/wizard spritesheet calciumtrice.png
+recipes.tscn::PackedScene::4009764032588436624::1774402534::0::1::::<><><>0<>0<><>::uid://c6sxmefhw038h::::res://scripts/recipes.gd<>uid://b831ar5q1tprs::::res://assets/New Piskel-1.png.png
+start.tscn::PackedScene::8848577434651333823::1774402534::0::1::::<><><>0<>0<><>::uid://b2u1dwqb882km::::res://scripts/start.gd
+::res://scripts/::1774402541
+bookshelf.gd::GDScript::9030099053547134767::1774402534::0::1::::<>Node2D<><>0<>0<><>::
+cauldron.gd::GDScript::5034503119506492254::1774402534::0::1::::<>Node2D<><>0<>0<><>::
+clinic.gd::GDScript::8291909321913522489::1774402534::0::1::::<>Node2D<><>0<>0<><>::
+globals.gd::GDScript::6269702103189719588::1774402534::0::1::::<>Node<><>0<>0<><>::
+illnesses.gd::GDScript::2721386812677549706::1774402534::0::1::::<>Node2D<><>0<>0<><>::
+ingredients.gd::GDScript::7739061069516807258::1774402534::0::1::::<>Node2D<><>0<>0<><>::
+player.gd::GDScript::42897338914313839::1774402534::0::1::::<>CharacterBody2D<><>0<>0<><>::
+recipes.gd::GDScript::6987272458264655521::1774402534::0::1::::<>Node2D<><>0<>0<><>::
+start.gd::GDScript::4324392196516250628::1774402534::0::1::::<>Node2D<><>0<>0<><>::
