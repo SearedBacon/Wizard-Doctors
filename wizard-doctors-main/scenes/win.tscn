@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://cioypsxrnxgwr"]
+
+[ext_resource type="Script" uid="uid://dm64ppgemuvxs" path="res://scripts/win.gd" id="1_826fv"]
+[ext_resource type="FontFile" uid="uid://nbr1p2koff0c" path="res://assets/Firlest-Regular.otf" id="1_r4oei"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_826fv"]
+font = ExtResource("1_r4oei")
+font_size = 50
+
+[sub_resource type="LabelSettings" id="LabelSettings_r4oei"]
+font = ExtResource("1_r4oei")
+font_size = 70
+
+[node name="Win" type="Node2D" unique_id=712718977]
+script = ExtResource("1_826fv")
+
+[node name="Back" type="ColorRect" parent="." unique_id=1148948582]
+offset_left = -1.0
+offset_top = 438.0
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
+[node name="Top" type="Label" parent="." unique_id=707298276]
+offset_left = 460.0
+offset_top = 514.0
+offset_right = 666.0
+offset_bottom = 557.0
+text = "Boar Dead"
+label_settings = SubResource("LabelSettings_826fv")
+
+[node name="Text" type="Label" parent="." unique_id=1863954117]
+visible = false
+offset_left = 22.0
+offset_top = 473.0
+offset_right = 431.0
+offset_bottom = 533.0
+text = "Items Dropped:"
+label_settings = SubResource("LabelSettings_r4oei")
+
+[node name="Next" type="Button" parent="." unique_id=1863425966]
+offset_left = 1008.0
+offset_top = 580.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_fonts/font = ExtResource("1_r4oei")
+theme_override_font_sizes/font_size = 70
+text = "Next"
+
+[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]

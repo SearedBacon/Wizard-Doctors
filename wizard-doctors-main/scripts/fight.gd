@@ -9,6 +9,8 @@ extends Node2D
 @onready var attack: Button = $Attack
 @onready var bag: Button = $Bag
 @onready var run: Button = $Run
+@onready var close: Button = $Close
+@onready var win: Node2D = $Win
 
 func _physics_process(delta: float) -> void:
 	if Globals.doneb==true and health.size.x<254:
@@ -39,11 +41,20 @@ func _physics_process(delta: float) -> void:
 	else:
 		player.play("Idle")
 	
+	if Globals.fightb==true and Globals.doneb==false:
+		boar.visible=true
+	
 	if health_2.size.x<=0:
-		Globals.fightb=false
-		Globals.bdead=true
-		health_2.size.x=253
-		Globals.doneb=true
+		boar.visible=false
+		close.visible=true
+		win.visible=true
+		boar.global_position=Vector2(1945,331)
+		Globals.which_boar_item=randf_range(0,1)
+	
+	if Globals.pause==true:
+		close.visible=false
+	else:
+		close.visible=true
 
 func _on_attack_pressed() -> void:
 	attacks.visible=true
@@ -67,3 +78,12 @@ func _on_hitb_area_entered(area: Area2D) -> void:
 	attack.disabled=false
 	run.disabled=false
 	bag.disabled=false
+
+
+func _on_close_pressed() -> void:
+	Globals.fightb=false
+	Globals.bdead=true
+	health_2.size.x=253
+	Globals.doneb=true
+	close.visible=false
+	win.visible=true

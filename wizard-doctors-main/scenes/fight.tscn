@@ -8,6 +8,7 @@
 [ext_resource type="FontFile" uid="uid://nbr1p2koff0c" path="res://assets/Firlest-Regular.otf" id="5_qogor"]
 [ext_resource type="PackedScene" uid="uid://sbr2i1y3m6vg" path="res://scenes/attack.tscn" id="7_f43n0"]
 [ext_resource type="PackedScene" uid="uid://d1di882f184wj" path="res://scenes/chargeeeee.tscn" id="8_i268b"]
+[ext_resource type="PackedScene" uid="uid://cioypsxrnxgwr" path="res://scenes/win.tscn" id="9_bjlyo"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_htrw1"]
 atlas = ExtResource("1_537il")
@@ -368,6 +369,19 @@ theme_override_fonts/font = ExtResource("5_qogor")
 theme_override_font_sizes/font_size = 70
 text = "Flee In Fear"
 
+[node name="Win" parent="." unique_id=712718977 instance=ExtResource("9_bjlyo")]
+visible = false
+
+[node name="Close" type="Button" parent="." unique_id=425996156]
+visible = false
+offset_left = 992.0
+offset_top = 580.0
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_fonts/font = ExtResource("5_qogor")
+theme_override_font_sizes/font_size = 70
+text = "Close"
+
 [node name="Attacks" parent="." unique_id=1480694836 instance=ExtResource("7_f43n0")]
 visible = false
 
@@ -376,3 +390,4 @@ visible = false
 [connection signal="body_entered" from="boar/Hitb" to="." method="_on_hitb_body_entered"]
 [connection signal="pressed" from="Attack" to="." method="_on_attack_pressed"]
 [connection signal="pressed" from="Run" to="." method="_on_run_pressed"]
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]

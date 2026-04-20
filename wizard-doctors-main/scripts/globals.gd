@@ -34,3 +34,5 @@ var doneb:=true
 var bdead:=false
 var whichb:=0
 var goback:=false
+var which_boar_item:=0
+var pause:=true
