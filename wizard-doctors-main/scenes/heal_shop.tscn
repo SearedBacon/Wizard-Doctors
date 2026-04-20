@@ -1,25 +1,25 @@
 [gd_scene format=3 uid="uid://b5d2ylayobonk"]
 
-[ext_resource type="FontFile" uid="uid://nbr1p2koff0c" path="res://assets/Firlest-Regular.otf" id="1_dfu7f"]
-[ext_resource type="Script" uid="uid://ba87b6hdts3n" path="res://scripts/shop!.gd" id="1_oq0cr"]
+[ext_resource type="Script" uid="uid://ba87b6hdts3n" path="res://scripts/shop!.gd" id="1_8ijtx"]
+[ext_resource type="FontFile" uid="uid://nbr1p2koff0c" path="res://assets/Firlest-Regular.otf" id="2_rjjhj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_oq0cr"]
-font = ExtResource("1_dfu7f")
+font = ExtResource("2_rjjhj")
 font_size = 100
 
 [sub_resource type="LabelSettings" id="LabelSettings_8f4te"]
-font = ExtResource("1_dfu7f")
+font = ExtResource("2_rjjhj")
 font_size = 30
 
-[node name="Shop!" type="Node2D" unique_id=1699072714]
-script = ExtResource("1_oq0cr")
+[node name="HealShop" type="Node2D" unique_id=1699072714]
+script = ExtResource("1_8ijtx")
 
 [node name="Label" type="Label" parent="." unique_id=608406711]
 offset_left = 460.0
 offset_top = 9.0
 offset_right = 664.0
 offset_bottom = 94.0
-text = "Shop!"
+text = "Heals!"
 label_settings = SubResource("LabelSettings_oq0cr")
 
 [node name="Place" type="ColorRect" parent="." unique_id=1584634471]
