@@ -11,6 +11,7 @@ extends Node2D
 @onready var run: Button = $Run
 @onready var close: Button = $Close
 @onready var win: Node2D = $Win
+@onready var death: Node2D = $Death
 
 func _physics_process(delta: float) -> void:
 	if Globals.doneb==true and health.size.x<254:
@@ -49,7 +50,6 @@ func _physics_process(delta: float) -> void:
 		close.visible=true
 		win.visible=true
 		#boar.global_position=Vector2(1945,331)
-		Globals.which_boar_item=randf_range(0,100)
 	
 	if boar.visible==false:
 		win.visible=true
@@ -60,6 +60,9 @@ func _physics_process(delta: float) -> void:
 		close.visible=false
 	else:
 		close.visible=true
+	
+	if health.size.x<=0:
+		death.visible=true
 
 func _on_attack_pressed() -> void:
 	attacks.visible=true

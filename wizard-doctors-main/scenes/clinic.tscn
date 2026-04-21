@@ -297,6 +297,14 @@ blend_mode = 1
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rwdlf"]
 blend_mode = 1
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fqmk2"]
+radius = 18.0
+height = 64.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rwdlf"]
+radius = 18.0
+height = 54.0
+
 [node name="Clinic" type="Node2D" unique_id=1466911789]
 script = ExtResource("1_mk7th")
 
@@ -430,5 +438,19 @@ scale = Vector2(0.9, 0.9)
 visible = false
 position = Vector2(712, 20)
 scale = Vector2(0.9, 0.9)
+
+[node name="Recipesa" type="Area2D" parent="." unique_id=2056852365]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Recipesa" unique_id=25498400]
+position = Vector2(561, 110)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_fqmk2")
+
+[node name="Illnessesa" type="Area2D" parent="." unique_id=1744426139]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Illnessesa" unique_id=424552054]
+position = Vector2(607, 155)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_rwdlf")
 
 [connection signal="pressed" from="SeePatients" to="." method="_on_see_patients_pressed"]

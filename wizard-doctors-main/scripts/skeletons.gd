@@ -4,7 +4,6 @@ class_name Skeleton
 @onready var skeletons: Area2D = $"."
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if Globals.run==true:
 		if Globals.left==true:

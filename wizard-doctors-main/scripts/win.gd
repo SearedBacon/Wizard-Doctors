@@ -15,21 +15,22 @@ func _physics_process(delta: float) -> void:
 		top.visible=false
 		text.visible=true
 		next.visible=false
-	#if Globals.which_boar_item<=49:
-		#if rand_tusk<50:
-			#text.text="Item Dropped: 1 Tusk"
-		#if rand_tusk>50:
-			#text.text="Items Dropped: 2 Tusks"
-	#else:
-		#if rand_hooves<50:
-			#text.text="Item Dropped: 1 Hoof"
-		#if rand_hooves>50:
-			#text.text="Items Dropped: 2 Hooves"
+	if Globals.which_boar_item<=49:
+		if rand_tusk<50:
+			text.text="Item Dropped: 1 Tusk"
+		if rand_tusk>50:
+			text.text="Items Dropped: 2 Tusks"
+	else:
+		if rand_hooves<50:
+			text.text="Item Dropped: 1 Hoof"
+		if rand_hooves>50:
+			text.text="Items Dropped: 2 Hooves"
 	pass
 
 func _on_next_pressed() -> void:
 	rand_tusk=randf_range(0,100)
 	rand_hooves=randf_range(0,100)
+	Globals.which_boar_item=randf_range(0,100)
 	text.visible=true
 	next.visible=false
 	Globals.pause=false

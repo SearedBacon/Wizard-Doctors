@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://dfr8pmw1qtwpv"]
+
+[ext_resource type="FontFile" uid="uid://nbr1p2koff0c" path="res://assets/Firlest-Regular.otf" id="1_0hhgj"]
+[ext_resource type="Script" uid="uid://cnbsdajgihxi2" path="res://scripts/death.gd" id="1_w8wr1"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_w8wr1"]
+font = ExtResource("1_0hhgj")
+font_size = 175
+
+[sub_resource type="LabelSettings" id="LabelSettings_tjai8"]
+font = ExtResource("1_0hhgj")
+font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_q1r8t"]
+font = ExtResource("1_0hhgj")
+font_size = 40
+
+[sub_resource type="LabelSettings" id="LabelSettings_6up1m"]
+font = ExtResource("1_0hhgj")
+font_size = 40
+
+[node name="Death" type="Node2D" unique_id=1523613049]
+script = ExtResource("1_w8wr1")
+
+[node name="BG" type="ColorRect" parent="." unique_id=997489085]
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0.74, 0, 0, 1)
+
+[node name="DeathLabel" type="Label" parent="." unique_id=567301567]
+offset_left = 301.0
+offset_top = 71.0
+offset_right = 854.0
+offset_bottom = 219.0
+text = "You Died"
+label_settings = SubResource("LabelSettings_w8wr1")
+
+[node name="Under" type="Label" parent="." unique_id=1800556625]
+offset_left = 494.0
+offset_top = 225.0
+offset_right = 593.0
+offset_bottom = 242.0
+text = "L+bozo+ratio"
+label_settings = SubResource("LabelSettings_tjai8")
+
+[node name="RespawnLabel" type="Label" parent="." unique_id=1826536297]
+offset_left = 259.0
+offset_top = 283.0
+offset_right = 846.0
+offset_bottom = 317.0
+text = "Drink a potion of revival to respawn"
+label_settings = SubResource("LabelSettings_q1r8t")
+
+[node name="QuitLabel" type="Label" parent="." unique_id=767059451]
+offset_left = 77.0
+offset_top = 436.0
+offset_right = 1057.0
+offset_bottom = 470.0
+text = "Surrender and let the monsters consume your mind and body"
+label_settings = SubResource("LabelSettings_6up1m")
+
+[node name="Respawn" type="Button" parent="." unique_id=479832455]
+offset_left = 498.0
+offset_top = 368.0
+offset_right = 608.0
+offset_bottom = 402.0
+theme_override_fonts/font = ExtResource("1_0hhgj")
+theme_override_font_sizes/font_size = 30
+text = "Respawn"
+
+[node name="Quit" type="Button" parent="." unique_id=1209434594]
+offset_left = 523.0
+offset_top = 522.0
+offset_right = 580.0
+offset_bottom = 556.0
+theme_override_fonts/font = ExtResource("1_0hhgj")
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+
+[connection signal="pressed" from="Respawn" to="." method="_on_respawn_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

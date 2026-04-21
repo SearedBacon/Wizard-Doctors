@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://sbr2i1y3m6vg" path="res://scenes/attack.tscn" id="7_f43n0"]
 [ext_resource type="PackedScene" uid="uid://d1di882f184wj" path="res://scenes/chargeeeee.tscn" id="8_i268b"]
 [ext_resource type="PackedScene" uid="uid://cioypsxrnxgwr" path="res://scenes/win.tscn" id="9_bjlyo"]
+[ext_resource type="PackedScene" uid="uid://dfr8pmw1qtwpv" path="res://scenes/death.tscn" id="10_b8bj8"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_htrw1"]
 atlas = ExtResource("1_537il")
@@ -385,6 +386,9 @@ text = "Close"
 [node name="Attacks" parent="." unique_id=1480694836 instance=ExtResource("7_f43n0")]
 visible = false
 position = Vector2(0, 438)
+
+[node name="Death" parent="." unique_id=1523613049 instance=ExtResource("10_b8bj8")]
+visible = false
 
 [connection signal="body_entered" from="player/hitp" to="." method="_on_hitp_body_entered"]
 [connection signal="area_entered" from="boar/Hitb" to="." method="_on_hitb_area_entered"]
