@@ -291,6 +291,11 @@ position = Vector2(-1.2000008, -0.40000534)
 scale = Vector2(0.99999976, 0.99999976)
 shape = SubResource("RectangleShape2D_bjlyo")
 
+[node name="CIRCLE2" type="Sprite2D" parent="." unique_id=1918300003]
+position = Vector2(942.00006, 354)
+scale = Vector2(0.284, 0.172)
+texture = ExtResource("1_htrw1")
+
 [node name="boar" type="AnimatedSprite2D" parent="." unique_id=1158277082]
 position = Vector2(937, 331)
 scale = Vector2(3, 3)
@@ -304,11 +309,6 @@ frame_progress = 0.031156933
 [node name="CollisionShape2D" type="CollisionShape2D" parent="boar/Hitb" unique_id=1872306480]
 position = Vector2(0, 8.333336)
 shape = SubResource("RectangleShape2D_i268b")
-
-[node name="CIRCLE2" type="Sprite2D" parent="." unique_id=1918300003]
-position = Vector2(942.00006, 354)
-scale = Vector2(0.284, 0.172)
-texture = ExtResource("1_htrw1")
 
 [node name="HealthBack" type="ColorRect" parent="." unique_id=484075180]
 offset_left = 44.0
@@ -383,6 +383,7 @@ theme_override_font_sizes/font_size = 70
 text = "Close"
 
 [node name="Attacks" parent="." unique_id=1480694836 instance=ExtResource("7_f43n0")]
+visible = false
 position = Vector2(0, 438)
 
 [connection signal="body_entered" from="player/hitp" to="." method="_on_hitp_body_entered"]

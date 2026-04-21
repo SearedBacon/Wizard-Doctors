@@ -44,12 +44,17 @@ func _physics_process(delta: float) -> void:
 	if Globals.fightb==true and Globals.doneb==false:
 		boar.visible=true
 	
-	if health_2.size.x<=0:
+	if health_2.size.x<=1:
 		boar.visible=false
 		close.visible=true
 		win.visible=true
-		boar.global_position=Vector2(1945,331)
-		Globals.which_boar_item=randf_range(0,1)
+		#boar.global_position=Vector2(1945,331)
+		Globals.which_boar_item=randf_range(0,100)
+	
+	if boar.visible==false:
+		win.visible=true
+	else:
+		win.visible=false
 	
 	if Globals.pause==true:
 		close.visible=false
@@ -79,11 +84,12 @@ func _on_hitb_area_entered(area: Area2D) -> void:
 	run.disabled=false
 	bag.disabled=false
 
-
 func _on_close_pressed() -> void:
 	Globals.fightb=false
 	Globals.bdead=true
 	health_2.size.x=253
 	Globals.doneb=true
+	win.visible=false
+	health_2.size.x=253
 	close.visible=false
-	win.visible=true
+	Globals.pause=true

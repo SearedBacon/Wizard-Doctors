@@ -7,17 +7,25 @@ var rand_hooves:=0
 @onready var top: Label = $Top
 
 func _physics_process(delta: float) -> void:
-	if Globals.which_boar_item==0:
-		if rand_tusk<50:
-			text.text="Item Dropped: 1 Tusk"
-		if rand_tusk>50:
-			text.text="Items Dropped: 2 Tusks"
-	if Globals.which_boar_item==1:
-		if rand_hooves<50:
-			text.text="Item Dropped: 1 Hoof"
-		if rand_hooves>50:
-			text.text="Items Dropped: 2 Hooves"
-
+	if Globals.pause==true:
+		top.visible=true
+		text.visible=false
+		next.visible=true
+	else:
+		top.visible=false
+		text.visible=true
+		next.visible=false
+	#if Globals.which_boar_item<=49:
+		#if rand_tusk<50:
+			#text.text="Item Dropped: 1 Tusk"
+		#if rand_tusk>50:
+			#text.text="Items Dropped: 2 Tusks"
+	#else:
+		#if rand_hooves<50:
+			#text.text="Item Dropped: 1 Hoof"
+		#if rand_hooves>50:
+			#text.text="Items Dropped: 2 Hooves"
+	pass
 
 func _on_next_pressed() -> void:
 	rand_tusk=randf_range(0,100)

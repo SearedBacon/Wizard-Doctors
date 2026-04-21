@@ -11,13 +11,13 @@ script = ExtResource("1_jy1op")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=1246924244]
 offset_right = 1152.0
-offset_bottom = 210.0
+offset_bottom = 201.0
 
 [node name="ColorRect2" type="ColorRect" parent="." unique_id=224218524]
 offset_left = 2.0
 offset_top = 2.0
 offset_right = 1150.0
-offset_bottom = 208.0
+offset_bottom = 199.0
 color = Color(0, 0, 0, 1)
 
 [node name="FIREBALL" type="Button" parent="." unique_id=1061831228]
