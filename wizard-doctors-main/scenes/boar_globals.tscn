@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://bcdc5ufjhn3v2"]
+
+[ext_resource type="Script" uid="uid://cvijbhxjrqmmm" path="res://scripts/boar_globals.gd" id="1_sgo6r"]
+
+[node name="BoarGlobals" type="Node" unique_id=1949301417]
+script = ExtResource("1_sgo6r")

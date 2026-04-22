@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 Globals="*uid://cvldcvy7sk13u"
+BoarGlobals="*uid://bcdc5ufjhn3v2"
 
 [input]
 

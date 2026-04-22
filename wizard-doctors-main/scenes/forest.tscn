@@ -270,7 +270,7 @@ disable_mode = 2
 zoom = Vector2(3, 3)
 
 [node name="Skeletons" parent="." unique_id=1340739391 instance=ExtResource("7_i1yi8")]
-position = Vector2(590, 350)
+position = Vector2(590, 365)
 
 [node name="tusk" type="Sprite2D" parent="." unique_id=199992802]
 position = Vector2(468.99997, 462.99997)

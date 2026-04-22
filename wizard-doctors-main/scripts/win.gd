@@ -25,7 +25,6 @@ func _physics_process(delta: float) -> void:
 			text.text="Item Dropped: 1 Hoof"
 		if rand_hooves>50:
 			text.text="Items Dropped: 2 Hooves"
-	pass
 
 func _on_next_pressed() -> void:
 	rand_tusk=randf_range(0,100)

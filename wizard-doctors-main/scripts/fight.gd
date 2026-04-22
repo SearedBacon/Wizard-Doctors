@@ -12,21 +12,42 @@ extends Node2D
 @onready var close: Button = $Close
 @onready var win: Node2D = $Win
 @onready var death: Node2D = $Death
+@onready var hitb: Area2D = $boar/Hitb
+var butvis:=true
 
 func _physics_process(delta: float) -> void:
 	if Globals.doneb==true and health.size.x<254:
 		health.size.x+=.3
 	
+	#if boar.global_position==Vector2(2145,338):
+		#BoarGlobals.buttons_work=true
+	#else:
+		#BoarGlobals.buttons_work=false
+	
+	if chargeeeee.visible==true or boar.global_position!=Vector2(2145,338) or butvis==false:
+		BoarGlobals.buttons_work=false
+	else:
+		BoarGlobals.buttons_work=true
+	
 	if Globals.attack==true:
-		attack.disabled=true
-		run.disabled=true
-		bag.disabled=true
+		#attack.visible=false
+		#run.visible=false
+		#bag.visible=false
+		#BoarGlobals.buttons_work=false
+		if BoarGlobals.buttons_work==false:
+			attack.disabled=true
+			run.disabled=true
+			bag.disabled=true
 		player.play("Attack")
+		butvis=false
 		await get_tree().create_timer(.5).timeout
+		butvis=true
 		chargeeeee.visible=true
 		Globals.go=true
 		Globals.please=true
+		#BoarGlobals.buttons_work=false
 		await get_tree().create_timer(1.8).timeout
+		BoarGlobals.buttons_work=false
 		chargeeeee.collision_layer=2
 		chargeeeee.collision_mask=2
 		chargeeeee.global_position=Vector2(1460, 287)
@@ -39,6 +60,12 @@ func _physics_process(delta: float) -> void:
 		boar.play("Idle")
 		chargeeeee.collision_layer=1
 		chargeeeee.collision_mask=1
+		await get_tree().create_timer(1.8).timeout
+		#BoarGlobals.buttons_work=true
+		if BoarGlobals.buttons_work==true:
+			attack.disabled=false
+			run.disabled=false
+			bag.disabled=false
 	else:
 		player.play("Idle")
 	
@@ -49,7 +76,11 @@ func _physics_process(delta: float) -> void:
 		boar.visible=false
 		close.visible=true
 		win.visible=true
-		#boar.global_position=Vector2(1945,331)
+		hitb.collision_layer=2
+		hitb.collision_mask=2
+	else:
+		hitb.collision_layer=1
+		hitb.collision_mask=1
 	
 	if boar.visible==false:
 		win.visible=true
@@ -63,6 +94,7 @@ func _physics_process(delta: float) -> void:
 	
 	if health.size.x<=0:
 		death.visible=true
+	
 
 func _on_attack_pressed() -> void:
 	attacks.visible=true
@@ -96,3 +128,4 @@ func _on_close_pressed() -> void:
 	health_2.size.x=253
 	close.visible=false
 	Globals.pause=true
+	Globals.active=true

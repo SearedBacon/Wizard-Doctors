@@ -37,3 +37,4 @@ var goback:=false
 var which_boar_item:=0
 var pause:=true
 var closebutton:=false
+var active:=true

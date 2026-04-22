@@ -3,13 +3,12 @@ class_name Player
 
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var player: CharacterBody2D = $"."
-var active:=true
 @export var speed:=100
 
 func _physics_process(_delta: float) -> void:
 	var direction:=0
 	var directions:=0
-	if active:
+	if Globals.active:
 		direction = Input.get_axis("move_left","move_right")
 		directions = Input.get_axis("move_up","move_down")
 	
@@ -20,8 +19,8 @@ func _physics_process(_delta: float) -> void:
 	velocity.x=direction*speed
 	velocity.y=directions*speed
 	
-
-	move_and_slide()
+	if Globals.active:
+		move_and_slide()
 	
 	if Globals.behind==true:
 		player.z_index=0
