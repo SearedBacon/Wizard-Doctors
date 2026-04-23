@@ -7,8 +7,11 @@ extends TileMapLayer
 @onready var boar_2: Boar = $Boar2
 @onready var boar_3: Boar = $Boar3
 @onready var boar_4: Boar = $Boar4
+@onready var boar_follow_1: PathFollow2D = $Boar1P/BoarFollow1
 
 func _physics_process(delta: float) -> void:
+	
+	boar_follow_1.progress+=1
 	
 	f_camera_2d.enabled=false
 	

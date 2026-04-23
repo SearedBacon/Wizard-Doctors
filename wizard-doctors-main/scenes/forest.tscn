@@ -66,8 +66,16 @@ size = Vector2(47, 49)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_sek5r"]
 size = Vector2(59, 59)
 
+[sub_resource type="Curve2D" id="Curve2D_3knxq"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 421, 400, 0, 0, 0, 0, 308, 400, 0, 0, 0, 0, 308, 287, 0, 0, 0, 0, 421, 287, 0, 0, 0, 0, 421, 400)
+}
+point_count = 5
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_3knxq"]
 size = Vector2(82, 90)
+
+[sub_resource type="Curve2D" id="Curve2D_ercsu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3csf"]
 size = Vector2(82, 90)
@@ -157,7 +165,7 @@ position = Vector2(824, 553)
 
 [node name="Tree17" parent="." unique_id=571430543 instance=ExtResource("6_sek5r")]
 z_index = 1
-position = Vector2(780.00006, 411)
+position = Vector2(756.00006, 411)
 
 [node name="Tree18" parent="." unique_id=1743052526 instance=ExtResource("6_sek5r")]
 z_index = 1
@@ -226,14 +234,30 @@ offset_bottom = 127.0
 scale = Vector2(0.5457354, 0.8289517)
 text = "Beach"
 
-[node name="Boar" parent="." unique_id=326999417 instance=ExtResource("5_xr56k")]
-position = Vector2(421, 388)
+[node name="Boar1P" type="Path2D" parent="." unique_id=1084190478]
+curve = SubResource("Curve2D_3knxq")
 
-[node name="boar1" type="Area2D" parent="Boar" unique_id=265750301]
+[node name="BoarFollow1" type="PathFollow2D" parent="Boar1P" unique_id=69096876]
+position = Vector2(421, 400)
+rotation = 3.1415927
+rotates = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boar/boar1" unique_id=779364885]
+[node name="Boar" parent="Boar1P/BoarFollow1" unique_id=326999417 instance=ExtResource("5_xr56k")]
+position = Vector2(0, 12)
+rotation = 3.1415925
+
+[node name="boar1" type="Area2D" parent="Boar1P/BoarFollow1/Boar" unique_id=265750301]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boar1P/BoarFollow1/Boar/boar1" unique_id=779364885]
 position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_3knxq")
+
+[node name="Boar2P" type="Path2D" parent="." unique_id=358741495]
+curve = SubResource("Curve2D_ercsu")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Boar2P" unique_id=146412344]
+position = Vector2(362, 248)
+rotation = -2.5409486
 
 [node name="Boar2" parent="." unique_id=741676734 instance=ExtResource("5_xr56k")]
 position = Vector2(362, 236)
@@ -294,7 +318,7 @@ scale = Vector2(1.0000002, 1.0000002)
 
 [connection signal="body_entered" from="GoHome" to="Player" method="_on_go_home_body_entered"]
 [connection signal="body_entered" from="GoBeach" to="Player" method="_on_go_beach_body_entered"]
-[connection signal="body_entered" from="Boar/boar1" to="." method="_on_boar_1_body_entered"]
+[connection signal="body_entered" from="Boar1P/BoarFollow1/Boar/boar1" to="." method="_on_boar_1_body_entered"]
 [connection signal="body_entered" from="Boar2/boar2" to="." method="_on_boar_2_body_entered"]
 [connection signal="body_entered" from="Boar3/boar3" to="." method="_on_boar_3_body_entered"]
 [connection signal="body_entered" from="Boar4/boar4" to="." method="_on_boar_4_body_entered"]
