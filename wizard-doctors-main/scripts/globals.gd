@@ -38,3 +38,4 @@ var which_boar_item:=0
 var pause:=true
 var closebutton:=false
 var active:=true
+var revivies:=3

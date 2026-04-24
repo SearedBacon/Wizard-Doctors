@@ -76,12 +76,28 @@ point_count = 5
 size = Vector2(82, 90)
 
 [sub_resource type="Curve2D" id="Curve2D_ercsu"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 362, 248, 0, 0, 0, 0, 249, 248, 0, 0, 0, 0, 249, 135, 0, 0, 0, 0, 362, 135, 0, 0, 0, 0, 362, 248)
+}
+point_count = 5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_j3csf"]
 size = Vector2(82, 90)
 
+[sub_resource type="Curve2D" id="Curve2D_j3csf"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 678, 223, 0, 0, 0, 0, 565, 223, 0, 0, 0, 0, 565, 110, 0, 0, 0, 0, 678, 110, 0, 0, 0, 0, 678, 223)
+}
+point_count = 5
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_dabdc"]
 size = Vector2(82, 90)
+
+[sub_resource type="Curve2D" id="Curve2D_dabdc"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 909, 474, 0, 0, 0, 0, 796, 474, 0, 0, 0, 0, 796, 361, 0, 0, 0, 0, 909, 361, 0, 0, 0, 0, 909, 474)
+}
+point_count = 5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cf55d"]
 size = Vector2(82, 90)
@@ -130,7 +146,7 @@ position = Vector2(528, 195.00002)
 
 [node name="Tree9" parent="." unique_id=528262066 instance=ExtResource("6_sek5r")]
 z_index = 1
-position = Vector2(607, 67)
+position = Vector2(607, 37)
 
 [node name="Tree10" parent="." unique_id=1053147681 instance=ExtResource("6_sek5r")]
 z_index = 1
@@ -255,34 +271,50 @@ shape = SubResource("RectangleShape2D_3knxq")
 [node name="Boar2P" type="Path2D" parent="." unique_id=358741495]
 curve = SubResource("Curve2D_ercsu")
 
-[node name="PathFollow2D" type="PathFollow2D" parent="Boar2P" unique_id=146412344]
+[node name="BoarFollow2" type="PathFollow2D" parent="Boar2P" unique_id=146412344]
 position = Vector2(362, 248)
-rotation = -2.5409486
+rotation = 3.1415927
+rotates = false
 
-[node name="Boar2" parent="." unique_id=741676734 instance=ExtResource("5_xr56k")]
-position = Vector2(362, 236)
+[node name="Boar2" parent="Boar2P/BoarFollow2" unique_id=741676734 instance=ExtResource("5_xr56k")]
+position = Vector2(3.0517578e-05, 12)
+rotation = 3.1415925
 
-[node name="boar2" type="Area2D" parent="Boar2" unique_id=516667640]
+[node name="boar2" type="Area2D" parent="Boar2P/BoarFollow2/Boar2" unique_id=516667640]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boar2/boar2" unique_id=623684246]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boar2P/BoarFollow2/Boar2/boar2" unique_id=623684246]
 position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_j3csf")
 
-[node name="Boar3" parent="." unique_id=1485468425 instance=ExtResource("5_xr56k")]
-position = Vector2(678, 211)
+[node name="Boar3P" type="Path2D" parent="." unique_id=558881505]
+curve = SubResource("Curve2D_j3csf")
 
-[node name="boar3" type="Area2D" parent="Boar3" unique_id=30864993]
+[node name="BoarFollow3" type="PathFollow2D" parent="Boar3P" unique_id=1362969160]
+position = Vector2(678, 223)
+rotates = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boar3/boar3" unique_id=1954256892]
+[node name="Boar3" parent="Boar3P/BoarFollow3" unique_id=1485468425 instance=ExtResource("5_xr56k")]
+position = Vector2(0, -12)
+
+[node name="boar3" type="Area2D" parent="Boar3P/BoarFollow3/Boar3" unique_id=30864993]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boar3P/BoarFollow3/Boar3/boar3" unique_id=1954256892]
 position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_dabdc")
 
-[node name="Boar4" parent="." unique_id=1956731487 instance=ExtResource("5_xr56k")]
-position = Vector2(909, 462)
+[node name="Boar4P" type="Path2D" parent="." unique_id=1390287178]
+curve = SubResource("Curve2D_dabdc")
 
-[node name="boar4" type="Area2D" parent="Boar4" unique_id=1708993141]
+[node name="BoarFollow4" type="PathFollow2D" parent="Boar4P" unique_id=523837057]
+position = Vector2(909, 474)
+rotates = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Boar4/boar4" unique_id=1305298417]
+[node name="Boar4" parent="Boar4P/BoarFollow4" unique_id=1956731487 instance=ExtResource("5_xr56k")]
+position = Vector2(0, -12)
+
+[node name="boar4" type="Area2D" parent="Boar4P/BoarFollow4/Boar4" unique_id=1708993141]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Boar4P/BoarFollow4/Boar4/boar4" unique_id=1305298417]
 position = Vector2(0, 11)
 shape = SubResource("RectangleShape2D_cf55d")
 
@@ -319,8 +351,8 @@ scale = Vector2(1.0000002, 1.0000002)
 [connection signal="body_entered" from="GoHome" to="Player" method="_on_go_home_body_entered"]
 [connection signal="body_entered" from="GoBeach" to="Player" method="_on_go_beach_body_entered"]
 [connection signal="body_entered" from="Boar1P/BoarFollow1/Boar/boar1" to="." method="_on_boar_1_body_entered"]
-[connection signal="body_entered" from="Boar2/boar2" to="." method="_on_boar_2_body_entered"]
-[connection signal="body_entered" from="Boar3/boar3" to="." method="_on_boar_3_body_entered"]
-[connection signal="body_entered" from="Boar4/boar4" to="." method="_on_boar_4_body_entered"]
+[connection signal="body_entered" from="Boar2P/BoarFollow2/Boar2/boar2" to="." method="_on_boar_2_body_entered"]
+[connection signal="body_entered" from="Boar3P/BoarFollow3/Boar3/boar3" to="." method="_on_boar_3_body_entered"]
+[connection signal="body_entered" from="Boar4P/BoarFollow4/Boar4/boar4" to="." method="_on_boar_4_body_entered"]
 [connection signal="body_entered" from="tusk/collect" to="." method="_on_collect_body_entered"]
 [connection signal="body_exited" from="tusk/collect" to="." method="_on_collect_body_exited"]

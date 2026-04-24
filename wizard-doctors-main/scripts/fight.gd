@@ -94,7 +94,6 @@ func _physics_process(delta: float) -> void:
 	
 	if health.size.x<=0:
 		death.visible=true
-	
 
 func _on_attack_pressed() -> void:
 	attacks.visible=true
@@ -104,6 +103,7 @@ func _on_run_pressed() -> void:
 	Globals.bdead=false
 	health_2.size.x=253
 	Globals.doneb=false
+	Globals.active=true
 
 func _on_hitb_body_entered(body: Node2D) -> void:
 	health_2.size.x-=100
