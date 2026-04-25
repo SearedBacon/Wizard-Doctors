@@ -16,7 +16,7 @@ extends Node2D
 var butvis:=true
 
 func _physics_process(delta: float) -> void:
-	if Globals.doneb==true and health.size.x<254:
+	if BoarGlobals.doneb==true and health.size.x<254:
 		health.size.x+=.3
 	
 	#if boar.global_position==Vector2(2145,338):
@@ -69,7 +69,7 @@ func _physics_process(delta: float) -> void:
 	else:
 		player.play("Idle")
 	
-	if Globals.fightb==true and Globals.doneb==false:
+	if BoarGlobals.fightb==true and BoarGlobals.doneb==false:
 		boar.visible=true
 	
 	if health_2.size.x<=1:
@@ -99,10 +99,10 @@ func _on_attack_pressed() -> void:
 	attacks.visible=true
 
 func _on_run_pressed() -> void:
-	Globals.fightb=false
-	Globals.bdead=false
+	BoarGlobals.fightb=false
+	BoarGlobals.bdead=false
 	health_2.size.x=253
-	Globals.doneb=false
+	BoarGlobals.doneb=false
 	Globals.active=true
 
 func _on_hitb_body_entered(body: Node2D) -> void:
@@ -120,10 +120,10 @@ func _on_hitb_area_entered(area: Area2D) -> void:
 	bag.disabled=false
 
 func _on_close_pressed() -> void:
-	Globals.fightb=false
-	Globals.bdead=true
+	BoarGlobals.fightb=false
+	BoarGlobals.bdead=true
 	health_2.size.x=253
-	Globals.doneb=true
+	BoarGlobals.doneb=true
 	win.visible=false
 	health_2.size.x=253
 	close.visible=false

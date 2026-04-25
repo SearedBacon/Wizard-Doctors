@@ -21,23 +21,23 @@ func _physics_process(delta: float) -> void:
 	
 	f_camera_2d.enabled=false
 	
-	if Globals.doneb==true:
+	if BoarGlobals.doneb==true:
 		p_camera_2d.enabled=true
 		f_camera_2d.enabled=false
 		fight.visible=false
-		if Globals.whichb==1:
+		if BoarGlobals.whichb==1:
 			boar.visible=false
 			boar.collision_layer=2
 			boar.collision_mask=2
-		if Globals.whichb==2:
+		if BoarGlobals.whichb==2:
 			boar_2.visible=false
 			boar_2.collision_layer=2
 			boar_2.collision_mask=2
-		if Globals.whichb==3:
+		if BoarGlobals.whichb==3:
 			boar_3.visible=false
 			boar_3.collision_layer=2
 			boar_3.collision_mask=2
-		if Globals.whichb==4:
+		if BoarGlobals.whichb==4:
 			boar_4.visible=false
 			boar_4.collision_layer=2
 			boar_4.collision_mask=2
@@ -46,12 +46,12 @@ func _physics_process(delta: float) -> void:
 		f_camera_2d.enabled=true
 		fight.visible=true
 	
-	if Globals.collectT==true and Input.is_action_just_pressed("collect"):
-		Globals.tusk+=1
-		Globals.collectTPerm=true
-		Globals.collectT=false
+	if BoarGlobals.collectT==true and Input.is_action_just_pressed("collect"):
+		BoarGlobals.tusk+=1
+		BoarGlobals.collectTPerm=true
+		BoarGlobals.collectT=false
 	
-	if Globals.fightb==true:
+	if BoarGlobals.fightb==true:
 		fight.visible=true
 		f_camera_2d.enabled=true
 		p_camera_2d.enabled=false
@@ -61,25 +61,25 @@ func _physics_process(delta: float) -> void:
 		p_camera_2d.enabled=true
 
 func _on_collect_body_entered(body: Node2D) -> void:
-	Globals.collectT=true
+	BoarGlobals.collectT=true
 	print("yes")
-	Globals.collectTPerm=true
+	BoarGlobals.collectTPerm=true
 	
 func _on_collect_body_exited(body: Node2D) -> void:
-	Globals.collectT=false
+	BoarGlobals.collectT=false
 
 func _on_boar_1_body_entered(body: Node2D) -> void:
 	if body is Player:
-		Globals.whichb=1
+		BoarGlobals.whichb=1
 
 func _on_boar_2_body_entered(body: Node2D) -> void:
 	if body is Player:
-		Globals.whichb=2
+		BoarGlobals.whichb=2
 
 func _on_boar_3_body_entered(body: Node2D) -> void:
 	if body is Player:
-		Globals.whichb=3
+		BoarGlobals.whichb=3
 
 func _on_boar_4_body_entered(body: Node2D) -> void:
 	if body is Player:
-		Globals.whichb=4
+		BoarGlobals.whichb=4

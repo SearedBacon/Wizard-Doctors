@@ -9,7 +9,7 @@ extends Node2D
 @onready var name_7: Label = $Name7
 
 func _physics_process(delta: float) -> void:
-	if Globals.collectTPerm==true:
+	if BoarGlobals.collectTPerm==true:
 		names.text="Tusk"
 
 func _on_next_pressed() -> void:
