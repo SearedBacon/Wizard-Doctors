@@ -18,14 +18,18 @@ func _physics_process(delta: float) -> void:
 	if BoarGlobals.which_boar_item<=49:
 		if rand_tusk<50:
 			text.text="Item Dropped: 1 Tusk"
-			
+			BoarGlobals.tusk+=1
 		if rand_tusk>50:
 			text.text="Items Dropped: 2 Tusks"
+			BoarGlobals.tusk+=2
 	else:
+		BoarGlobals.collectHPerm=true
 		if rand_hooves<50:
 			text.text="Item Dropped: 1 Hoof"
+			BoarGlobals.hoof+=1
 		if rand_hooves>50:
 			text.text="Items Dropped: 2 Hooves"
+			BoarGlobals.hoof+=2
 
 func _on_next_pressed() -> void:
 	rand_tusk=randf_range(0,100)

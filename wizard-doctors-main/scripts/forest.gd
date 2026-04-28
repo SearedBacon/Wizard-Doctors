@@ -11,8 +11,11 @@ extends TileMapLayer
 @onready var boar_follow_2: PathFollow2D = $Boar2P/BoarFollow2
 @onready var boar_follow_3: PathFollow2D = $Boar3P/BoarFollow3
 @onready var boar_follow_4: PathFollow2D = $Boar4P/BoarFollow4
+@onready var player: Player = $Player
 
 func _physics_process(delta: float) -> void:
+	#if Globals.gobackforest==true:
+		#player.global_position=Vector2()
 	
 	boar_follow_1.progress+=1
 	boar_follow_2.progress+=1

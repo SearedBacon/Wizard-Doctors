@@ -31,3 +31,4 @@ var pause:=true
 var closebutton:=false
 var active:=true
 var revivies:=3
+var gobackforest:=false
