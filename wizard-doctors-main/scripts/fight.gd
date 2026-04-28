@@ -129,3 +129,11 @@ func _on_close_pressed() -> void:
 	close.visible=false
 	Globals.pause=true
 	Globals.active=true
+	if BoarGlobals.which_boar_item<=49 and BoarGlobals.rand_tusk<50:
+		BoarGlobals.tusk+=1
+	if BoarGlobals.which_boar_item<=49 and BoarGlobals.rand_tusk>=50:
+		BoarGlobals.tusk+=2
+	if BoarGlobals.which_boar_item>50 and BoarGlobals.rand_hooves<50:
+		BoarGlobals.hoof+=1
+	if BoarGlobals.which_boar_item>50 and BoarGlobals.rand_hooves>=50:
+		BoarGlobals.hoof+=2
