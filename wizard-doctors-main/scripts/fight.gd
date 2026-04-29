@@ -17,7 +17,12 @@ var butvis:=true
 
 func _physics_process(delta: float) -> void:
 	if BoarGlobals.doneb==true and health.size.x<254:
-		health.size.x+=.3
+		health.size.x+=.2
+	
+	if health.size.x<=0:
+		player.play("Death")
+		await get_tree().create_timer(1).timeout
+		death.visible=true
 	
 	#if boar.global_position==Vector2(2145,338):
 		#BoarGlobals.buttons_work=true
@@ -91,9 +96,6 @@ func _physics_process(delta: float) -> void:
 		close.visible=false
 	else:
 		close.visible=true
-	
-	if health.size.x<=0:
-		death.visible=true
 
 func _on_attack_pressed() -> void:
 	attacks.visible=true

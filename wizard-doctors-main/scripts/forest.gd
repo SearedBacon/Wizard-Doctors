@@ -4,9 +4,9 @@ extends TileMapLayer
 @onready var p_camera_2d: Camera2D = $Player/PCamera2D
 @onready var f_camera_2d: Camera2D = $FCamera2D
 @onready var boar: Boar = $Boar1P/BoarFollow1/Boar
-@onready var boar_2: Boar = $Boar2P/PathFollow2D/Boar2
-@onready var boar_3: Boar = $Boar3
-@onready var boar_4: Boar = $Boar4
+@onready var boar_2: Boar = $Boar2P/BoarFollow2/Boar2
+@onready var boar_3: Boar = $Boar3P/BoarFollow3/Boar3
+@onready var boar_4: Boar = $Boar4P/BoarFollow4/Boar4
 @onready var boar_follow_1: PathFollow2D = $Boar1P/BoarFollow1
 @onready var boar_follow_2: PathFollow2D = $Boar2P/BoarFollow2
 @onready var boar_follow_3: PathFollow2D = $Boar3P/BoarFollow3
@@ -14,8 +14,10 @@ extends TileMapLayer
 @onready var player: Player = $Player
 
 func _physics_process(delta: float) -> void:
-	#if Globals.gobackforest==true:
-		#player.global_position=Vector2()
+	
+	if Globals.gobackforest==true:
+		player.global_position=Vector2(876,145)
+		Globals.gobackforest=false
 	
 	boar_follow_1.progress+=1
 	boar_follow_2.progress+=1

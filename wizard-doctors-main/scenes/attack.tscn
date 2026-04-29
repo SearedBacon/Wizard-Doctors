@@ -39,5 +39,23 @@ theme_override_fonts/font = ExtResource("1_nursx")
 theme_override_font_sizes/font_size = 40
 text = "lightning bolt"
 
+[node name="ICICLESPEAR" type="Button" parent="." unique_id=1206545958]
+offset_left = 568.0
+offset_top = 81.0
+offset_right = 766.0
+offset_bottom = 123.0
+theme_override_fonts/font = ExtResource("1_nursx")
+theme_override_font_sizes/font_size = 40
+text = "Icicle Spear"
+
+[node name="EARTHBALL" type="Button" parent="." unique_id=1543118121]
+offset_left = 866.0
+offset_top = 86.0
+offset_right = 1041.0
+offset_bottom = 128.0
+theme_override_fonts/font = ExtResource("1_nursx")
+theme_override_font_sizes/font_size = 40
+text = "earthball"
+
 [connection signal="pressed" from="FIREBALL" to="." method="_on_fireball_pressed"]
 [connection signal="pressed" from="LIGHTNINGBOLT" to="." method="_on_lightningbolt_pressed"]

@@ -29,7 +29,6 @@ func _process(delta: float) -> void:
 			await get_tree().create_timer(1.87).timeout
 			Globals.down=false
 			Globals.left=true
-	pass
 
 func _on_body_entered(body: Node2D) -> void:
 	if body is Player:

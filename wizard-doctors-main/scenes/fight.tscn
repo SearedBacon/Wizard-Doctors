@@ -51,6 +51,46 @@ region = Rect2(256, 96, 32, 32)
 atlas = ExtResource("1_537il")
 region = Rect2(288, 96, 32, 32)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_g2u6g"]
+atlas = ExtResource("1_537il")
+region = Rect2(0, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rvfw8"]
+atlas = ExtResource("1_537il")
+region = Rect2(32, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c6exc"]
+atlas = ExtResource("1_537il")
+region = Rect2(64, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kukp3"]
+atlas = ExtResource("1_537il")
+region = Rect2(96, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5vbsx"]
+atlas = ExtResource("1_537il")
+region = Rect2(128, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rsbe6"]
+atlas = ExtResource("1_537il")
+region = Rect2(160, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6lf7a"]
+atlas = ExtResource("1_537il")
+region = Rect2(192, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3upxk"]
+atlas = ExtResource("1_537il")
+region = Rect2(224, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s4j5e"]
+atlas = ExtResource("1_537il")
+region = Rect2(256, 128, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6ueug"]
+atlas = ExtResource("1_537il")
+region = Rect2(288, 128, 32, 32)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_8lmvx"]
 atlas = ExtResource("1_537il")
 region = Rect2(0, 0, 32, 32)
@@ -126,6 +166,41 @@ animations = [{
 }],
 "loop": true,
 "name": &"Attack",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g2u6g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rvfw8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c6exc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kukp3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5vbsx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rsbe6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6lf7a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3upxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s4j5e")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6ueug")
+}],
+"loop": true,
+"name": &"Death",
 "speed": 10.0
 }, {
 "frames": [{
@@ -282,8 +357,9 @@ texture = ExtResource("1_htrw1")
 position = Vector2(164, 283.00003)
 scale = Vector2(5, 5)
 sprite_frames = SubResource("SpriteFrames_8lmvx")
-animation = &"Attack"
+animation = &"Idle"
 autoplay = "Idle"
+frame_progress = 0.9662978
 
 [node name="hitp" type="Area2D" parent="player" unique_id=869564062]
 

@@ -10,9 +10,9 @@ extends Node2D
 
 func _physics_process(delta: float) -> void:
 	if BoarGlobals.collectTPerm==true:
-		names.text="Tusk"
+		names.text="Tusk: "+str(BoarGlobals.tusk)
 	if BoarGlobals.collectHPerm==true:
-		name_2.text="Hoof"
+		name_2.text="Hoof: "+str(BoarGlobals.hoof)
 
 func _on_next_pressed() -> void:
 	Globals.ingredientpage+=1

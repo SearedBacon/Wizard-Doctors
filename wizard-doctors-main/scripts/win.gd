@@ -15,6 +15,7 @@ func _physics_process(delta: float) -> void:
 		top.visible=false
 		text.visible=true
 		next.visible=false
+	
 	if BoarGlobals.which_boar_item<=49:
 		if rand_tusk<50:
 			text.text="Item Dropped: 1 Tusk"
