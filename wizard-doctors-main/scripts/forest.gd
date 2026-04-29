@@ -15,6 +15,22 @@ extends TileMapLayer
 
 func _physics_process(delta: float) -> void:
 	
+	if BoarGlobals.bvisible==true:
+		boar.visible=true
+		boar_2.visible=true
+		boar_3.visible=true
+		boar_4.visible=true
+		BoarGlobals.bvisible=false
+		boar.collision_layer=1
+		boar.collision_mask=1
+		boar_2.collision_layer=1
+		boar_2.collision_mask=1
+		boar_3.collision_layer=1
+		boar_3.collision_mask=1
+		boar_4.collision_layer=1
+		boar_4.collision_mask=1
+		BoarGlobals.whichb=0
+	
 	if Globals.gobackforest==true:
 		player.global_position=Vector2(876,145)
 		Globals.gobackforest=false
