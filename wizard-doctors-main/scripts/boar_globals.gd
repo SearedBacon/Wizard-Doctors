@@ -14,3 +14,4 @@ var fightb:=false
 var collectTPerm:=false
 var collectT:=false
 var collectHPerm:=false
+var bvisible:=false
