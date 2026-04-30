@@ -330,8 +330,8 @@ visible = false
 position = Vector2(590, 365)
 
 [node name="tusk" type="Sprite2D" parent="." unique_id=199992802]
-position = Vector2(468.99997, 462.99997)
-scale = Vector2(0.2515788, 0.2464924)
+position = Vector2(274, 411)
+scale = Vector2(0.15, 0.147)
 texture = ExtResource("10_3knxq")
 
 [node name="collect" type="Area2D" parent="tusk" unique_id=2001288965]

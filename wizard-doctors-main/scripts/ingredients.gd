@@ -7,12 +7,30 @@ extends Node2D
 @onready var name_5: Label = $Name5
 @onready var name_6: Label = $Name6
 @onready var name_7: Label = $Name7
+@onready var add_t: AnimatedSprite2D = $AddT
+@onready var adds_t: Button = $AddsT
+@onready var remove_t: AnimatedSprite2D = $RemoveT
+@onready var removes_t: Button = $RemovesT
+@onready var add_h: AnimatedSprite2D = $AddH
+@onready var adds_h: Button = $AddsH
+@onready var remove_h: AnimatedSprite2D = $RemoveH
+@onready var removes_h: Button = $RemovesH
 
 func _physics_process(delta: float) -> void:
 	if BoarGlobals.collectTPerm==true:
 		names.text="Tusk: "+str(BoarGlobals.tusk)
+		add_t.visible=true
+		adds_t.visible=true
+		remove_t.visible=true
+		removes_t.visible=true
 	if BoarGlobals.collectHPerm==true:
 		name_2.text="Hoof: "+str(BoarGlobals.hoof)
+		add_h.visible=true
+		adds_h.visible=true
+		remove_h.visible=true
+		removes_h.visible=true
+	if Globals.collectTRootPerm==true:
+		name_3.text="Tree Root: "+str(Globals.treeroot)
 
 func _on_next_pressed() -> void:
 	Globals.ingredientpage+=1

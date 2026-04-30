@@ -2,10 +2,53 @@
 
 [ext_resource type="Script" uid="uid://dii4g8egsrcoo" path="res://scripts/ingredients.gd" id="1_dlkf3"]
 [ext_resource type="Texture2D" uid="uid://b831ar5q1tprs" path="res://assets/New Piskel-1.png.png" id="2_vq77k"]
+[ext_resource type="Texture2D" uid="uid://dput4o0vmilv2" path="res://assets/Tilemap/tilemap.png" id="3_drxak"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dlkf3"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_vq77k"]
+blend_mode = 1
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uo5kx"]
+atlas = ExtResource("3_drxak")
+region = Rect2(85, 357, 17, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6qxbs"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uo5kx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_drxak"]
+blend_mode = 1
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jxu4d"]
+atlas = ExtResource("3_drxak")
+region = Rect2(68, 357, 17, 17)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hg0p4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jxu4d")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_uo5kx"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6qxbs"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jxu4d"]
 blend_mode = 1
 
 [node name="Ingredients" type="Node2D" unique_id=572742726]
@@ -163,13 +206,69 @@ position = Vector2(329, 38)
 scale = Vector2(0.03, 0.03)
 texture = ExtResource("2_vq77k")
 
-[node name="Button" type="Button" parent="." unique_id=1281182250]
+[node name="XButtons" type="Button" parent="." unique_id=1281182250]
 material = SubResource("CanvasItemMaterial_vq77k")
 offset_left = 330.0
 offset_top = 15.0
 offset_right = 348.0
 offset_bottom = 33.0
 
+[node name="AddT" type="AnimatedSprite2D" parent="." unique_id=377884874]
+visible = false
+position = Vector2(215, 106)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_6qxbs")
+
+[node name="AddsT" type="Button" parent="." unique_id=1279280622]
+visible = false
+material = SubResource("CanvasItemMaterial_drxak")
+offset_left = 203.0
+offset_top = 94.0
+offset_right = 225.0
+offset_bottom = 116.0
+
+[node name="RemoveT" type="AnimatedSprite2D" parent="." unique_id=1745746866]
+visible = false
+position = Vector2(252, 106)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_hg0p4")
+
+[node name="RemovesT" type="Button" parent="." unique_id=1241599486]
+visible = false
+material = SubResource("CanvasItemMaterial_uo5kx")
+offset_left = 240.0
+offset_top = 94.0
+offset_right = 262.0
+offset_bottom = 116.0
+
+[node name="AddH" type="AnimatedSprite2D" parent="." unique_id=1231072079]
+visible = false
+position = Vector2(215, 176)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_6qxbs")
+
+[node name="AddsH" type="Button" parent="." unique_id=190615218]
+visible = false
+material = SubResource("CanvasItemMaterial_6qxbs")
+offset_left = 203.0
+offset_top = 164.0
+offset_right = 224.0
+offset_bottom = 186.0
+
+[node name="RemoveH" type="AnimatedSprite2D" parent="." unique_id=103923940]
+visible = false
+position = Vector2(252, 176)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_hg0p4")
+
+[node name="RemovesH" type="Button" parent="." unique_id=1720782547]
+visible = false
+material = SubResource("CanvasItemMaterial_jxu4d")
+offset_left = 240.0
+offset_top = 164.0
+offset_right = 262.0
+offset_bottom = 186.0
+
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="XButtons" to="." method="_on_button_pressed"]

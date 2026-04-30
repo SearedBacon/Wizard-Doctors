@@ -67,10 +67,9 @@ func _physics_process(delta: float) -> void:
 		f_camera_2d.enabled=true
 		fight.visible=true
 	
-	if BoarGlobals.collectT==true and Input.is_action_just_pressed("collect"):
-		BoarGlobals.tusk+=1
-		BoarGlobals.collectTPerm=true
-		BoarGlobals.collectT=false
+	if Globals.collectTRoot==true and Input.is_action_just_pressed("collect"):
+		Globals.treeroot+=1
+		Globals.collectTRootPerm=true
 	
 	if BoarGlobals.fightb==true:
 		fight.visible=true
@@ -82,12 +81,10 @@ func _physics_process(delta: float) -> void:
 		p_camera_2d.enabled=true
 
 func _on_collect_body_entered(body: Node2D) -> void:
-	BoarGlobals.collectT=true
-	print("yes")
-	BoarGlobals.collectTPerm=true
-	
+	Globals.collectTRoot=true
+
 func _on_collect_body_exited(body: Node2D) -> void:
-	BoarGlobals.collectT=false
+	Globals.collectTRoot=false
 
 func _on_boar_1_body_entered(body: Node2D) -> void:
 	if body is Player:
