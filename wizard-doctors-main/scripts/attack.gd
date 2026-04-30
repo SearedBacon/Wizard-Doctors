@@ -18,3 +18,17 @@ func _on_lightningbolt_pressed() -> void:
 	attack.visible=false
 	await get_tree().create_timer(1).timeout
 	Globals.attack=false
+
+func _on_iciclespear_pressed() -> void:
+	Globals.attack=true
+	Globals.please=true
+	attack.visible=false
+	await get_tree().create_timer(1).timeout
+	Globals.attack=false
+
+func _on_earthball_pressed() -> void:
+	Globals.attack=true
+	Globals.please=true
+	attack.visible=false
+	await get_tree().create_timer(1).timeout
+	Globals.attack=false

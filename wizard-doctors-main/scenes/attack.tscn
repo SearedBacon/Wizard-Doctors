@@ -59,3 +59,5 @@ text = "earthball"
 
 [connection signal="pressed" from="FIREBALL" to="." method="_on_fireball_pressed"]
 [connection signal="pressed" from="LIGHTNINGBOLT" to="." method="_on_lightningbolt_pressed"]
+[connection signal="pressed" from="ICICLESPEAR" to="." method="_on_iciclespear_pressed"]
+[connection signal="pressed" from="EARTHBALL" to="." method="_on_earthball_pressed"]
