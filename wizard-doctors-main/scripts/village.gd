@@ -9,6 +9,8 @@ extends TileMapLayer
 @onready var nothing_6: Label = $Nothing6
 @onready var nothing_7: Label = $Nothing7
 @onready var player: Player = $Player
+@onready var leave_label: Label = $LeaveLabel
+@onready var home_label: Label = $HomeLabel
 
 func _physics_process(delta: float) -> void:
 	if Globals.goback==true:
@@ -85,3 +87,19 @@ func _on_area_2d_9_body_entered(body: Node2D) -> void:
 func _on_area_2d_9_body_exited(body: Node2D) -> void:
 	if body is Player:
 		Globals.behind=false
+
+func _on_show_leave_body_entered(body: Node2D) -> void:
+	if body is Player:
+		leave_label.visible=true
+
+func _on_show_leave_body_exited(body: Node2D) -> void:
+	if body is Player:
+		leave_label.visible=false
+
+func _on_show_home_body_entered(body: Node2D) -> void:
+	if body is Player:
+		home_label.visible=true
+
+func _on_show_home_body_exited(body: Node2D) -> void:
+	if body is Player:
+		home_label.visible=false

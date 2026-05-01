@@ -133,9 +133,13 @@ func _on_close_pressed() -> void:
 	Globals.active=true
 	if BoarGlobals.which_boar_item<=49 and BoarGlobals.rand_tusk<50:
 		BoarGlobals.tusk+=1
+		BoarGlobals.trackT+=1
 	if BoarGlobals.which_boar_item<=49 and BoarGlobals.rand_tusk>=50:
 		BoarGlobals.tusk+=2
+		BoarGlobals.trackT+=2
 	if BoarGlobals.which_boar_item>50 and BoarGlobals.rand_hooves<50:
 		BoarGlobals.hoof+=1
+		BoarGlobals.trackH+=1
 	if BoarGlobals.which_boar_item>50 and BoarGlobals.rand_hooves>=50:
 		BoarGlobals.hoof+=2
+		BoarGlobals.trackH+=2

@@ -2,11 +2,16 @@
 
 [ext_resource type="Script" uid="uid://c6sxmefhw038h" path="res://scripts/recipes.gd" id="1_xmpxi"]
 [ext_resource type="Texture2D" uid="uid://b831ar5q1tprs" path="res://assets/New Piskel-1.png.png" id="2_b7koh"]
+[ext_resource type="FontFile" uid="uid://nbr1p2koff0c" path="res://assets/Firlest-Regular.otf" id="3_g44oj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_xmpxi"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_g44oj"]
 blend_mode = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_m7u0p"]
+font = ExtResource("3_g44oj")
+font_size = 40
 
 [node name="Recipes" type="Node2D" unique_id=1255496518]
 script = ExtResource("1_xmpxi")
@@ -170,6 +175,14 @@ offset_left = 330.0
 offset_top = 16.0
 offset_right = 348.0
 offset_bottom = 33.0
+
+[node name="RecipeLabel" type="Label" parent="." unique_id=1357423130]
+offset_left = 121.0
+offset_top = 9.0
+offset_right = 237.0
+offset_bottom = 43.0
+text = "Recipes"
+label_settings = SubResource("LabelSettings_m7u0p")
 
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

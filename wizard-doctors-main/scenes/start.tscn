@@ -7,6 +7,10 @@
 font = ExtResource("2_u80x2")
 font_size = 100
 
+[sub_resource type="LabelSettings" id="LabelSettings_u80x2"]
+font = ExtResource("2_u80x2")
+font_size = 50
+
 [node name="Start" type="Node2D" unique_id=1617238037]
 script = ExtResource("1_jaeev")
 
@@ -25,21 +29,62 @@ label_settings = SubResource("LabelSettings_ewcy1")
 
 [node name="Start" type="Button" parent="." unique_id=328744194]
 offset_left = 492.0
-offset_top = 287.0
+offset_top = 261.0
 offset_right = 643.0
-offset_bottom = 350.0
+offset_bottom = 324.0
 theme_override_fonts/font = ExtResource("2_u80x2")
 theme_override_font_sizes/font_size = 60
 text = "Start"
 
 [node name="Quit" type="Button" parent="." unique_id=1688800533]
 offset_left = 514.0
-offset_top = 406.0
+offset_top = 377.0
 offset_right = 621.0
-offset_bottom = 469.0
+offset_bottom = 440.0
 theme_override_fonts/font = ExtResource("2_u80x2")
 theme_override_font_sizes/font_size = 60
 text = "Quit"
 
+[node name="Instructions" type="Button" parent="." unique_id=1527259701]
+offset_left = 414.0
+offset_top = 493.0
+offset_right = 723.0
+offset_bottom = 552.0
+theme_override_fonts/font = ExtResource("2_u80x2")
+theme_override_font_sizes/font_size = 60
+text = "Instructions"
+
+[node name="Front" type="ColorRect" parent="." unique_id=915263063]
+visible = false
+offset_right = 1153.0
+offset_bottom = 646.0
+color = Color(0, 0, 0, 1)
+
+[node name="Label" type="Label" parent="." unique_id=11951744]
+visible = false
+offset_left = 252.0
+offset_top = 84.0
+offset_right = 936.0
+offset_bottom = 311.0
+size_flags_horizontal = 4
+text = "               WASD to move
+
+Go to the forest to fight enemies 
+and collect items and then use 
+those items to create potions!"
+label_settings = SubResource("LabelSettings_u80x2")
+
+[node name="Close" type="Button" parent="." unique_id=951035835]
+visible = false
+offset_left = 494.0
+offset_top = 554.0
+offset_right = 632.0
+offset_bottom = 613.0
+theme_override_fonts/font = ExtResource("2_u80x2")
+theme_override_font_sizes/font_size = 60
+text = "Close"
+
 [connection signal="pressed" from="Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]
+[connection signal="pressed" from="Instructions" to="." method="_on_instructions_pressed"]
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]

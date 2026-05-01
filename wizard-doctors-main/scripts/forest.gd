@@ -12,6 +12,7 @@ extends TileMapLayer
 @onready var boar_follow_3: PathFollow2D = $Boar3P/BoarFollow3
 @onready var boar_follow_4: PathFollow2D = $Boar4P/BoarFollow4
 @onready var player: Player = $Player
+@onready var village_also_here: Label = $VillageAlsoHere
 
 func _physics_process(delta: float) -> void:
 	
@@ -101,3 +102,11 @@ func _on_boar_3_body_entered(body: Node2D) -> void:
 func _on_boar_4_body_entered(body: Node2D) -> void:
 	if body is Player:
 		BoarGlobals.whichb=4
+
+func _on_village_here_body_entered(body: Node2D) -> void:
+	if body is Player:
+		village_also_here.visible=true
+
+func _on_village_here_body_exited(body: Node2D) -> void:
+	if body is Player:
+		village_also_here.visible=false

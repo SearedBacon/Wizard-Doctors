@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://dudi845vmxtmy" path="res://scenes/ingredients.tscn" id="8_ise63"]
 [ext_resource type="PackedScene" uid="uid://8c3f3xuwntl3" path="res://scenes/door.tscn" id="9_fqmk2"]
 [ext_resource type="Texture2D" uid="uid://cwn1phjdg0w7m" path="res://assets/planks.png" id="10_fqmk2"]
+[ext_resource type="FontFile" uid="uid://nbr1p2koff0c" path="res://assets/Firlest-Regular.otf" id="11_rwdlf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fcilv"]
 texture = ExtResource("1_7gffy")
@@ -298,12 +299,16 @@ blend_mode = 1
 blend_mode = 1
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_fqmk2"]
-radius = 18.0
-height = 64.0
+radius = 19.999992
+height = 72.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rwdlf"]
 radius = 18.0
 height = 54.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_nkcaq"]
+font = ExtResource("11_rwdlf")
+font_size = 23
 
 [node name="Clinic" type="Node2D" unique_id=1466911789]
 script = ExtResource("1_mk7th")
@@ -453,4 +458,15 @@ position = Vector2(607, 155)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_rwdlf")
 
+[node name="Temp" type="Label" parent="." unique_id=1965927939]
+visible = false
+offset_left = 970.0
+offset_top = 311.0
+offset_right = 1149.0
+offset_bottom = 331.0
+text = "Under Construction"
+label_settings = SubResource("LabelSettings_nkcaq")
+
 [connection signal="pressed" from="SeePatients" to="." method="_on_see_patients_pressed"]
+[connection signal="mouse_entered" from="Recipesa" to="." method="_on_recipesa_mouse_entered"]
+[connection signal="mouse_exited" from="Recipesa" to="." method="_on_recipesa_mouse_exited"]

@@ -41,3 +41,11 @@ func _on_back_pressed() -> void:
 
 func _on_button_pressed() -> void:
 	Globals.IngredientScreen=false
+
+func _on_adds_t_pressed() -> void:
+	if BoarGlobals.tusk>0:
+		BoarGlobals.tusk-=1
+
+func _on_removes_t_pressed() -> void:
+	if BoarGlobals.trackT>BoarGlobals.tusk:
+		BoarGlobals.tusk+=1

@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dii4g8egsrcoo" path="res://scripts/ingredients.gd" id="1_dlkf3"]
 [ext_resource type="Texture2D" uid="uid://b831ar5q1tprs" path="res://assets/New Piskel-1.png.png" id="2_vq77k"]
 [ext_resource type="Texture2D" uid="uid://dput4o0vmilv2" path="res://assets/Tilemap/tilemap.png" id="3_drxak"]
+[ext_resource type="FontFile" uid="uid://nbr1p2koff0c" path="res://assets/Firlest-Regular.otf" id="4_uo5kx"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_dlkf3"]
 
@@ -56,6 +57,10 @@ blend_mode = 1
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6jm1f"]
 blend_mode = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_6qxbs"]
+font = ExtResource("4_uo5kx")
+font_size = 40
 
 [node name="Ingredients" type="Node2D" unique_id=572742726]
 script = ExtResource("1_dlkf3")
@@ -303,6 +308,16 @@ offset_top = 234.0
 offset_right = 262.0
 offset_bottom = 256.0
 
+[node name="IngredientsLabel" type="Label" parent="." unique_id=1352219845]
+offset_left = 86.0
+offset_top = 8.0
+offset_right = 268.0
+offset_bottom = 42.0
+text = "Ingredients"
+label_settings = SubResource("LabelSettings_6qxbs")
+
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="XButtons" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="AddsT" to="." method="_on_adds_t_pressed"]
+[connection signal="pressed" from="RemovesT" to="." method="_on_removes_t_pressed"]
