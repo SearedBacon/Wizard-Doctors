@@ -51,6 +51,12 @@ blend_mode = 1
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_jxu4d"]
 blend_mode = 1
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_hg0p4"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6jm1f"]
+blend_mode = 1
+
 [node name="Ingredients" type="Node2D" unique_id=572742726]
 script = ExtResource("1_dlkf3")
 
@@ -268,6 +274,34 @@ offset_left = 240.0
 offset_top = 164.0
 offset_right = 262.0
 offset_bottom = 186.0
+
+[node name="AddTR" type="AnimatedSprite2D" parent="." unique_id=917643964]
+visible = false
+position = Vector2(214, 246)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_6qxbs")
+
+[node name="AddsTR" type="Button" parent="." unique_id=29407042]
+visible = false
+material = SubResource("CanvasItemMaterial_hg0p4")
+offset_left = 202.0
+offset_top = 234.0
+offset_right = 224.0
+offset_bottom = 256.0
+
+[node name="RemoveTR" type="AnimatedSprite2D" parent="." unique_id=803418476]
+visible = false
+position = Vector2(252, 246)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_hg0p4")
+
+[node name="RemovesTR" type="Button" parent="." unique_id=343707369]
+visible = false
+material = SubResource("CanvasItemMaterial_6jm1f")
+offset_left = 240.0
+offset_top = 234.0
+offset_right = 262.0
+offset_bottom = 256.0
 
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
