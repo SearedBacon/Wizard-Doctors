@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cc7wh8rgbi8yq" path="res://scenes/tree.tscn" id="6_sek5r"]
 [ext_resource type="PackedScene" uid="uid://cv8pcyqa5usnu" path="res://scenes/skeletons.tscn" id="7_i1yi8"]
 [ext_resource type="PackedScene" uid="uid://co2mws5dkvqbg" path="res://scenes/fight.tscn" id="9_3knxq"]
-[ext_resource type="Texture2D" uid="uid://dxcn4grodkrao" path="res://icon.svg" id="10_3knxq"]
+[ext_resource type="Texture2D" uid="uid://bro2kk5pxwh8a" path="res://assets/Trees+.png" id="9_ercsu"]
 [ext_resource type="FontFile" uid="uid://nbr1p2koff0c" path="res://assets/Firlest-Regular.otf" id="11_ercsu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_yj5dr"]
@@ -102,6 +102,21 @@ point_count = 5
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cf55d"]
 size = Vector2(82, 90)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3csf"]
+atlas = ExtResource("9_ercsu")
+region = Rect2(244, 799, 61, 47)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dabdc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3csf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ercsu"]
 size = Vector2(119.24695, 121.70776)
@@ -339,14 +354,17 @@ zoom = Vector2(3, 3)
 visible = false
 position = Vector2(590, 365)
 
-[node name="tusk" type="Sprite2D" parent="." unique_id=199992802]
-position = Vector2(274, 411)
-scale = Vector2(0.15, 0.147)
-texture = ExtResource("10_3knxq")
+[node name="TreeRoot" type="AnimatedSprite2D" parent="." unique_id=994912728]
+z_index = 1
+position = Vector2(279, 398)
+scale = Vector2(0.235, 0.23)
+sprite_frames = SubResource("SpriteFrames_dabdc")
 
-[node name="collect" type="Area2D" parent="tusk" unique_id=2001288965]
+[node name="collect" type="Area2D" parent="TreeRoot" unique_id=2001288965]
+position = Vector2(0.00012207031, 0)
+scale = Vector2(0.6382979, 0.6391304)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="tusk/collect" unique_id=417826052]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TreeRoot/collect" unique_id=417826052]
 position = Vector2(0.00012207031, 0.00012207031)
 scale = Vector2(1.0000002, 1.0000002)
 shape = SubResource("RectangleShape2D_ercsu")
@@ -388,7 +406,7 @@ label_settings = SubResource("LabelSettings_ercsu")
 [connection signal="body_entered" from="Boar2P/BoarFollow2/Boar2/boar2" to="." method="_on_boar_2_body_entered"]
 [connection signal="body_entered" from="Boar3P/BoarFollow3/Boar3/boar3" to="." method="_on_boar_3_body_entered"]
 [connection signal="body_entered" from="Boar4P/BoarFollow4/Boar4/boar4" to="." method="_on_boar_4_body_entered"]
-[connection signal="body_entered" from="tusk/collect" to="." method="_on_collect_body_entered"]
-[connection signal="body_exited" from="tusk/collect" to="." method="_on_collect_body_exited"]
+[connection signal="body_entered" from="TreeRoot/collect" to="." method="_on_collect_body_entered"]
+[connection signal="body_exited" from="TreeRoot/collect" to="." method="_on_collect_body_exited"]
 [connection signal="body_entered" from="VillageHere" to="." method="_on_village_here_body_entered"]
 [connection signal="body_exited" from="VillageHere" to="." method="_on_village_here_body_exited"]

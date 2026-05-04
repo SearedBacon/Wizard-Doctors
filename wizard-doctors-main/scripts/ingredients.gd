@@ -17,7 +17,7 @@ extends Node2D
 @onready var removes_h: Button = $RemovesH
 
 func _physics_process(delta: float) -> void:
-	if BoarGlobals.collectTPerm==true:
+	if BoarGlobals.collectTPerm==true and BoarGlobals.tusk>0:
 		names.text="Tusk: "+str(BoarGlobals.tusk)
 		add_t.visible=true
 		adds_t.visible=true
