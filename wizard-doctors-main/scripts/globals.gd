@@ -9,6 +9,7 @@ var iScreen=false
 var behind:=false
 var bones:=0
 var treeroot:=0
+var trackTR:=0
 var collectTRoot:=false
 var collectTRootPerm:=false
 var fur:=0

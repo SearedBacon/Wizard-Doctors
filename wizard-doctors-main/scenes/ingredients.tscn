@@ -62,6 +62,12 @@ blend_mode = 1
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6jm1f"]
 blend_mode = 1
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_dr41e"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_og073"]
+blend_mode = 1
+
 [node name="Ingredients" type="Node2D" unique_id=572742726]
 script = ExtResource("1_dlkf3")
 
@@ -316,8 +322,40 @@ offset_top = 234.0
 offset_right = 262.0
 offset_bottom = 256.0
 
+[node name="AddS" type="AnimatedSprite2D" parent="." unique_id=1575791776]
+visible = false
+position = Vector2(214, 316)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_6qxbs")
+
+[node name="AddsS" type="Button" parent="." unique_id=1059521412]
+visible = false
+material = SubResource("CanvasItemMaterial_dr41e")
+offset_left = 202.0
+offset_top = 304.0
+offset_right = 224.0
+offset_bottom = 326.0
+
+[node name="RemoveS" type="AnimatedSprite2D" parent="." unique_id=154450478]
+visible = false
+position = Vector2(252, 316)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_hg0p4")
+
+[node name="RemovesS" type="Button" parent="." unique_id=1152462264]
+visible = false
+material = SubResource("CanvasItemMaterial_og073")
+offset_left = 240.0
+offset_top = 304.0
+offset_right = 262.0
+offset_bottom = 326.0
+
 [connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="XButtons" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="AddsT" to="." method="_on_adds_t_pressed"]
 [connection signal="pressed" from="RemovesT" to="." method="_on_removes_t_pressed"]
+[connection signal="pressed" from="AddsH" to="." method="_on_adds_h_pressed"]
+[connection signal="pressed" from="RemovesH" to="." method="_on_removes_h_pressed"]
+[connection signal="pressed" from="AddsTR" to="." method="_on_adds_tr_pressed"]
+[connection signal="pressed" from="RemovesTR" to="." method="_on_removes_tr_pressed"]

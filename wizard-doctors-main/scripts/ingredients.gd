@@ -15,6 +15,10 @@ extends Node2D
 @onready var adds_h: Button = $AddsH
 @onready var remove_h: AnimatedSprite2D = $RemoveH
 @onready var removes_h: Button = $RemovesH
+@onready var add_tr: AnimatedSprite2D = $AddTR
+@onready var adds_tr: Button = $AddsTR
+@onready var remove_tr: AnimatedSprite2D = $RemoveTR
+@onready var removes_tr: Button = $RemovesTR
 
 func _physics_process(delta: float) -> void:
 	if BoarGlobals.collectTPerm==true and BoarGlobals.tusk>0:
@@ -31,6 +35,10 @@ func _physics_process(delta: float) -> void:
 		removes_h.visible=true
 	if Globals.collectTRootPerm==true:
 		name_3.text="Tree Root: "+str(Globals.treeroot)
+		add_tr.visible=true
+		adds_tr.visible=true
+		remove_tr.visible=true
+		removes_tr.visible=true
 
 func _on_next_pressed() -> void:
 	Globals.ingredientpage+=1
@@ -49,3 +57,19 @@ func _on_adds_t_pressed() -> void:
 func _on_removes_t_pressed() -> void:
 	if BoarGlobals.trackT>BoarGlobals.tusk:
 		BoarGlobals.tusk+=1
+
+func _on_adds_h_pressed() -> void:
+	if BoarGlobals.hoof>0:
+		BoarGlobals.hoof-=1
+
+func _on_removes_h_pressed() -> void:
+	if BoarGlobals.trackH>BoarGlobals.hoof:
+		BoarGlobals.hoof+=1
+
+func _on_adds_tr_pressed() -> void:
+	if Globals.treeroot>0:
+		Globals.treeroot-=1
+
+func _on_removes_tr_pressed() -> void:
+	if Globals.trackTR>Globals.treeroot:
+		Globals.treeroot+=1

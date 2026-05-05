@@ -70,6 +70,7 @@ func _physics_process(delta: float) -> void:
 	
 	if Globals.collectTRoot==true and Input.is_action_just_pressed("collect"):
 		Globals.treeroot+=1
+		Globals.trackTR+=1
 		Globals.collectTRootPerm=true
 	
 	if BoarGlobals.fightb==true:
