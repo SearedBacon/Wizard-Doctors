@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dbvgf42dlapeq"]
+
+[ext_resource type="Script" uid="uid://b5lyrxeoo11yx" path="res://scripts/fish_globals.gd" id="1_k0ja3"]
+
+[node name="FishGlobals" type="Node" unique_id=1043597435]
+script = ExtResource("1_k0ja3")

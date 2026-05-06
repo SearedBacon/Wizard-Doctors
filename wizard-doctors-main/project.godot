@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Globals="*uid://cvldcvy7sk13u"
 BoarGlobals="*uid://bcdc5ufjhn3v2"
+FishGlobals="*uid://b5lyrxeoo11yx"
 
 [input]
 

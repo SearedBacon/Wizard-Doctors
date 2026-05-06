@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://cayem70vhcgsy"]
+
+[ext_resource type="Texture2D" uid="uid://cgkqh7lxowdli" path="res://assets/rose.png" id="1_8x8dx"]
+
+[node name="Flower" type="Node2D" unique_id=1339006425]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=839929075]
+scale = Vector2(0.015, 0.015)
+texture = ExtResource("1_8x8dx")
