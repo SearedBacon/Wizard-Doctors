@@ -1,5 +1,7 @@
 extends TileMapLayer
 
+@onready var forest: Label = $Forest
+
 func _on_to_forest_body_entered(body: Node2D) -> void:
 	if body is Player:
 		get_tree().change_scene_to_file("res://scenes/forest.tscn")
@@ -20,3 +22,11 @@ func _on_fih_3_body_entered(body: Node2D) -> void:
 
 func _on_fih_4_body_entered(body: Node2D) -> void:
 	pass # Replace with function body.
+
+func _on_go_forest_label_body_entered(body: Node2D) -> void:
+	if body is Player:
+		forest.visible=true
+
+func _on_go_forest_label_body_exited(body: Node2D) -> void:
+	if body is Player:
+		forest.visible=false

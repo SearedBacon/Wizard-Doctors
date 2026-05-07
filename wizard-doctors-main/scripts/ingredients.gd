@@ -113,3 +113,35 @@ func _on_adds_tr_pressed() -> void:
 func _on_removes_tr_pressed() -> void:
 	if Globals.trackTR>Globals.treeroot:
 		Globals.treeroot+=1
+
+func _on_adds_f_pressed() -> void:
+	if Globals.flower>0:
+		Globals.flower-=1
+
+func _on_removes_f_pressed() -> void:
+	if Globals.trackF>Globals.flower:
+		Globals.flower+=1
+
+func _on_adds_ss_pressed() -> void:
+	if Globals.seashells>0:
+		Globals.seashells-=1
+
+func _on_removes_ss_pressed() -> void:
+	if Globals.trackSS>Globals.seashells:
+		Globals.seashells+=1
+
+func _on_adds_s_pressed() -> void:
+	if FishGlobals.scale>0:
+		FishGlobals.scale-=1
+
+func _on_removes_s_pressed() -> void:
+	if FishGlobals.trackS>FishGlobals.scale:
+		FishGlobals.scale+=1
+
+func _on_adds_b_pressed() -> void:
+	if FishGlobals.bone>0:
+		FishGlobals.bone-=1
+
+func _on_removes_b_pressed() -> void:
+	if FishGlobals.trackB>FishGlobals.bone:
+		FishGlobals.bone+=1
