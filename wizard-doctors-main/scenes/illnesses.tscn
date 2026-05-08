@@ -5,6 +5,47 @@
 [ext_resource type="FontFile" uid="uid://nbr1p2koff0c" path="res://assets/Firlest-Regular.otf" id="3_gn45l"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_46cvr"]
+font = ExtResource("3_gn45l")
+font_size = 30
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_q7ijl"]
+blend_mode = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_gn45l"]
+font = ExtResource("3_gn45l")
+font_size = 30
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_45k4n"]
+blend_mode = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_80sff"]
+font = ExtResource("3_gn45l")
+font_size = 30
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_1111a"]
+blend_mode = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_217y3"]
+font = ExtResource("3_gn45l")
+font_size = 30
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_0uf80"]
+blend_mode = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_0uf80"]
+font = ExtResource("3_gn45l")
+font_size = 30
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_217y3"]
+blend_mode = 1
+
+[sub_resource type="LabelSettings" id="LabelSettings_1111a"]
+font = ExtResource("3_gn45l")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_45k4n"]
+font = ExtResource("3_gn45l")
+font_size = 30
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_gn45l"]
 blend_mode = 1
@@ -92,76 +133,96 @@ offset_right = 273.0
 offset_bottom = 545.0
 color = Color(0.31, 0.31, 0.31, 0.6666667)
 
-[node name="Back" type="Button" parent="." unique_id=1053500394]
-visible = false
-offset_left = 58.0
-offset_top = 561.0
-offset_right = 103.0
-offset_bottom = 592.0
-text = "Back"
-
-[node name="Next" type="Button" parent="." unique_id=1275287460]
-offset_left = 260.0
-offset_top = 561.0
-offset_right = 305.0
-offset_bottom = 592.0
-text = "Next"
-
-[node name="Name5" type="Label" parent="." unique_id=100758184]
-offset_left = 98.0
-offset_top = 373.0
-offset_right = 266.0
-offset_bottom = 396.0
-text = "???????????????????????"
-label_settings = SubResource("LabelSettings_46cvr")
-
-[node name="Name6" type="Label" parent="." unique_id=87057593]
-offset_left = 98.0
-offset_top = 443.0
-offset_right = 266.0
-offset_bottom = 466.0
-text = "???????????????????????"
-label_settings = SubResource("LabelSettings_46cvr")
-
-[node name="Name7" type="Label" parent="." unique_id=576921102]
-offset_left = 98.0
-offset_top = 513.0
-offset_right = 266.0
-offset_bottom = 536.0
-text = "???????????????????????"
-label_settings = SubResource("LabelSettings_46cvr")
-
-[node name="Name4" type="Label" parent="." unique_id=942523709]
-offset_left = 98.0
-offset_top = 303.0
-offset_right = 266.0
-offset_bottom = 326.0
-text = "???????????????????????"
-label_settings = SubResource("LabelSettings_46cvr")
-
-[node name="Name3" type="Label" parent="." unique_id=1329951947]
-offset_left = 98.0
-offset_top = 233.0
-offset_right = 266.0
-offset_bottom = 256.0
-text = "???????????????????????"
-label_settings = SubResource("LabelSettings_46cvr")
-
-[node name="Name2" type="Label" parent="." unique_id=1037303008]
-offset_left = 98.0
-offset_top = 163.0
-offset_right = 266.0
-offset_bottom = 186.0
-text = "???????????????????????"
-label_settings = SubResource("LabelSettings_46cvr")
-
 [node name="Name" type="Label" parent="." unique_id=2081744788]
-offset_left = 98.0
+offset_left = 108.0
 offset_top = 93.0
-offset_right = 266.0
-offset_bottom = 116.0
-text = "???????????????????????"
+offset_right = 258.0
+offset_bottom = 119.0
+text = "Common cold"
 label_settings = SubResource("LabelSettings_46cvr")
+
+[node name="1" type="Button" parent="." unique_id=706063667]
+material = SubResource("CanvasItemMaterial_q7ijl")
+offset_left = 91.0
+offset_top = 85.0
+offset_right = 273.0
+offset_bottom = 125.0
+
+[node name="Name2" type="Label" parent="." unique_id=868035402]
+offset_left = 161.0
+offset_top = 162.0
+offset_right = 201.0
+offset_bottom = 188.0
+text = "Flu"
+label_settings = SubResource("LabelSettings_gn45l")
+
+[node name="2" type="Button" parent="." unique_id=1035191765]
+material = SubResource("CanvasItemMaterial_45k4n")
+offset_left = 91.0
+offset_top = 155.0
+offset_right = 273.0
+offset_bottom = 195.0
+
+[node name="Name3" type="Label" parent="." unique_id=974350524]
+offset_left = 141.0
+offset_top = 232.0
+offset_right = 221.0
+offset_bottom = 258.0
+text = "covid-1"
+label_settings = SubResource("LabelSettings_80sff")
+
+[node name="3" type="Button" parent="." unique_id=1253974043]
+material = SubResource("CanvasItemMaterial_1111a")
+offset_left = 91.0
+offset_top = 225.0
+offset_right = 273.0
+offset_bottom = 265.0
+
+[node name="Name4" type="Label" parent="." unique_id=165614042]
+offset_left = 151.0
+offset_top = 302.0
+offset_right = 230.0
+offset_bottom = 328.0
+text = "Lupus"
+label_settings = SubResource("LabelSettings_217y3")
+
+[node name="4" type="Button" parent="." unique_id=1270459604]
+material = SubResource("CanvasItemMaterial_0uf80")
+offset_left = 91.0
+offset_top = 295.0
+offset_right = 273.0
+offset_bottom = 335.0
+
+[node name="Name5" type="Label" parent="." unique_id=1241113274]
+offset_left = 103.0
+offset_top = 373.0
+offset_right = 260.0
+offset_bottom = 399.0
+text = "ball explode"
+label_settings = SubResource("LabelSettings_0uf80")
+
+[node name="5" type="Button" parent="." unique_id=870844536]
+material = SubResource("CanvasItemMaterial_217y3")
+offset_left = 91.0
+offset_top = 365.0
+offset_right = 273.0
+offset_bottom = 405.0
+
+[node name="Name6" type="Label" parent="." unique_id=2014897441]
+offset_left = 150.0
+offset_top = 442.0
+offset_right = 252.0
+offset_bottom = 468.0
+text = "ebola"
+label_settings = SubResource("LabelSettings_1111a")
+
+[node name="Name7" type="Label" parent="." unique_id=223886925]
+offset_left = 102.0
+offset_top = 513.0
+offset_right = 261.0
+offset_bottom = 539.0
+text = "Black Plague"
+label_settings = SubResource("LabelSettings_45k4n")
 
 [node name="XButton" type="Sprite2D" parent="." unique_id=1241767924]
 position = Vector2(329, 38.000008)
@@ -183,6 +244,4 @@ offset_bottom = 43.0
 text = "Illnesses"
 label_settings = SubResource("LabelSettings_q7ijl")
 
-[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
 [connection signal="pressed" from="X" to="." method="_on_x_pressed"]

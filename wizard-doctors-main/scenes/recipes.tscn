@@ -148,22 +148,6 @@ offset_bottom = 536.0
 text = "???????????????????????"
 label_settings = SubResource("LabelSettings_xmpxi")
 
-[node name="Next" type="Button" parent="." unique_id=2052487368]
-offset_left = 260.0
-offset_top = 561.0
-offset_right = 305.0
-offset_bottom = 592.0
-text = "Next
-"
-
-[node name="Back" type="Button" parent="." unique_id=2083333805]
-visible = false
-offset_left = 58.0
-offset_top = 561.0
-offset_right = 103.0
-offset_bottom = 592.0
-text = "Back"
-
 [node name="XButton" type="Sprite2D" parent="." unique_id=90836356]
 position = Vector2(329, 38)
 scale = Vector2(0.03, 0.03)
@@ -184,6 +168,4 @@ offset_bottom = 43.0
 text = "Recipes"
 label_settings = SubResource("LabelSettings_m7u0p")
 
-[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
-[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]
