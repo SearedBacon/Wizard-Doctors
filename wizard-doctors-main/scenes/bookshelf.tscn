@@ -29,5 +29,9 @@ offset_top = 1.0
 offset_right = 13.0
 offset_bottom = 10.0
 
+[connection signal="mouse_entered" from="Recipe" to="." method="_on_recipe_mouse_entered"]
+[connection signal="mouse_exited" from="Recipe" to="." method="_on_recipe_mouse_exited"]
 [connection signal="pressed" from="Recipe" to="." method="_on_recipe_pressed"]
+[connection signal="mouse_entered" from="Index" to="." method="_on_index_mouse_entered"]
+[connection signal="mouse_exited" from="Index" to="." method="_on_index_mouse_exited"]
 [connection signal="pressed" from="Index" to="." method="_on_index_pressed"]

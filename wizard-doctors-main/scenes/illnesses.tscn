@@ -43,9 +43,15 @@ blend_mode = 1
 font = ExtResource("3_gn45l")
 font_size = 30
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_80sff"]
+blend_mode = 1
+
 [sub_resource type="LabelSettings" id="LabelSettings_45k4n"]
 font = ExtResource("3_gn45l")
 font_size = 30
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_i8oh6"]
+blend_mode = 1
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_gn45l"]
 blend_mode = 1
@@ -141,7 +147,7 @@ offset_bottom = 119.0
 text = "Common cold"
 label_settings = SubResource("LabelSettings_46cvr")
 
-[node name="1" type="Button" parent="." unique_id=706063667]
+[node name="Names1" type="Button" parent="." unique_id=706063667]
 material = SubResource("CanvasItemMaterial_q7ijl")
 offset_left = 91.0
 offset_top = 85.0
@@ -156,7 +162,7 @@ offset_bottom = 188.0
 text = "Flu"
 label_settings = SubResource("LabelSettings_gn45l")
 
-[node name="2" type="Button" parent="." unique_id=1035191765]
+[node name="Names2" type="Button" parent="." unique_id=1035191765]
 material = SubResource("CanvasItemMaterial_45k4n")
 offset_left = 91.0
 offset_top = 155.0
@@ -171,7 +177,7 @@ offset_bottom = 258.0
 text = "covid-1"
 label_settings = SubResource("LabelSettings_80sff")
 
-[node name="3" type="Button" parent="." unique_id=1253974043]
+[node name="Names3" type="Button" parent="." unique_id=1253974043]
 material = SubResource("CanvasItemMaterial_1111a")
 offset_left = 91.0
 offset_top = 225.0
@@ -186,7 +192,7 @@ offset_bottom = 328.0
 text = "Lupus"
 label_settings = SubResource("LabelSettings_217y3")
 
-[node name="4" type="Button" parent="." unique_id=1270459604]
+[node name="Names4" type="Button" parent="." unique_id=1270459604]
 material = SubResource("CanvasItemMaterial_0uf80")
 offset_left = 91.0
 offset_top = 295.0
@@ -201,7 +207,7 @@ offset_bottom = 399.0
 text = "ball explode"
 label_settings = SubResource("LabelSettings_0uf80")
 
-[node name="5" type="Button" parent="." unique_id=870844536]
+[node name="Names5" type="Button" parent="." unique_id=870844536]
 material = SubResource("CanvasItemMaterial_217y3")
 offset_left = 91.0
 offset_top = 365.0
@@ -216,6 +222,13 @@ offset_bottom = 468.0
 text = "ebola"
 label_settings = SubResource("LabelSettings_1111a")
 
+[node name="Names6" type="Button" parent="." unique_id=839940289]
+material = SubResource("CanvasItemMaterial_80sff")
+offset_left = 91.0
+offset_top = 435.0
+offset_right = 273.0
+offset_bottom = 475.0
+
 [node name="Name7" type="Label" parent="." unique_id=223886925]
 offset_left = 102.0
 offset_top = 513.0
@@ -223,6 +236,13 @@ offset_right = 261.0
 offset_bottom = 539.0
 text = "Black Plague"
 label_settings = SubResource("LabelSettings_45k4n")
+
+[node name="Names7" type="Button" parent="." unique_id=1086535752]
+material = SubResource("CanvasItemMaterial_i8oh6")
+offset_left = 91.0
+offset_top = 505.0
+offset_right = 273.0
+offset_bottom = 545.0
 
 [node name="XButton" type="Sprite2D" parent="." unique_id=1241767924]
 position = Vector2(329, 38.000008)
@@ -244,4 +264,11 @@ offset_bottom = 43.0
 text = "Illnesses"
 label_settings = SubResource("LabelSettings_q7ijl")
 
+[connection signal="pressed" from="Names1" to="." method="_on_names_1_pressed"]
+[connection signal="pressed" from="Names2" to="." method="_on_names_2_pressed"]
+[connection signal="pressed" from="Names3" to="." method="_on_names_3_pressed"]
+[connection signal="pressed" from="Names4" to="." method="_on_names_4_pressed"]
+[connection signal="pressed" from="Names5" to="." method="_on_names_5_pressed"]
+[connection signal="pressed" from="Names6" to="." method="_on_names_6_pressed"]
+[connection signal="pressed" from="Names7" to="." method="_on_names_7_pressed"]
 [connection signal="pressed" from="X" to="." method="_on_x_pressed"]

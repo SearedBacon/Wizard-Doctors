@@ -38,3 +38,5 @@ var closebutton:=false
 var active:=true
 var revives:=3
 var gobackforest:=false
+var recipe_vis:=false
+var illness_vis:=false
