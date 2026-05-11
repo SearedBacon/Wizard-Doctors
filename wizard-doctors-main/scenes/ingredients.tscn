@@ -229,21 +229,6 @@ offset_bottom = 536.0
 text = "???????????????????????"
 label_settings = SubResource("LabelSettings_dlkf3")
 
-[node name="Next" type="Button" parent="." unique_id=862887994]
-offset_left = 260.0
-offset_top = 561.0
-offset_right = 305.0
-offset_bottom = 592.0
-text = "Next"
-
-[node name="Back" type="Button" parent="." unique_id=878695737]
-visible = false
-offset_left = 58.0
-offset_top = 561.0
-offset_right = 103.0
-offset_bottom = 592.0
-text = "Back"
-
 [node name="XButton" type="Sprite2D" parent="." unique_id=1901013739]
 position = Vector2(329, 38)
 scale = Vector2(0.03, 0.03)
@@ -452,8 +437,6 @@ offset_top = 514.0
 offset_right = 262.0
 offset_bottom = 536.0
 
-[connection signal="pressed" from="Next" to="." method="_on_next_pressed"]
-[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="XButtons" to="." method="_on_button_pressed"]
 [connection signal="pressed" from="AddsT" to="." method="_on_adds_t_pressed"]
 [connection signal="pressed" from="RemovesT" to="." method="_on_removes_t_pressed"]

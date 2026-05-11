@@ -13,6 +13,27 @@ blend_mode = 1
 font = ExtResource("3_g44oj")
 font_size = 40
 
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_m7u0p"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_p6ntd"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_5dkhf"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_n3oxd"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ptow1"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_bw5o3"]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_tkerc"]
+blend_mode = 1
+
 [node name="Recipes" type="Node2D" unique_id=1255496518]
 script = ExtResource("1_xmpxi")
 
@@ -167,5 +188,55 @@ offset_right = 237.0
 offset_bottom = 43.0
 text = "Recipes"
 label_settings = SubResource("LabelSettings_m7u0p")
+
+[node name="first" type="Button" parent="." unique_id=1519665587]
+material = SubResource("CanvasItemMaterial_m7u0p")
+offset_left = 91.0
+offset_top = 85.0
+offset_right = 273.0
+offset_bottom = 125.0
+theme_override_fonts/font = ExtResource("3_g44oj")
+
+[node name="second" type="Button" parent="." unique_id=797455925]
+material = SubResource("CanvasItemMaterial_p6ntd")
+offset_left = 91.0
+offset_top = 155.0
+offset_right = 273.0
+offset_bottom = 195.0
+
+[node name="third" type="Button" parent="." unique_id=1911112015]
+material = SubResource("CanvasItemMaterial_5dkhf")
+offset_left = 91.0
+offset_top = 225.0
+offset_right = 273.0
+offset_bottom = 265.0
+
+[node name="fourth" type="Button" parent="." unique_id=895464900]
+material = SubResource("CanvasItemMaterial_n3oxd")
+offset_left = 91.0
+offset_top = 295.0
+offset_right = 273.0
+offset_bottom = 335.0
+
+[node name="fifth" type="Button" parent="." unique_id=1689243017]
+material = SubResource("CanvasItemMaterial_ptow1")
+offset_left = 91.0
+offset_top = 365.0
+offset_right = 273.0
+offset_bottom = 405.0
+
+[node name="sixth" type="Button" parent="." unique_id=611180570]
+material = SubResource("CanvasItemMaterial_bw5o3")
+offset_left = 91.0
+offset_top = 435.0
+offset_right = 273.0
+offset_bottom = 475.0
+
+[node name="seventh" type="Button" parent="." unique_id=1949204038]
+material = SubResource("CanvasItemMaterial_tkerc")
+offset_left = 91.0
+offset_top = 505.0
+offset_right = 273.0
+offset_bottom = 545.0
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

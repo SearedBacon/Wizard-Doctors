@@ -298,6 +298,10 @@ blend_mode = 1
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_rwdlf"]
 blend_mode = 1
 
+[sub_resource type="LabelSettings" id="LabelSettings_xg8fv"]
+font = ExtResource("11_rwdlf")
+font_size = 30
+
 [sub_resource type="LabelSettings" id="LabelSettings_nkcaq"]
 font = ExtResource("11_rwdlf")
 font_size = 23
@@ -309,6 +313,34 @@ font_size = 20
 [sub_resource type="LabelSettings" id="LabelSettings_l8tb2"]
 font = ExtResource("11_rwdlf")
 font_size = 20
+
+[sub_resource type="LabelSettings" id="LabelSettings_3iaqw"]
+font = ExtResource("11_rwdlf")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_lb8fk"]
+font = ExtResource("11_rwdlf")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_ygwao"]
+font = ExtResource("11_rwdlf")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_lgxxe"]
+font = ExtResource("11_rwdlf")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_c4plu"]
+font = ExtResource("11_rwdlf")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_2kq47"]
+font = ExtResource("11_rwdlf")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_5x352"]
+font = ExtResource("11_rwdlf")
+font_size = 30
 
 [node name="Clinic" type="Node2D" unique_id=1466911789]
 script = ExtResource("1_mk7th")
@@ -444,6 +476,21 @@ visible = false
 position = Vector2(712, 20)
 scale = Vector2(0.9, 0.9)
 
+[node name="Leave" type="Label" parent="." unique_id=1591179083]
+visible = false
+offset_left = 156.0
+offset_top = 431.0
+offset_right = 217.0
+offset_bottom = 457.0
+text = "Leave"
+label_settings = SubResource("LabelSettings_xg8fv")
+
+[node name="Back" type="ColorRect" parent="." unique_id=296026228]
+visible = false
+offset_right = 1152.0
+offset_bottom = 648.0
+color = Color(0, 0, 0, 1)
+
 [node name="Temp" type="Label" parent="." unique_id=1965927939]
 visible = false
 offset_left = 970.0
@@ -471,4 +518,106 @@ offset_bottom = 73.0
 text = "Illnesse Book"
 label_settings = SubResource("LabelSettings_l8tb2")
 
+[node name="CommonCold" type="Label" parent="." unique_id=689307274]
+visible = false
+offset_left = 527.0
+offset_top = 317.0
+offset_right = 639.0
+offset_bottom = 343.0
+text = "Potion(s):"
+label_settings = SubResource("LabelSettings_3iaqw")
+
+[node name="Flu" type="Label" parent="." unique_id=1424175838]
+visible = false
+offset_left = 527.0
+offset_top = 317.0
+offset_right = 639.0
+offset_bottom = 343.0
+text = "Potion(s):"
+label_settings = SubResource("LabelSettings_lb8fk")
+
+[node name="Covid-1" type="Label" parent="." unique_id=1720208083]
+visible = false
+offset_left = 527.0
+offset_top = 317.0
+offset_right = 639.0
+offset_bottom = 343.0
+text = "Potion(s):"
+label_settings = SubResource("LabelSettings_ygwao")
+
+[node name="Lupus" type="Label" parent="." unique_id=1006476868]
+visible = false
+offset_left = 527.0
+offset_top = 317.0
+offset_right = 639.0
+offset_bottom = 343.0
+text = "Potion(s):"
+label_settings = SubResource("LabelSettings_lgxxe")
+
+[node name="BallExplode" type="Label" parent="." unique_id=1208542565]
+visible = false
+offset_left = 527.0
+offset_top = 317.0
+offset_right = 639.0
+offset_bottom = 343.0
+text = "Potion(s):"
+label_settings = SubResource("LabelSettings_c4plu")
+
+[node name="Ebola" type="Label" parent="." unique_id=38344330]
+visible = false
+offset_left = 527.0
+offset_top = 317.0
+offset_right = 639.0
+offset_bottom = 343.0
+text = "Potion(s):"
+label_settings = SubResource("LabelSettings_2kq47")
+
+[node name="BlackPlague" type="Label" parent="." unique_id=853946669]
+visible = false
+offset_left = 527.0
+offset_top = 317.0
+offset_right = 639.0
+offset_bottom = 343.0
+text = "Potion(s):"
+label_settings = SubResource("LabelSettings_5x352")
+
+[node name="Close" type="Button" parent="." unique_id=2040208487]
+visible = false
+offset_left = 509.0
+offset_top = 538.0
+offset_right = 647.0
+offset_bottom = 597.0
+theme_override_fonts/font = ExtResource("11_rwdlf")
+theme_override_font_sizes/font_size = 60
+text = "Close"
+
+[node name="first" type="Label" parent="." unique_id=1040596100]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="second" type="Label" parent="." unique_id=1557089341]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="third" type="Label" parent="." unique_id=654170543]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="fourth" type="Label" parent="." unique_id=297143381]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="fifth" type="Label" parent="." unique_id=1670748000]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="sixth" type="Label" parent="." unique_id=1873735187]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="seventh" type="Label" parent="." unique_id=1613696457]
+offset_right = 40.0
+offset_bottom = 23.0
+
 [connection signal="pressed" from="SeePatients" to="." method="_on_see_patients_pressed"]
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
