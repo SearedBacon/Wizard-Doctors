@@ -85,9 +85,7 @@ func _physics_process(delta: float) -> void:
 		leave.visible=false
 
 func _on_see_patients_pressed() -> void:
-	temp.visible=true
-	await get_tree().create_timer(1.5).timeout
-	temp.visible=false
+	pass
 
 func _on_close_pressed() -> void:
 	Globals.cold=false
@@ -106,3 +104,9 @@ func _on_close_pressed() -> void:
 	ball_explode.visible=false
 	ebola.visible=false
 	black_plague.visible=false
+
+func _on_see_patients_mouse_entered() -> void:
+	temp.visible=true
+
+func _on_see_patients_mouse_exited() -> void:
+	temp.visible=false
