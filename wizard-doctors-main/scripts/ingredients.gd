@@ -36,45 +36,45 @@ extends Node2D
 @onready var remove_b: AnimatedSprite2D = $RemoveB
 @onready var removes_b: Button = $RemovesB
 
-func _physics_process(delta: float) -> void:
+func _physics_process(_delta: float) -> void:
 	if BoarGlobals.collectTPerm==true and BoarGlobals.tusk>0:
-		names.text="Tusk: "+str(BoarGlobals.tusk)
+		names.text="Tusk: "+str(abs(BoarGlobals.tusk-10)+1)
 		add_t.visible=true
 		adds_t.visible=true
 		remove_t.visible=true
 		removes_t.visible=true
 	if BoarGlobals.collectHPerm==true:
-		name_2.text="Hoof: "+str(BoarGlobals.hoof)
+		name_2.text="Hoof: "+str(abs(BoarGlobals.hoof-10)+1)
 		add_h.visible=true
 		adds_h.visible=true
 		remove_h.visible=true
 		removes_h.visible=true
 	if Globals.collectTRootPerm==true:
-		name_3.text="Tree Root: "+str(Globals.treeroot)
+		name_3.text="Tree Root: "+str(abs(Globals.treeroot-10)+1)
 		add_tr.visible=true
 		adds_tr.visible=true
 		remove_tr.visible=true
 		removes_tr.visible=true
 	if Globals.collectFlowerPerm==true:
-		name_4.text="Flower: "+str(Globals.flower)
+		name_4.text="Flower: "+str(abs(Globals.flower-10)+1)
 		add_f.visible=true
 		adds_f.visible=true
 		remove_f.visble=true
 		removes_f.visible=true
 	if Globals.collectSSPerm==true:
-		name_5.text="SeaShell: "+str(Globals.seashells)
+		name_5.text="SeaShell: "+str(abs(Globals.seashells-10)+1)
 		add_ss.visible=true
 		adds_ss.visible=true
 		remove_ss.visible=true
 		removes_ss.visible=true
 	if FishGlobals.collectSPerm==true:
-		name_6.text="Scale: "+str(FishGlobals.scale)
+		name_6.text="Scale: "+str(abs(FishGlobals.scale-10)+1)
 		add_s.visible=true
 		adds_s.visible=true
 		remove_s.visible=true
 		removes_s.visible=true
 	if FishGlobals.collectBPerm==true:
-		name_7.text="Bone: "+str(FishGlobals.bone)
+		name_7.text="Bone: "+str(abs(FishGlobals.bone-10)+1)
 		add_b.visible=true
 		adds_b.visible=true
 		remove_b.visible=true

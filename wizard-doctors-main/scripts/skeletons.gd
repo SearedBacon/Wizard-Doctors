@@ -4,7 +4,7 @@ class_name Skeleton
 @onready var skeletons: Area2D = $"."
 @onready var animated_sprite: AnimatedSprite2D = $AnimatedSprite2D
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
 	if Globals.run==true:
 		if Globals.left==true:
 			skeletons.global_position.x-=1
