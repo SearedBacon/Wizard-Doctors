@@ -9,7 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://cc7wh8rgbi8yq" path="res://scenes/tree.tscn" id="6_sek5r"]
 [ext_resource type="PackedScene" uid="uid://cv8pcyqa5usnu" path="res://scenes/skeletons.tscn" id="7_i1yi8"]
 [ext_resource type="PackedScene" uid="uid://co2mws5dkvqbg" path="res://scenes/fight.tscn" id="9_3knxq"]
-[ext_resource type="Texture2D" uid="uid://bro2kk5pxwh8a" path="res://assets/Trees+.png" id="9_ercsu"]
+[ext_resource type="PackedScene" uid="uid://b0trsqyd8ooko" path="res://scenes/tree_root.tscn" id="9_j3csf"]
 [ext_resource type="FontFile" uid="uid://nbr1p2koff0c" path="res://assets/Firlest-Regular.otf" id="11_ercsu"]
 [ext_resource type="PackedScene" uid="uid://cayem70vhcgsy" path="res://scenes/flower.tscn" id="12_j3csf"]
 
@@ -104,21 +104,6 @@ point_count = 5
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cf55d"]
 size = Vector2(82, 90)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_j3csf"]
-atlas = ExtResource("9_ercsu")
-region = Rect2(244, 799, 61, 47)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_dabdc"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_j3csf")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ercsu"]
 size = Vector2(320, 299.31982)
 
@@ -134,10 +119,10 @@ font = ExtResource("11_ercsu")
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pyn53"]
 size = Vector2(50, 54)
 
-[sub_resource type="LabelSettings" id="LabelSettings_dabdc"]
+[sub_resource type="LabelSettings" id="LabelSettings_cf55d"]
 font_size = 10
 
-[sub_resource type="LabelSettings" id="LabelSettings_cf55d"]
+[sub_resource type="LabelSettings" id="LabelSettings_dabdc"]
 font_size = 10
 
 [node name="Forest" type="TileMapLayer" unique_id=1095673719]
@@ -364,15 +349,12 @@ zoom = Vector2(3, 3)
 visible = false
 position = Vector2(590, 365)
 
-[node name="TreeRoot" type="AnimatedSprite2D" parent="." unique_id=994912728]
-z_index = 1
-position = Vector2(279, 398)
-scale = Vector2(0.235, 0.23)
-sprite_frames = SubResource("SpriteFrames_dabdc")
+[node name="TreeRoot" parent="." unique_id=1382870498 instance=ExtResource("9_j3csf")]
+position = Vector2(259, 384)
 
 [node name="collect" type="Area2D" parent="TreeRoot" unique_id=2001288965]
-position = Vector2(0.00012207031, 0)
-scale = Vector2(0.6382979, 0.6391304)
+position = Vector2(-1.0000019, 8)
+scale = Vector2(0.15, 0.147)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="TreeRoot/collect" unique_id=417826052]
 position = Vector2(-0.00012207031, 0)
@@ -418,23 +400,23 @@ position = Vector2(507, 285)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Flower/Flower1" unique_id=281870247]
 shape = SubResource("RectangleShape2D_pyn53")
 
+[node name="TreeRootCollect" type="Label" parent="." unique_id=979807088]
+visible = false
+offset_left = 220.0
+offset_top = 411.0
+offset_right = 301.0
+offset_bottom = 434.0
+text = "Press e to collect"
+label_settings = SubResource("LabelSettings_cf55d")
+
 [node name="FlowerCollect" type="Label" parent="." unique_id=959301160]
 visible = false
 offset_left = 468.0
 offset_top = 310.0
 offset_right = 541.0
 offset_bottom = 323.0
-text = "Press E to collect"
-label_settings = SubResource("LabelSettings_dabdc")
-
-[node name="TreeRootCollect" type="Label" parent="." unique_id=979807088]
-visible = false
-offset_left = 243.0
-offset_top = 422.0
-offset_right = 317.0
-offset_bottom = 445.0
 text = "Press e to collect"
-label_settings = SubResource("LabelSettings_cf55d")
+label_settings = SubResource("LabelSettings_dabdc")
 
 [connection signal="body_entered" from="GoHome" to="Player" method="_on_go_home_body_entered"]
 [connection signal="body_entered" from="GoBeach" to="Player" method="_on_go_beach_body_entered"]

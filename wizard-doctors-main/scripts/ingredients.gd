@@ -59,7 +59,7 @@ func _physics_process(delta: float) -> void:
 		name_4.text="Flower: "+str(Globals.flower)
 		add_f.visible=true
 		adds_f.visible=true
-		remove_f.visble=true
+		remove_f.visible=true
 		removes_f.visible=true
 	if Globals.collectSSPerm==true:
 		name_5.text="SeaShell: "+str(Globals.seashells)

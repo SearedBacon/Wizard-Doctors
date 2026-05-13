@@ -75,6 +75,11 @@ func _physics_process(delta: float) -> void:
 		Globals.trackTR+=1
 		Globals.collectTRootPerm=true
 	
+	if Globals.collectFlower==true and Input.is_action_just_pressed("collect"):
+		Globals.flower+=1
+		Globals.trackF+=1
+		Globals.collectFlowerPerm=true
+	
 	if BoarGlobals.fightb==true:
 		fight.visible=true
 		f_camera_2d.enabled=true
@@ -120,8 +125,10 @@ func _on_village_here_body_exited(body: Node2D) -> void:
 
 func _on_flower_1_body_entered(body: Node2D) -> void:
 	if body is Player:
+		Globals.collectFlower=true
 		flower_collect.visible=true
 
 func _on_flower_1_body_exited(body: Node2D) -> void:
 	if body is Player:
+		Globals.collectFlower=false
 		flower_collect.visible=false

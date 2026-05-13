@@ -58,6 +58,21 @@ font = ExtResource("5_mv8fa")
 [sub_resource type="LabelSettings" id="LabelSettings_7sh0f"]
 font = ExtResource("5_mv8fa")
 
+[sub_resource type="LabelSettings" id="LabelSettings_pa23k"]
+font = ExtResource("5_mv8fa")
+
+[sub_resource type="LabelSettings" id="LabelSettings_oiag1"]
+font = ExtResource("5_mv8fa")
+
+[sub_resource type="LabelSettings" id="LabelSettings_gktdk"]
+font = ExtResource("5_mv8fa")
+
+[sub_resource type="LabelSettings" id="LabelSettings_a655f"]
+font = ExtResource("5_mv8fa")
+
+[sub_resource type="LabelSettings" id="LabelSettings_kcivn"]
+font = ExtResource("5_mv8fa")
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_7sh0f"]
 size = Vector2(20, 12.621975)
 
@@ -167,6 +182,7 @@ offset_top = 221.0
 offset_right = 1077.0
 offset_bottom = 244.0
 text = "Absolutely fricking nothing"
+label_settings = SubResource("LabelSettings_pa23k")
 
 [node name="Nothing4" type="Label" parent="." unique_id=1084009050]
 visible = false
@@ -175,6 +191,7 @@ offset_top = 625.0
 offset_right = 281.0
 offset_bottom = 648.0
 text = "Absolutely fricking nothing"
+label_settings = SubResource("LabelSettings_oiag1")
 
 [node name="Nothing5" type="Label" parent="." unique_id=1032331627]
 visible = false
@@ -183,6 +200,7 @@ offset_top = 625.0
 offset_right = 541.0
 offset_bottom = 648.0
 text = "Absolutely fricking nothing"
+label_settings = SubResource("LabelSettings_gktdk")
 
 [node name="Nothing6" type="Label" parent="." unique_id=2013585276]
 visible = false
@@ -191,6 +209,7 @@ offset_top = 625.0
 offset_right = 806.0
 offset_bottom = 648.0
 text = "Absolutely fricking nothing"
+label_settings = SubResource("LabelSettings_a655f")
 
 [node name="Nothing7" type="Label" parent="." unique_id=1545548918]
 visible = false
@@ -199,6 +218,7 @@ offset_top = 625.0
 offset_right = 1077.0
 offset_bottom = 648.0
 text = "Absolutely fricking nothing"
+label_settings = SubResource("LabelSettings_kcivn")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=246294044]
 position = Vector2(177, 202)
