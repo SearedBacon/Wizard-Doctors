@@ -16,6 +16,7 @@ extends Node2D
 @onready var black_plague: Label = $BlackPlague
 @onready var close: Button = $Close
 @onready var leave: Label = $Leave
+@onready var brew: Label = $brew
 
 func _physics_process(delta: float) -> void:
 	
@@ -83,6 +84,11 @@ func _physics_process(delta: float) -> void:
 		leave.visible=true
 	else:
 		leave.visible=false
+	
+	if Globals.brew==true:
+		brew.visible=true
+	else:
+		brew.visible=false
 
 func _on_see_patients_pressed() -> void:
 	pass

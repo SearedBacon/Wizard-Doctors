@@ -14,6 +14,7 @@ extends TileMapLayer
 @onready var player: Player = $Player
 @onready var village_also_here: Label = $VillageAlsoHere
 @onready var flower_collect: Label = $FlowerCollect
+@onready var tree_root_collect: Label = $TreeRootCollect
 
 func _physics_process(delta: float) -> void:
 
@@ -84,10 +85,14 @@ func _physics_process(delta: float) -> void:
 		p_camera_2d.enabled=true
 
 func _on_collect_body_entered(body: Node2D) -> void:
-	Globals.collectTRoot=true
+	if body is Player:
+		Globals.collectTRoot=true
+		tree_root_collect.visible=true
 
 func _on_collect_body_exited(body: Node2D) -> void:
-	Globals.collectTRoot=false
+	if body is Player:
+		Globals.collectTRoot=false
+		tree_root_collect.visible=false
 
 func _on_boar_1_body_entered(body: Node2D) -> void:
 	if body is Player:

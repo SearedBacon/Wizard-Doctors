@@ -48,3 +48,4 @@ var ballexplode:=false
 var ebola:=false
 var blackplague:=false
 var leave_clinic:=false
+var brew:=false

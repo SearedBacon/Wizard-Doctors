@@ -62,16 +62,18 @@ color = Color(0, 0, 0, 1)
 
 [node name="Label" type="Label" parent="." unique_id=11951744]
 visible = false
-offset_left = 252.0
-offset_top = 84.0
-offset_right = 936.0
-offset_bottom = 311.0
+offset_left = 45.0
+offset_top = 26.0
+offset_right = 1104.0
+offset_bottom = 345.0
 size_flags_horizontal = 4
-text = "               WASD to move
+text = "                             WASD to move
 
-Go to the forest to fight enemies 
-and collect items and then use 
-those items to create potions!"
+Hovering your mouse over objects in your house will
+tell you what it does. Leave your house to head to
+the village which across the village is the forest
+where you may encounter monsters and collect 
+                 items in order to brew potions."
 label_settings = SubResource("LabelSettings_u80x2")
 
 [node name="Close" type="Button" parent="." unique_id=951035835]
