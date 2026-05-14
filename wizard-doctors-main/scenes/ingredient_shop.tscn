@@ -1,13 +1,47 @@
 [gd_scene format=3 uid="uid://daycu1iyoq0np"]
 
 [ext_resource type="Texture2D" uid="uid://cwn1phjdg0w7m" path="res://assets/planks.png" id="1_33hef"]
+[ext_resource type="Script" uid="uid://deik7nrc5cf01" path="res://scripts/ingredient_shop.gd" id="1_qyjxm"]
 [ext_resource type="FontFile" uid="uid://nbr1p2koff0c" path="res://assets/Firlest-Regular.otf" id="2_yjvuc"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_qyjxm"]
 font = ExtResource("2_yjvuc")
 font_size = 100
 
+[sub_resource type="LabelSettings" id="LabelSettings_yjvuc"]
+font = ExtResource("2_yjvuc")
+font_size = 70
+
+[sub_resource type="LabelSettings" id="LabelSettings_shap6"]
+font = ExtResource("2_yjvuc")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_30kxy"]
+font = ExtResource("2_yjvuc")
+font_size = 70
+
+[sub_resource type="LabelSettings" id="LabelSettings_2yxiv"]
+font = ExtResource("2_yjvuc")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_c867g"]
+font = ExtResource("2_yjvuc")
+font_size = 70
+
+[sub_resource type="LabelSettings" id="LabelSettings_aarpq"]
+font = ExtResource("2_yjvuc")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_8vaxa"]
+font = ExtResource("2_yjvuc")
+font_size = 70
+
+[sub_resource type="LabelSettings" id="LabelSettings_mecdn"]
+font = ExtResource("2_yjvuc")
+font_size = 30
+
 [node name="IngredientShop" type="Node2D" unique_id=342484686]
+script = ExtResource("1_qyjxm")
 
 [node name="Planks" type="Sprite2D" parent="." unique_id=300176792]
 position = Vector2(153, 495)
@@ -69,6 +103,13 @@ position = Vector2(1074, -119)
 scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_33hef")
 
+[node name="Stuff" type="ColorRect" parent="." unique_id=70337977]
+offset_left = 120.0
+offset_top = 107.0
+offset_right = 1044.0
+offset_bottom = 541.0
+color = Color(0.4, 0.4, 0.4, 0.4862745)
+
 [node name="Top" type="Label" parent="." unique_id=941989361]
 offset_left = 341.0
 offset_top = 27.0
@@ -76,3 +117,108 @@ offset_right = 796.0
 offset_bottom = 112.0
 text = "Ingredients"
 label_settings = SubResource("LabelSettings_qyjxm")
+
+[node name="Tusk" type="Label" parent="." unique_id=467707292]
+offset_left = 189.0
+offset_top = 196.0
+offset_right = 302.0
+offset_bottom = 256.0
+text = "Tusk"
+label_settings = SubResource("LabelSettings_yjvuc")
+
+[node name="TuskStock" type="Label" parent="." unique_id=513232554]
+offset_left = 198.0
+offset_top = 293.0
+offset_right = 348.0
+offset_bottom = 319.0
+text = "Out of stock"
+label_settings = SubResource("LabelSettings_shap6")
+
+[node name="TuskBuy" type="Button" parent="." unique_id=308544255]
+offset_left = 388.0
+offset_top = 290.0
+offset_right = 443.0
+offset_bottom = 324.0
+theme_override_fonts/font = ExtResource("2_yjvuc")
+theme_override_font_sizes/font_size = 30
+text = "Buy"
+
+[node name="Hoof" type="Label" parent="." unique_id=1139838348]
+offset_left = 189.0
+offset_top = 354.0
+offset_right = 325.0
+offset_bottom = 414.0
+text = "Hoof"
+label_settings = SubResource("LabelSettings_30kxy")
+
+[node name="HoofStock" type="Label" parent="." unique_id=386206425]
+offset_left = 198.0
+offset_top = 447.0
+offset_right = 348.0
+offset_bottom = 473.0
+text = "Out of stock"
+label_settings = SubResource("LabelSettings_2yxiv")
+
+[node name="HoofBuy" type="Button" parent="." unique_id=708418292]
+offset_left = 388.0
+offset_top = 443.0
+offset_right = 443.0
+offset_bottom = 477.0
+theme_override_fonts/font = ExtResource("2_yjvuc")
+theme_override_font_sizes/font_size = 30
+text = "Buy"
+
+[node name="Scale" type="Label" parent="." unique_id=1860562458]
+offset_left = 641.0
+offset_top = 198.0
+offset_right = 803.0
+offset_bottom = 258.0
+text = "Scale"
+label_settings = SubResource("LabelSettings_c867g")
+
+[node name="ScaleStock" type="Label" parent="." unique_id=498187764]
+offset_left = 656.0
+offset_top = 293.0
+offset_right = 806.0
+offset_bottom = 319.0
+text = "Out of stock"
+label_settings = SubResource("LabelSettings_aarpq")
+
+[node name="ScaleBuy" type="Button" parent="." unique_id=584322686]
+offset_left = 839.0
+offset_top = 290.0
+offset_right = 894.0
+offset_bottom = 324.0
+theme_override_fonts/font = ExtResource("2_yjvuc")
+theme_override_font_sizes/font_size = 30
+text = "Buy"
+
+[node name="Bone" type="Label" parent="." unique_id=427851705]
+offset_left = 651.0
+offset_top = 354.0
+offset_right = 783.0
+offset_bottom = 414.0
+text = "Bone"
+label_settings = SubResource("LabelSettings_8vaxa")
+
+[node name="BoneStock" type="Label" parent="." unique_id=878351416]
+offset_left = 656.0
+offset_top = 447.0
+offset_right = 806.0
+offset_bottom = 473.0
+text = "Out of stock"
+label_settings = SubResource("LabelSettings_mecdn")
+
+[node name="BoneBuy" type="Button" parent="." unique_id=1503519022]
+offset_left = 839.0
+offset_top = 443.0
+offset_right = 894.0
+offset_bottom = 477.0
+theme_override_fonts/font = ExtResource("2_yjvuc")
+theme_override_font_sizes/font_size = 30
+text = "Buy"
+
+[connection signal="pressed" from="TuskBuy" to="." method="_on_tusk_buy_pressed"]
+[connection signal="pressed" from="HoofBuy" to="." method="_on_hoof_buy_pressed"]
+[connection signal="pressed" from="ScaleBuy" to="." method="_on_scale_buy_pressed"]
+[connection signal="pressed" from="BoneBuy" to="." method="_on_bone_buy_pressed"]

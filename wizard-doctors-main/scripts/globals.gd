@@ -49,3 +49,4 @@ var ebola:=false
 var blackplague:=false
 var leave_clinic:=false
 var brew:=false
+var money:=100
