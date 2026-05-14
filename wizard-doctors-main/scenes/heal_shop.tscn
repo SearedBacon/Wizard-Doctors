@@ -1,85 +1,224 @@
 [gd_scene format=3 uid="uid://b5d2ylayobonk"]
 
-[ext_resource type="Script" uid="uid://ba87b6hdts3n" path="res://scripts/shop!.gd" id="1_8ijtx"]
+[ext_resource type="Script" uid="uid://ba87b6hdts3n" path="res://scripts/heal_shop.gd" id="1_8ijtx"]
 [ext_resource type="FontFile" uid="uid://nbr1p2koff0c" path="res://assets/Firlest-Regular.otf" id="2_rjjhj"]
+[ext_resource type="Texture2D" uid="uid://cwn1phjdg0w7m" path="res://assets/planks.png" id="3_rjjhj"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_oq0cr"]
 font = ExtResource("2_rjjhj")
 font_size = 100
 
-[sub_resource type="LabelSettings" id="LabelSettings_8f4te"]
+[sub_resource type="LabelSettings" id="LabelSettings_rjjhj"]
+font = ExtResource("2_rjjhj")
+font_size = 70
+
+[sub_resource type="LabelSettings" id="LabelSettings_d2kw6"]
+font = ExtResource("2_rjjhj")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_rbrd1"]
+font = ExtResource("2_rjjhj")
+font_size = 70
+
+[sub_resource type="LabelSettings" id="LabelSettings_ntra5"]
+font = ExtResource("2_rjjhj")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_g107k"]
+font = ExtResource("2_rjjhj")
+font_size = 70
+
+[sub_resource type="LabelSettings" id="LabelSettings_puckp"]
+font = ExtResource("2_rjjhj")
+font_size = 30
+
+[sub_resource type="LabelSettings" id="LabelSettings_mfvpb"]
+font = ExtResource("2_rjjhj")
+font_size = 70
+
+[sub_resource type="LabelSettings" id="LabelSettings_nwwhw"]
 font = ExtResource("2_rjjhj")
 font_size = 30
 
 [node name="HealShop" type="Node2D" unique_id=1699072714]
 script = ExtResource("1_8ijtx")
 
-[node name="Label" type="Label" parent="." unique_id=608406711]
+[node name="Planks" type="Sprite2D" parent="." unique_id=1893077302]
+position = Vector2(153, 495)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_rjjhj")
+
+[node name="Planks2" type="Sprite2D" parent="." unique_id=161239874]
+position = Vector2(153, 188)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_rjjhj")
+
+[node name="Planks3" type="Sprite2D" parent="." unique_id=1006023475]
+position = Vector2(153, -119.00001)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_rjjhj")
+
+[node name="Planks4" type="Sprite2D" parent="." unique_id=973846292]
+position = Vector2(460, 495.00003)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_rjjhj")
+
+[node name="Planks5" type="Sprite2D" parent="." unique_id=1261225719]
+position = Vector2(460.00003, 188)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_rjjhj")
+
+[node name="Planks6" type="Sprite2D" parent="." unique_id=526898346]
+position = Vector2(460.00003, -119.00001)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_rjjhj")
+
+[node name="Planks7" type="Sprite2D" parent="." unique_id=145895957]
+position = Vector2(767, 495)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_rjjhj")
+
+[node name="Planks8" type="Sprite2D" parent="." unique_id=624819597]
+position = Vector2(767, 188)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_rjjhj")
+
+[node name="Planks9" type="Sprite2D" parent="." unique_id=1970471826]
+position = Vector2(767, -119)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_rjjhj")
+
+[node name="Planks10" type="Sprite2D" parent="." unique_id=218177286]
+position = Vector2(1074, 495)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_rjjhj")
+
+[node name="Planks11" type="Sprite2D" parent="." unique_id=1646125496]
+position = Vector2(1074, 188)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_rjjhj")
+
+[node name="Planks12" type="Sprite2D" parent="." unique_id=2137450336]
+position = Vector2(1074, -119.00001)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_rjjhj")
+
+[node name="Top" type="Label" parent="." unique_id=608406711]
 offset_left = 460.0
 offset_top = 9.0
-offset_right = 664.0
+offset_right = 706.0
 offset_bottom = 94.0
-text = "Heals!"
+text = "Heals"
 label_settings = SubResource("LabelSettings_oq0cr")
 
-[node name="Place" type="ColorRect" parent="." unique_id=1584634471]
-offset_left = 315.0
-offset_top = 124.0
-offset_right = 355.0
-offset_bottom = 164.0
-color = Color(0, 0, 0, 0.18431373)
+[node name="Stuff" type="ColorRect" parent="." unique_id=485087655]
+offset_left = 120.0
+offset_top = 107.0
+offset_right = 1044.0
+offset_bottom = 541.0
+color = Color(0.4, 0.4, 0.4, 0.4862745)
 
-[node name="Place2" type="ColorRect" parent="." unique_id=1166577418]
-offset_left = 396.0
-offset_top = 124.0
-offset_right = 436.0
-offset_bottom = 164.0
-color = Color(0, 0, 0, 0.18431373)
+[node name="BasicPotion" type="Label" parent="." unique_id=46789087]
+offset_left = 189.0
+offset_top = 196.0
+offset_right = 531.0
+offset_bottom = 256.0
+text = "Basic Potion"
+label_settings = SubResource("LabelSettings_rjjhj")
 
-[node name="Place3" type="ColorRect" parent="." unique_id=1681266455]
-offset_left = 480.0
-offset_top = 124.0
-offset_right = 520.0
-offset_bottom = 164.0
-color = Color(0, 0, 0, 0.18431373)
+[node name="BasicStock" type="Label" parent="." unique_id=77352373]
+offset_left = 198.0
+offset_top = 293.0
+offset_right = 348.0
+offset_bottom = 319.0
+text = "Out of stock"
+label_settings = SubResource("LabelSettings_d2kw6")
 
-[node name="Place4" type="ColorRect" parent="." unique_id=1008065604]
-offset_left = 562.0
-offset_top = 124.0
-offset_right = 602.0
-offset_bottom = 164.0
-color = Color(0, 0, 0, 0.18431373)
+[node name="BasicBuy" type="Button" parent="." unique_id=175284649]
+offset_left = 388.0
+offset_top = 290.0
+offset_right = 443.0
+offset_bottom = 324.0
+theme_override_fonts/font = ExtResource("2_rjjhj")
+theme_override_font_sizes/font_size = 30
+text = "Buy"
 
-[node name="Place5" type="ColorRect" parent="." unique_id=280643494]
-offset_left = 642.0
-offset_top = 124.0
-offset_right = 682.0
-offset_bottom = 164.0
-color = Color(0, 0, 0, 0.18431373)
+[node name="BigPotion" type="Label" parent="." unique_id=2105874717]
+offset_left = 189.0
+offset_top = 354.0
+offset_right = 465.0
+offset_bottom = 414.0
+text = "Big Potion"
+label_settings = SubResource("LabelSettings_rbrd1")
 
-[node name="Place6" type="ColorRect" parent="." unique_id=1325443036]
-offset_left = 710.0
-offset_top = 124.0
-offset_right = 750.0
-offset_bottom = 164.0
-color = Color(0, 0, 0, 0.18431373)
+[node name="BigStock" type="Label" parent="." unique_id=4247515]
+offset_left = 198.0
+offset_top = 447.0
+offset_right = 348.0
+offset_bottom = 473.0
+text = "Out of stock"
+label_settings = SubResource("LabelSettings_ntra5")
 
-[node name="Place7" type="ColorRect" parent="." unique_id=159084566]
-offset_left = 778.0
-offset_top = 124.0
-offset_right = 818.0
-offset_bottom = 164.0
-color = Color(0, 0, 0, 0.18431373)
+[node name="BigBuy" type="Button" parent="." unique_id=1511640362]
+offset_left = 388.0
+offset_top = 443.0
+offset_right = 443.0
+offset_bottom = 477.0
+theme_override_fonts/font = ExtResource("2_rjjhj")
+theme_override_font_sizes/font_size = 30
+text = "Buy"
 
-[node name="Time" type="Label" parent="." unique_id=990752486]
-offset_left = 486.0
-offset_top = 580.0
-offset_right = 671.0
-offset_bottom = 606.0
-text = "Shop resets in :"
-label_settings = SubResource("LabelSettings_8f4te")
+[node name="GreatPotion" type="Label" parent="." unique_id=592615553]
+offset_left = 641.0
+offset_top = 198.0
+offset_right = 993.0
+offset_bottom = 258.0
+text = "Great Potion"
+label_settings = SubResource("LabelSettings_g107k")
 
-[node name="Timer" type="Timer" parent="." unique_id=1900438472]
-autostart = true
+[node name="GreatStock" type="Label" parent="." unique_id=999988978]
+offset_left = 656.0
+offset_top = 293.0
+offset_right = 806.0
+offset_bottom = 319.0
+text = "Out of stock"
+label_settings = SubResource("LabelSettings_puckp")
 
-[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[node name="GreatBuy" type="Button" parent="." unique_id=1419889368]
+offset_left = 839.0
+offset_top = 290.0
+offset_right = 894.0
+offset_bottom = 324.0
+theme_override_fonts/font = ExtResource("2_rjjhj")
+theme_override_font_sizes/font_size = 30
+text = "Buy"
+
+[node name="MaxPotion" type="Label" parent="." unique_id=294755117]
+offset_left = 651.0
+offset_top = 354.0
+offset_right = 959.0
+offset_bottom = 414.0
+text = "Max Potion"
+label_settings = SubResource("LabelSettings_mfvpb")
+
+[node name="MaxStock" type="Label" parent="." unique_id=298905835]
+offset_left = 656.0
+offset_top = 447.0
+offset_right = 806.0
+offset_bottom = 473.0
+text = "Out of stock"
+label_settings = SubResource("LabelSettings_nwwhw")
+
+[node name="MaxBuy" type="Button" parent="." unique_id=1743734219]
+offset_left = 839.0
+offset_top = 443.0
+offset_right = 894.0
+offset_bottom = 477.0
+theme_override_fonts/font = ExtResource("2_rjjhj")
+theme_override_font_sizes/font_size = 30
+text = "Buy"
+
+[connection signal="pressed" from="BasicBuy" to="." method="_on_basic_buy_pressed"]
+[connection signal="pressed" from="BigBuy" to="." method="_on_big_buy_pressed"]
+[connection signal="pressed" from="GreatBuy" to="." method="_on_great_buy_pressed"]
+[connection signal="pressed" from="MaxBuy" to="." method="_on_max_buy_pressed"]

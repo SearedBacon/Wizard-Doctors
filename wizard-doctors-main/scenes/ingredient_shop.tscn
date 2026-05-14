@@ -1,3 +1,78 @@
 [gd_scene format=3 uid="uid://daycu1iyoq0np"]
 
+[ext_resource type="Texture2D" uid="uid://cwn1phjdg0w7m" path="res://assets/planks.png" id="1_33hef"]
+[ext_resource type="FontFile" uid="uid://nbr1p2koff0c" path="res://assets/Firlest-Regular.otf" id="2_yjvuc"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_qyjxm"]
+font = ExtResource("2_yjvuc")
+font_size = 100
+
 [node name="IngredientShop" type="Node2D" unique_id=342484686]
+
+[node name="Planks" type="Sprite2D" parent="." unique_id=300176792]
+position = Vector2(153, 495)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_33hef")
+
+[node name="Planks2" type="Sprite2D" parent="." unique_id=2068959774]
+position = Vector2(153, 188)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_33hef")
+
+[node name="Planks3" type="Sprite2D" parent="." unique_id=2130931041]
+position = Vector2(153, -119.00001)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_33hef")
+
+[node name="Planks4" type="Sprite2D" parent="." unique_id=2136534685]
+position = Vector2(460, 495)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_33hef")
+
+[node name="Planks5" type="Sprite2D" parent="." unique_id=1820960312]
+position = Vector2(460, 188)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_33hef")
+
+[node name="Planks6" type="Sprite2D" parent="." unique_id=1208034190]
+position = Vector2(460, -119.00001)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_33hef")
+
+[node name="Planks7" type="Sprite2D" parent="." unique_id=1577268683]
+position = Vector2(767, 495)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_33hef")
+
+[node name="Planks8" type="Sprite2D" parent="." unique_id=1708719972]
+position = Vector2(767, 188)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_33hef")
+
+[node name="Planks9" type="Sprite2D" parent="." unique_id=1911307514]
+position = Vector2(767, -119)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_33hef")
+
+[node name="Planks10" type="Sprite2D" parent="." unique_id=395003280]
+position = Vector2(1074, 495.00003)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_33hef")
+
+[node name="Planks11" type="Sprite2D" parent="." unique_id=1618482006]
+position = Vector2(1074, 188)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_33hef")
+
+[node name="Planks12" type="Sprite2D" parent="." unique_id=250398683]
+position = Vector2(1074, -119)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_33hef")
+
+[node name="Top" type="Label" parent="." unique_id=941989361]
+offset_left = 341.0
+offset_top = 27.0
+offset_right = 796.0
+offset_bottom = 112.0
+text = "Ingredients"
+label_settings = SubResource("LabelSettings_qyjxm")

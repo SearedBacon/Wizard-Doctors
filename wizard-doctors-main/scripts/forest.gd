@@ -15,6 +15,7 @@ extends TileMapLayer
 @onready var village_also_here: Label = $VillageAlsoHere
 @onready var flower_collect: Label = $FlowerCollect
 @onready var tree_root_collect: Label = $TreeRootCollect
+var trtime:=10
 
 func _physics_process(delta: float) -> void:
 
@@ -132,3 +133,6 @@ func _on_flower_1_body_exited(body: Node2D) -> void:
 	if body is Player:
 		Globals.collectFlower=false
 		flower_collect.visible=false
+
+func _on_tr_timer_timeout() -> void:
+	trtime-=1

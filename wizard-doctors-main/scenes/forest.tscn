@@ -418,6 +418,8 @@ offset_bottom = 323.0
 text = "Press e to collect"
 label_settings = SubResource("LabelSettings_dabdc")
 
+[node name="TrTimer" type="Timer" parent="." unique_id=1448993368]
+
 [connection signal="body_entered" from="GoHome" to="Player" method="_on_go_home_body_entered"]
 [connection signal="body_entered" from="GoBeach" to="Player" method="_on_go_beach_body_entered"]
 [connection signal="body_entered" from="Boar1P/BoarFollow1/Boar/boar1" to="." method="_on_boar_1_body_entered"]
@@ -430,3 +432,4 @@ label_settings = SubResource("LabelSettings_dabdc")
 [connection signal="body_exited" from="VillageHere" to="." method="_on_village_here_body_exited"]
 [connection signal="body_entered" from="Flower/Flower1" to="." method="_on_flower_1_body_entered"]
 [connection signal="body_exited" from="Flower/Flower1" to="." method="_on_flower_1_body_exited"]
+[connection signal="timeout" from="TrTimer" to="." method="_on_tr_timer_timeout"]
