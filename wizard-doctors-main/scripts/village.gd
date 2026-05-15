@@ -103,3 +103,7 @@ func _on_show_home_body_entered(body: Node2D) -> void:
 func _on_show_home_body_exited(body: Node2D) -> void:
 	if body is Player:
 		home_label.visible=false
+
+func _on_timer_v_timeout() -> void:
+	Globals.shop_timers-=1
+	print(Globals.shop_timers)

@@ -17,6 +17,7 @@ extends Node2D
 @onready var close: Button = $Close
 @onready var leave: Label = $Leave
 @onready var brew: Label = $brew
+@onready var timer: Timer = $Timer
 
 func _physics_process(delta: float) -> void:
 	
@@ -116,3 +117,7 @@ func _on_see_patients_mouse_entered() -> void:
 
 func _on_see_patients_mouse_exited() -> void:
 	temp.visible=false
+
+func _on_timer_timeout() -> void:
+	Globals.shop_timers-=1
+	print(Globals.shop_timers)

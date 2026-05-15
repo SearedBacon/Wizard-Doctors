@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://u1ro6g2g8pn" path="res://scripts/player.gd" id="1_3vyb7"]
 [ext_resource type="Texture2D" uid="uid://ctm7ghq6led33" path="res://assets/wizard spritesheet calciumtrice.png" id="2_g2els"]
+[ext_resource type="PackedScene" uid="uid://bjpb3otlbdjah" path="res://scenes/globals.tscn" id="3_qhqgy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_u8vuu"]
 size = Vector2(20, 10)
@@ -322,3 +323,5 @@ sprite_frames = SubResource("SpriteFrames_jej6c")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.045083903
+
+[node name="Globals" parent="." unique_id=1136789602 instance=ExtResource("3_qhqgy")]

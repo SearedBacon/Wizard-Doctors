@@ -415,6 +415,9 @@ shape = SubResource("RectangleShape2D_pa23k")
 position = Vector2(957, 423)
 shape = SubResource("RectangleShape2D_pa23k")
 
+[node name="TimerV" type="Timer" parent="." unique_id=1704781942]
+autostart = true
+
 [connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
 [connection signal="body_exited" from="Area2D" to="." method="_on_area_2d_body_exited"]
 [connection signal="body_entered" from="Area2D2" to="." method="_on_area_2d_2_body_entered"]
@@ -439,3 +442,4 @@ shape = SubResource("RectangleShape2D_pa23k")
 [connection signal="body_exited" from="ShowHome" to="." method="_on_show_home_body_exited"]
 [connection signal="body_entered" from="Area2D9" to="." method="_on_area_2d_9_body_entered"]
 [connection signal="body_exited" from="Area2D9" to="." method="_on_area_2d_9_body_exited"]
+[connection signal="timeout" from="TimerV" to="." method="_on_timer_v_timeout"]
