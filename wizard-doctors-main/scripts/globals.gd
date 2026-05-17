@@ -1,7 +1,5 @@
 extends Node
 
-@onready var timer: Timer = $Timer
-
 var ipage:=0
 var rpage:=0
 var ingredientpage:=0
@@ -53,3 +51,4 @@ var leave_clinic:=false
 var brew:=false
 var money:=100
 var shop_timers:=60
+var close_shop:=false

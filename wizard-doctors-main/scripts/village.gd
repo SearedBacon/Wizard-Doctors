@@ -11,12 +11,29 @@ extends TileMapLayer
 @onready var player: Player = $Player
 @onready var leave_label: Label = $LeaveLabel
 @onready var home_label: Label = $HomeLabel
+@onready var heal_shop: Node2D = $HealShop
+@onready var spell_shop: Node2D = $SpellShop
+@onready var ingredient_shop: Node2D = $IngredientShop
 
 func _physics_process(delta: float) -> void:
 	if Globals.goback==true:
 		player.global_position=Vector2(1020,282)
 		Globals.goback=false
-
+	
+	if potion_stuff.visible==true and Input.is_action_just_pressed("collect"):
+		ingredient_shop.visible=true
+		player.visible=false
+		Globals.active=false
+	
+	if heals.visible==true and Input.is_action_just_pressed("collect"):
+		heal_shop.visible=true
+		player.visible=false
+		Globals.active=false
+	
+	if shop.visible==true and Input.is_action_just_pressed("collect"):
+		spell_shop.visible=true
+		player.visible=false
+		Globals.active=false
 func _on_area_2d_body_entered(_body: Node2D) -> void:
 	potion_stuff.visible=true
 

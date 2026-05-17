@@ -19,3 +19,6 @@ func _on_bone_buy_pressed() -> void:
 	if Globals.money>=10:
 		Globals.money-=10
 		FishGlobals.bone+=1
+
+func _on_close_pressed() -> void:
+	Globals.close_shop=true

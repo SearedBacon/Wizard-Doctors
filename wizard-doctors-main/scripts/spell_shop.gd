@@ -24,3 +24,6 @@ func _on_dance_buy_pressed() -> void:
 	if Globals.money>=1000 and yes_dance==false:
 		Globals.money-=1000
 		yes_dance=true
+
+func _on_close_pressed() -> void:
+	Globals.close_shop=true

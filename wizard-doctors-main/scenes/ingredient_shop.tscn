@@ -218,7 +218,17 @@ theme_override_fonts/font = ExtResource("2_yjvuc")
 theme_override_font_sizes/font_size = 30
 text = "Buy"
 
+[node name="Close" type="Button" parent="." unique_id=1476652237]
+offset_left = 504.0
+offset_top = 561.0
+offset_right = 664.0
+offset_bottom = 629.0
+theme_override_fonts/font = ExtResource("2_yjvuc")
+theme_override_font_sizes/font_size = 70
+text = "Close"
+
 [connection signal="pressed" from="TuskBuy" to="." method="_on_tusk_buy_pressed"]
 [connection signal="pressed" from="HoofBuy" to="." method="_on_hoof_buy_pressed"]
 [connection signal="pressed" from="ScaleBuy" to="." method="_on_scale_buy_pressed"]
 [connection signal="pressed" from="BoneBuy" to="." method="_on_bone_buy_pressed"]
+[connection signal="pressed" from="Close" to="." method="_on_close_pressed"]
